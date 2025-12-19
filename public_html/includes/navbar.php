@@ -51,6 +51,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     <a class="nav-link <?php echo ($current_page == 'about.php') ? 'active' : ''; ?>" href="about.php">About Us</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link <?php echo ($current_page == 'leadership.php') ? 'active' : ''; ?>" href="leadership.php">Leadership</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link <?php echo ($current_page == 'services.php') ? 'active' : ''; ?>" href="services.php">Services</a>
                 </li>
                 <li class="nav-item">
@@ -89,6 +92,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <ul class="mobile-nav-links">
             <li><a href="index.php" class="<?php echo ($current_page == 'index.php') ? 'active' : ''; ?>"><i class="bi bi-house-door me-3"></i>Home</a></li>
             <li><a href="about.php" class="<?php echo ($current_page == 'about.php') ? 'active' : ''; ?>"><i class="bi bi-info-circle me-3"></i>About Us</a></li>
+            <li><a href="leadership.php" class="<?php echo ($current_page == 'leadership.php') ? 'active' : ''; ?>"><i class="bi bi-people me-3"></i>Leadership</a></li>
             <li><a href="services.php" class="<?php echo ($current_page == 'services.php') ? 'active' : ''; ?>"><i class="bi bi-grid me-3"></i>Services</a></li>
             <li><a href="solutions.php" class="<?php echo ($current_page == 'solutions.php') ? 'active' : ''; ?>"><i class="bi bi-gear me-3"></i>Solutions</a></li>
             <li><a href="tracking.php" class="<?php echo ($current_page == 'tracking.php') ? 'active' : ''; ?>"><i class="bi bi-geo-alt me-3"></i>Track Shipment</a></li>

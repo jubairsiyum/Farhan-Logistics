@@ -5,14 +5,14 @@ include 'includes/navbar.php';
 ?>
 
 <!-- Page Header -->
-<section class="hero-section" style="height: 50vh; min-height: 400px;">
-    <div class="container">
-        <div class="row">
+<section class="hero-section" style="height: 50vh; min-height: 400px; background: linear-gradient(135deg, rgba(47, 51, 141, 0.9), rgba(236, 32, 37, 0.8)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=90') center/cover;">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
             <div class="col-lg-8">
                 <div class="hero-content">
                     <h1 data-aos="fade-up">About Farhan Logistics</h1>
                     <p data-aos="fade-up" data-aos-delay="100">
-                        Leading the way in international freight forwarding and logistics solutions since 1999.
+                        Professional 3PL company specializing in air and sea freight services since September 2016.
                     </p>
                 </div>
             </div>
@@ -25,29 +25,177 @@ include 'includes/navbar.php';
     <div class="container">
         <div class="row align-items-center mb-5">
             <div class="col-lg-6" data-aos="fade-right">
-                <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=80" alt="Farhan Logistics" class="img-fluid rounded shadow-lg" 
+                <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?w=800&q=85" alt="Farhan Logistics International" class="img-fluid rounded shadow-lg" 
                      style="height: 500px; width: 100%; object-fit: cover;">
             </div>
             <div class="col-lg-6" data-aos="fade-left">
                 <div class="ps-lg-4">
-                    <h2 class="mb-4">Your Trusted Global Logistics Partner</h2>
-                    <p class="lead text-orange">
-                        Delivering Excellence in Freight Forwarding Since 1999
+                    <span class="badge bg-primary-red text-white px-3 py-2 mb-3" style="background: var(--primary-red); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.5px;">Est. September 2016</span>
+                    <h2 class="mb-4">Professional 3PL Excellence</h2>
+                    <p class="lead" style="color: var(--primary-navy); font-weight: 600; font-size: 1.2rem;">
+                        Third Party Logistics Specialists Based in Bangladesh
                     </p>
-                    <p>
-                        Farhan Logistics has established itself as a premier international freight forwarding and logistics 
-                        company, serving businesses across 150+ countries with unwavering commitment to quality, reliability, 
-                        and customer satisfaction.
+                    <p style="line-height: 1.8;">
+                        <strong>Farhan Logistics International Ltd.</strong> is a professional 3PL (Third Party Logistics) company based in Bangladesh, 
+                        specializing in both <strong>air and sea freight services</strong>, including <strong>FCL (Full Container Load)</strong> and <strong>LCL (Less than Container Load)</strong> 
+                        shipments.
                     </p>
-                    <p>
-                        With over 25 years of industry expertise, we specialize in comprehensive logistics solutions including 
-                        air freight, sea freight, road transportation, warehousing, and customs clearance. Our global network 
-                        of strategic partners ensures seamless cargo movement across continents.
+                    <p style="line-height: 1.8;">
+                        With specialized expertise in <strong>RMG (Ready-Made Garments)</strong>, handicrafts, agro products, and general cargo, 
+                        we provide seamless solutions for import and export operations.
                     </p>
-                    <p>
-                        Headquartered in Dubai, UAE, we leverage our strategic location to serve as a central logistics hub 
-                        connecting East and West, facilitating trade between Asia, Europe, Africa, and the Americas.
+                    <div class="mt-4">
+                        <a href="services.php" class="btn btn-primary-custom">
+                            <i class="bi bi-arrow-right-circle me-2"></i>Explore Our Services
+                        </a>
+                        <a href="contact.php" class="btn btn-outline-custom ms-2">
+                            <i class="bi bi-envelope me-2"></i>Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Highlights -->
+<section class="py-80 bg-light-custom">
+    <div class="container">
+        <div class="section-title mb-60" data-aos="fade-up">
+            <h2>Why Choose Farhan Logistics</h2>
+            <p>Key highlights that make us your trusted logistics partner</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Highlight 1 -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="bi bi-calendar-check"></i>
+                    </div>
+                    <h4>Since 2016</h4>
+                    <p>9+ years of proven excellence in logistics and freight forwarding industry</p>
+                </div>
+            </div>
+            
+            <!-- Highlight 2 -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="bi bi-globe-americas"></i>
+                    </div>
+                    <h4>Global Reach</h4>
+                    <p>Serving USA, UK, Australia, Canada, Europe, Africa, Middle-East, and Asia</p>
+                </div>
+            </div>
+            
+            <!-- Highlight 3 -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="bi bi-boxes"></i>
+                    </div>
+                    <h4>RMG Specialists</h4>
+                    <p>Expert handling of Ready-Made Garments, handicrafts, and agro products</p>
+                </div>
+            </div>
+            
+            <!-- Highlight 4 -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+                    <h4>Nominated Buyers</h4>
+                    <p>Trusted by nominated buyers from major international markets worldwide</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Comprehensive Services -->
+<section class="py-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=85" alt="Our Services" class="img-fluid rounded shadow-lg" 
+                     style="height: 450px; width: 100%; object-fit: cover;">
+            </div>
+            <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+                <div class="pe-lg-4">
+                    <h2 class="mb-4">Comprehensive Logistics Solutions</h2>
+                    <p class="lead mb-4" style="color: var(--primary-red);">
+                        End-to-End Services Backed by Global Network
                     </p>
+                    
+                    <div class="service-list">
+                        <div class="service-list-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <div>
+                                <h5>Air & Sea Freight</h5>
+                                <p>FCL and LCL shipments with competitive rates and reliable scheduling</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-list-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <div>
+                                <h5>Customs Clearance</h5>
+                                <p>Expert customs brokerage and compliance management</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-list-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <div>
+                                <h5>Commercial Documentation</h5>
+                                <p>Complete documentation support for international trade</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-list-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <div>
+                                <h5>Warehousing & Local Delivery</h5>
+                                <p>Secure storage facilities and efficient last-mile delivery</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-list-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <div>
+                                <h5>Global Agent Network</h5>
+                                <p>Reliable partnerships ensuring seamless international operations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Commitment -->
+<section class="py-100 section-navy">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10" data-aos="fade-up">
+                <div class="commitment-box">
+                    <div class="row align-items-center">
+                        <div class="col-md-2 text-center mb-4 mb-md-0">
+                            <i class="bi bi-award-fill" style="font-size: 5rem; color: var(--primary-red);"></i>
+                        </div>
+                        <div class="col-md-10">
+                            <h3 class="text-white mb-3">Our Commitment to Excellence</h3>
+                            <p class="text-white mb-0" style="font-size: 1.1rem; line-height: 1.8;">
+                                At Farhan Logistics, we are committed to maintaining <strong>high standards of transparency</strong>, 
+                                <strong>timely delivery</strong>, and <strong>customer satisfaction</strong>. Our management strives to build 
+                                long-term partnerships by offering <strong>tailored logistics solutions</strong> based on each client's unique 
+                                needs. We believe in creating value through reliable service, ethical practices, and continuous improvement.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -57,44 +205,45 @@ include 'includes/navbar.php';
 <!-- Mission & Vision -->
 <section class="py-100 bg-light-custom">
     <div class="container">
+        <div class="section-title mb-60" data-aos="fade-up">
+            <h2>Mission & Vision</h2>
+            <p>Guiding principles that drive our organization forward</p>
+        </div>
+        
         <div class="row g-4">
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="card-custom h-100">
-                    <div class="card-body p-5">
-                        <div class="text-center mb-4">
-                            <i class="bi bi-bullseye" style="font-size: 4rem; color: var(--primary-orange);"></i>
-                        </div>
-                        <h3 class="text-center mb-4">Our Mission</h3>
-                        <p class="text-center">
-                            To provide world-class logistics solutions that empower businesses to thrive in the global 
-                            marketplace. We are committed to delivering exceptional service through innovation, reliability, 
-                            and sustainable practices while maintaining the highest standards of safety and efficiency.
-                        </p>
-                        <p class="text-center">
-                            Our mission is to be the logistics partner of choice, creating value for our clients through 
-                            seamless supply chain management and unwavering dedication to excellence.
-                        </p>
+                <div class="mission-vision-card">
+                    <div class="mv-icon">
+                        <i class="bi bi-bullseye"></i>
                     </div>
+                    <h3>Our Mission</h3>
+                    <p>
+                        To provide world-class logistics solutions that empower businesses to thrive in the global 
+                        marketplace. We are committed to delivering exceptional service through innovation, reliability, 
+                        and sustainable practices while maintaining the highest standards of safety and efficiency.
+                    </p>
+                    <p class="mb-0">
+                        Our mission is to be the logistics partner of choice, creating value for our clients through 
+                        seamless supply chain management and unwavering dedication to excellence.
+                    </p>
                 </div>
             </div>
             
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="card-custom h-100">
-                    <div class="card-body p-5">
-                        <div class="text-center mb-4">
-                            <i class="bi bi-eye" style="font-size: 4rem; color: var(--primary-orange);"></i>
-                        </div>
-                        <h3 class="text-center mb-4">Our Vision</h3>
-                        <p class="text-center">
-                            To be recognized as the leading global logistics provider, setting industry standards for 
-                            innovation, sustainability, and customer satisfaction. We envision a future where international 
-                            trade flows seamlessly, enabled by cutting-edge technology and human expertise.
-                        </p>
-                        <p class="text-center">
-                            We strive to build lasting partnerships, contribute to global economic growth, and create 
-                            sustainable logistics solutions that benefit businesses, communities, and the environment.
-                        </p>
+                <div class="mission-vision-card">
+                    <div class="mv-icon">
+                        <i class="bi bi-eye"></i>
                     </div>
+                    <h3>Our Vision</h3>
+                    <p>
+                        To be recognized as the leading logistics provider in Bangladesh and beyond, setting industry 
+                        standards for innovation, sustainability, and customer satisfaction. We envision a future where 
+                        international trade flows seamlessly, enabled by cutting-edge technology and human expertise.
+                    </p>
+                    <p class="mb-0">
+                        We strive to build lasting partnerships, contribute to economic growth, and create sustainable 
+                        logistics solutions that benefit businesses, communities, and the environment.
+                    </p>
                 </div>
             </div>
         </div>
@@ -104,15 +253,15 @@ include 'includes/navbar.php';
 <!-- Core Values -->
 <section class="py-100">
     <div class="container">
-        <div class="section-title" data-aos="fade-up">
+        <div class="section-title mb-60" data-aos="fade-up">
             <h2>Our Core Values</h2>
             <p>Principles that guide every decision and action we take</p>
         </div>
         
         <div class="row g-4">
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="service-card">
-                    <div class="service-icon">
+                <div class="value-card">
+                    <div class="value-icon">
                         <i class="bi bi-award"></i>
                     </div>
                     <h4>Excellence</h4>
@@ -124,9 +273,9 @@ include 'includes/navbar.php';
             </div>
             
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="bi bi-heart"></i>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="bi bi-shield-check"></i>
                     </div>
                     <h4>Integrity</h4>
                     <p>
@@ -137,99 +286,27 @@ include 'includes/navbar.php';
             </div>
             
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="bi bi-lightbulb"></i>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="bi bi-clock-history"></i>
                     </div>
-                    <h4>Innovation</h4>
+                    <h4>Reliability</h4>
                     <p>
-                        Embracing technology and creative solutions to continuously improve our services 
-                        and operational efficiency.
+                        Timely delivery and consistent service quality that our clients can depend on, 
+                        every single time.
                     </p>
                 </div>
             </div>
             
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="service-card">
-                    <div class="service-icon">
+                <div class="value-card">
+                    <div class="value-icon">
                         <i class="bi bi-people"></i>
                     </div>
-                    <h4>Teamwork</h4>
+                    <h4>Partnership</h4>
                     <p>
-                        Collaboration, mutual respect, and shared success drive our team to achieve 
-                        remarkable results together.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Why Choose Us -->
-<section class="py-100 bg-navy text-white">
-    <div class="container">
-        <div class="section-title" data-aos="fade-up">
-            <h2 class="text-white">What Sets Us Apart</h2>
-            <p class="text-white opacity-75">Competitive advantages that make us your ideal logistics partner</p>
-        </div>
-        
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="text-center">
-                    <i class="bi bi-geo-alt" style="font-size: 3.5rem; color: var(--primary-orange);"></i>
-                    <h5 class="mt-3 mb-3">Strategic Location</h5>
-                    <p class="opacity-75">
-                        Dubai hub provides unparalleled access to Middle East, Asian, European, and African markets.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="text-center">
-                    <i class="bi bi-clipboard-check" style="font-size: 3.5rem; color: var(--primary-orange);"></i>
-                    <h5 class="mt-3 mb-3">ISO Certified</h5>
-                    <p class="opacity-75">
-                        Quality management systems certified to international standards ensuring consistent excellence.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="text-center">
-                    <i class="bi bi-headset" style="font-size: 3.5rem; color: var(--primary-orange);"></i>
-                    <h5 class="mt-3 mb-3">24/7 Support</h5>
-                    <p class="opacity-75">
-                        Round-the-clock customer service with dedicated account managers for seamless communication.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="text-center">
-                    <i class="bi bi-shield-lock" style="font-size: 3.5rem; color: var(--primary-orange);"></i>
-                    <h5 class="mt-3 mb-3">Cargo Security</h5>
-                    <p class="opacity-75">
-                        Comprehensive insurance coverage and advanced security protocols for your peace of mind.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <div class="text-center">
-                    <i class="bi bi-graph-up-arrow" style="font-size: 3.5rem; color: var(--primary-orange);"></i>
-                    <h5 class="mt-3 mb-3">Technology Driven</h5>
-                    <p class="opacity-75">
-                        Advanced tracking systems and digital platforms for real-time visibility and control.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                <div class="text-center">
-                    <i class="bi bi-cash-coin" style="font-size: 3.5rem; color: var(--primary-orange);"></i>
-                    <h5 class="mt-3 mb-3">Competitive Rates</h5>
-                    <p class="opacity-75">
-                        Best value propositions with flexible payment terms and volume-based discounts.
+                        Building long-term relationships through collaboration, trust, and mutual success 
+                        with every client.
                     </p>
                 </div>
             </div>
@@ -238,15 +315,22 @@ include 'includes/navbar.php';
 </section>
 
 <!-- CTA Section -->
-<section class="cta-banner">
+<section class="py-100 cta-section" style="background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-red) 100%);">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center" data-aos="zoom-in">
-                <h2>Partner with Industry Leaders</h2>
-                <p>Join thousands of satisfied clients who trust us with their global logistics needs.</p>
-                <div class="mt-4">
-                    <a href="contact.php" class="btn btn-primary-custom btn-lg me-3">Get in Touch</a>
-                    <a href="services.php" class="btn btn-outline-custom btn-lg">Explore Services</a>
+                <h2 class="text-white mb-4">Ready to Optimize Your Supply Chain?</h2>
+                <p class="text-white mb-5" style="font-size: 1.2rem;">
+                    Join numerous satisfied clients who trust Farhan Logistics for their international freight needs. 
+                    Let's discuss how we can support your business growth.
+                </p>
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <a href="quote.php" class="btn btn-light btn-lg px-5">
+                        <i class="bi bi-file-text me-2"></i>Request a Quote
+                    </a>
+                    <a href="contact.php" class="btn btn-outline-light btn-lg px-5">
+                        <i class="bi bi-telephone me-2"></i>Contact Us Today
+                    </a>
                 </div>
             </div>
         </div>

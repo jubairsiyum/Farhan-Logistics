@@ -29,6 +29,7 @@
                     <ul class="footer-links">
                         <li><a href="index.php">Home</a></li>
                         <li><a href="about.php">About Us</a></li>
+                        <li><a href="leadership.php">Leadership</a></li>
                         <li><a href="services.php">Services</a></li>
                         <li><a href="solutions.php">Solutions</a></li>
                         <li><a href="careers.php">Careers</a></li>
@@ -53,11 +54,11 @@
                     <ul class="footer-contact">
                         <li>
                             <i class="bi bi-geo-alt-fill"></i>
-                            <span>Dubai, United Arab Emirates<br>Office 123, Business Bay</span>
+                            <span>Dhaka, Bangladesh<br>[Office Address]</span>
                         </li>
                         <li>
                             <i class="bi bi-telephone-fill"></i>
-                            <span>+971 4 XXX XXXX</span>
+                            <span>+880 XXX-XXXXXXX</span>
                         </li>
                         <li>
                             <i class="bi bi-envelope-fill"></i>
@@ -65,7 +66,7 @@
                         </li>
                         <li>
                             <i class="bi bi-clock-fill"></i>
-                            <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+                            <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
                         </li>
                     </ul>
                 </div>
