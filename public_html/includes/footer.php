@@ -27,24 +27,36 @@
                 <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
                     <h5 class="footer-title">Quick Links</h5>
                     <ul class="footer-links">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about.php">About Us</a></li>
-                        <li><a href="leadership.php">Leadership</a></li>
-                        <li><a href="services.php">Services</a></li>
-                        <li><a href="solutions.php">Solutions</a></li>
-                        <li><a href="careers.php">Careers</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/leadership">Leadership</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/solutions">Solutions</a></li>
+                        <li><a href="/careers">Careers</a></li>
                     </ul>
                 </div>
                 
                 <!-- Services -->
-                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
                     <h5 class="footer-title">Our Services</h5>
                     <ul class="footer-links">
-                        <li><a href="services.php#air-freight">Air Freight</a></li>
-                        <li><a href="services.php#sea-freight">Sea Freight</a></li>
-                        <li><a href="services.php#road-transport">Road Transport</a></li>
-                        <li><a href="services.php#warehousing">Warehousing</a></li>
-                        <li><a href="services.php#customs">Customs Clearance</a></li>
+                        <li><a href="/services#freight">Freight Forwarding</a></li>
+                        <li><a href="/services#customs">Customs & Trade</a></li>
+                        <li><a href="/services#finance">Finance & Docs</a></li>
+                        <li><a href="/services#technology">Tech Support</a></li>
+                        <li><a href="/services#network">Global Network</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Industries & Partners -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-title">Industries Served</h5>
+                    <ul class="footer-links">
+                        <li><a href="/solutions">Leather & Footwear</a></li>
+                        <li><a href="/solutions">RMG & Textile Exporters</a></li>
+                        <li><a href="/solutions">FMCG & Retail Imports</a></li>
+                        <li><a href="/solutions">Electronics & Spare Parts</a></li>
+                        <li><a href="/solutions">Agriculture & Commodities</a></li>
                     </ul>
                 </div>
                 
@@ -69,6 +81,44 @@
                             <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
                         </li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Partnership Networks -->
+    <div class="py-4" style="background: rgba(47, 51, 141, 0.05); border-top: 1px solid rgba(47, 51, 141, 0.1);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12 mb-3">
+                    <h6 class="text-center mb-4" style="color: var(--primary-navy); font-weight: 600; letter-spacing: 1px;">CERTIFIED PARTNERSHIP NETWORKS</h6>
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center g-4">
+                <div class="col-lg-2 col-md-3 col-6 text-center">
+                    <div class="partnership-logo-card p-3 bg-white rounded shadow-sm h-100">
+                        <img src="https://via.placeholder.com/150x60/2f338d/ffffff?text=BAFFA" alt="BAFFA" class="img-fluid" style="max-height: 50px; object-fit: contain;">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 text-center">
+                    <div class="partnership-logo-card p-3 bg-white rounded shadow-sm h-100">
+                        <img src="https://via.placeholder.com/150x60/ec2025/ffffff?text=DF+Alliance" alt="DF Alliance" class="img-fluid" style="max-height: 50px; object-fit: contain;">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 text-center">
+                    <div class="partnership-logo-card p-3 bg-white rounded shadow-sm h-100">
+                        <img src="https://via.placeholder.com/150x60/2f338d/ffffff?text=GLA" alt="GLA" class="img-fluid" style="max-height: 50px; object-fit: contain;">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 text-center">
+                    <div class="partnership-logo-card p-3 bg-white rounded shadow-sm h-100">
+                        <img src="https://via.placeholder.com/150x60/ec2025/ffffff?text=UN+Network" alt="UN Network" class="img-fluid" style="max-height: 50px; object-fit: contain;">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 text-center">
+                    <div class="partnership-logo-card p-3 bg-white rounded shadow-sm h-100">
+                        <img src="https://via.placeholder.com/150x60/2f338d/ffffff?text=LogisticLeads" alt="LogisticLeads" class="img-fluid" style="max-height: 50px; object-fit: contain;">
+                    </div>
                 </div>
             </div>
         </div>

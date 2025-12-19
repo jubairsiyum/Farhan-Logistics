@@ -47,7 +47,7 @@ include 'includes/navbar.php';
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-orange me-2"></i> Real-Time Tracking</li>
                     </ul>
                     
-                    <a href="quote.php" class="btn btn-primary-custom mt-4">Request Air Freight Quote</a>
+                    <a href="/quote" class="btn btn-primary-custom mt-4">Request Air Freight Quote</a>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left">
@@ -85,7 +85,7 @@ include 'includes/navbar.php';
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-orange me-2"></i> Port-to-Port and Door-to-Door</li>
                     </ul>
                     
-                    <a href="quote.php" class="btn btn-primary-custom mt-4">Request Sea Freight Quote</a>
+                    <a href="/quote" class="btn btn-primary-custom mt-4">Request Sea Freight Quote</a>
                 </div>
             </div>
             <div class="col-lg-6 order-lg-1" data-aos="fade-right">
@@ -123,7 +123,7 @@ include 'includes/navbar.php';
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-orange me-2"></i> GPS Tracking on All Vehicles</li>
                     </ul>
                     
-                    <a href="quote.php" class="btn btn-primary-custom mt-4">Request Road Transport Quote</a>
+                    <a href="/quote" class="btn btn-primary-custom mt-4">Request Road Transport Quote</a>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left">
@@ -161,7 +161,7 @@ include 'includes/navbar.php';
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-orange me-2"></i> Order Fulfillment</li>
                     </ul>
                     
-                    <a href="quote.php" class="btn btn-primary-custom mt-4">Request Warehousing Quote</a>
+                    <a href="/quote" class="btn btn-primary-custom mt-4">Request Warehousing Quote</a>
                 </div>
             </div>
             <div class="col-lg-6 order-lg-1" data-aos="fade-right">
@@ -199,7 +199,7 @@ include 'includes/navbar.php';
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-orange me-2"></i> Certificate of Origin</li>
                     </ul>
                     
-                    <a href="contact.php" class="btn btn-primary-custom mt-4">Contact Customs Team</a>
+                    <a href="/contact" class="btn btn-primary-custom mt-4">Contact Customs Team</a>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left">
@@ -260,8 +260,8 @@ include 'includes/navbar.php';
                 <h2>Need a Custom Logistics Solution?</h2>
                 <p>Our experts are ready to design a tailored freight solution for your unique requirements.</p>
                 <div class="mt-4">
-                    <a href="quote.php" class="btn btn-primary-custom btn-lg me-3">Get Custom Quote</a>
-                    <a href="contact.php" class="btn btn-outline-custom btn-lg">Speak with Expert</a>
+                    <a href="/quote" class="btn btn-primary-custom btn-lg me-3">Get Custom Quote</a>
+                    <a href="/contact" class="btn btn-outline-custom btn-lg">Speak with Expert</a>
                 </div>
             </div>
         </div>

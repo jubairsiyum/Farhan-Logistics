@@ -292,8 +292,8 @@ include 'includes/navbar.php';
                 <h2>Ready to Start Your Shipment?</h2>
                 <p>Get an instant quote and experience world-class logistics service.</p>
                 <div class="mt-4">
-                    <a href="quote.php" class="btn btn-primary-custom btn-lg me-3">Get a Quote</a>
-                    <a href="services.php" class="btn btn-outline-custom btn-lg">View Services</a>
+                    <a href="/quote" class="btn btn-primary-custom btn-lg me-3">Get a Quote</a>
+                    <a href="/services" class="btn btn-outline-custom btn-lg">View Services</a>
                 </div>
             </div>
         </div>

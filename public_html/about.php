@@ -5,7 +5,7 @@ include 'includes/navbar.php';
 ?>
 
 <!-- Page Header -->
-<section class="hero-section" style="height: 50vh; min-height: 400px; background: linear-gradient(135deg, rgba(47, 51, 141, 0.9), rgba(236, 32, 37, 0.8)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=90') center/cover;">
+<section class="hero-section" style="height: 50vh; min-height: 400px; background: linear-gradient(135deg, rgba(47, 51, 141, 0.92), rgba(47, 51, 141, 0.75)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=90') center/cover;">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-lg-8">
@@ -45,10 +45,10 @@ include 'includes/navbar.php';
                         we provide seamless solutions for import and export operations.
                     </p>
                     <div class="mt-4">
-                        <a href="services.php" class="btn btn-primary-custom">
+                        <a href="/services" class="btn btn-primary-custom">
                             <i class="bi bi-arrow-right-circle me-2"></i>Explore Our Services
                         </a>
-                        <a href="contact.php" class="btn btn-outline-custom ms-2">
+                        <a href="/contact" class="btn btn-outline-custom ms-2">
                             <i class="bi bi-envelope me-2"></i>Contact Us
                         </a>
                     </div>
@@ -108,6 +108,111 @@ include 'includes/navbar.php';
                     </div>
                     <h4>Nominated Buyers</h4>
                     <p>Trusted by nominated buyers from major international markets worldwide</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Speed & Precision Section -->
+<section class="py-100" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="pe-lg-5">
+                    <div class="badge bg-danger text-white px-3 py-2 mb-3" style="font-size: 0.85rem; letter-spacing: 1px;">
+                        OUR STRENGTH
+                    </div>
+                    <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 700; color: var(--primary-navy);">
+                        Speed & Precision <br>in Every Shipment
+                    </h2>
+                    <p class="lead mb-4" style="color: #6c757d; line-height: 1.8; font-size: 1.15rem;">
+                        At <strong style="color: var(--primary-navy);">Farhan Logistics International Ltd.</strong>, we 
+                        prioritize speed and precision to deliver a seamless shipment experience. Our proactive approach 
+                        includes priority carrier bookings, expertly prepared customs documentation, and real-time 
+                        cargo tracking, supported by a dedicated operations team to ensure your goods move 
+                        swiftly from pickup to final delivery without any delays.
+                    </p>
+                    <p class="mb-4" style="color: #6c757d; line-height: 1.8; font-size: 1.05rem;">
+                        Leveraging strong partnerships with leading airlines and global shipping lines, we optimize 
+                        scheduling and minimize port congestion, enabling us to handle time-sensitive 
+                        consignments with utmost accuracy. Trust us to deliver your shipments exactly when and where 
+                        they are needed, <strong style="color: var(--primary-red);">every time</strong>.
+                    </p>
+                    
+                    <div class="row g-4 mt-4">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <div class="me-3" style="width: 60px; height: 60px; background: var(--primary-red); border-radius: 50%; 
+                                     display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-lightning-charge-fill text-white" style="font-size: 1.8rem;"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0" style="color: var(--primary-navy); font-weight: 700;">Priority</h5>
+                                    <small style="color: #6c757d;">Carrier Bookings</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <div class="me-3" style="width: 60px; height: 60px; background: var(--primary-red); border-radius: 50%; 
+                                     display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-radar text-white" style="font-size: 1.8rem;"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0" style="color: var(--primary-navy); font-weight: 700;">Real-Time</h5>
+                                    <small style="color: #6c757d;">Cargo Tracking</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <div class="me-3" style="width: 60px; height: 60px; background: var(--primary-red); border-radius: 50%; 
+                                     display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-file-earmark-check-fill text-white" style="font-size: 1.8rem;"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0" style="color: var(--primary-navy); font-weight: 700;">Expert</h5>
+                                    <small style="color: #6c757d;">Documentation</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <div class="me-3" style="width: 60px; height: 60px; background: var(--primary-red); border-radius: 50%; 
+                                     display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-people-fill text-white" style="font-size: 1.8rem;"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0" style="color: var(--primary-navy); font-weight: 700;">Dedicated</h5>
+                                    <small style="color: #6c757d;">Operations Team</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=90" 
+                         alt="Speed and Precision" class="img-fluid rounded shadow-lg" 
+                         style="height: 550px; width: 100%; object-fit: cover; border-radius: 15px !important;">
+                    
+                    <!-- Floating stat card -->
+                    <div class="position-absolute bottom-0 start-0 m-4 p-4 bg-white rounded shadow-lg" 
+                         style="max-width: 250px;" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-clock-history text-danger me-2" style="font-size: 2rem;"></i>
+                            <div>
+                                <h3 class="mb-0" style="color: var(--primary-navy); font-weight: 700;">99.8%</h3>
+                                <small style="color: #6c757d;">On-Time Delivery</small>
+                            </div>
+                        </div>
+                        <p class="mb-0 small" style="color: #6c757d;">
+                            Trusted by leading brands worldwide
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -325,10 +430,10 @@ include 'includes/navbar.php';
                     Let's discuss how we can support your business growth.
                 </p>
                 <div class="d-flex gap-3 justify-content-center flex-wrap">
-                    <a href="quote.php" class="btn btn-light btn-lg px-5">
+                    <a href="/quote" class="btn btn-light btn-lg px-5">
                         <i class="bi bi-file-text me-2"></i>Request a Quote
                     </a>
-                    <a href="contact.php" class="btn btn-outline-light btn-lg px-5">
+                    <a href="/contact" class="btn btn-outline-light btn-lg px-5">
                         <i class="bi bi-telephone me-2"></i>Contact Us Today
                     </a>
                 </div>

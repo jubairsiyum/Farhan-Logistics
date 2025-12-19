@@ -235,7 +235,7 @@ include 'includes/navbar.php';
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-orange me-2"></i> Turnkey Solutions</li>
                     </ul>
                     
-                    <a href="contact.php" class="btn btn-primary-custom mt-4">Discuss Your Project</a>
+                    <a href="/contact" class="btn btn-primary-custom mt-4">Discuss Your Project</a>
                 </div>
             </div>
             
@@ -299,8 +299,8 @@ include 'includes/navbar.php';
                 <h2>Find the Perfect Solution for Your Industry</h2>
                 <p>Let our industry specialists design a custom logistics strategy for your business.</p>
                 <div class="mt-4">
-                    <a href="quote.php" class="btn btn-primary-custom btn-lg me-3">Get Industry Quote</a>
-                    <a href="contact.php" class="btn btn-outline-custom btn-lg">Consult an Expert</a>
+                    <a href="/quote" class="btn btn-primary-custom btn-lg me-3">Get Industry Quote</a>
+                    <a href="/contact" class="btn btn-outline-custom btn-lg">Consult an Expert</a>
                 </div>
             </div>
         </div>

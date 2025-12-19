@@ -5,7 +5,7 @@ include 'includes/navbar.php';
 ?>
 
 <!-- Page Header -->
-<section class="hero-section" style="height: 50vh; min-height: 400px; background: linear-gradient(135deg, rgba(47, 51, 141, 0.9), rgba(236, 32, 37, 0.8)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1920&q=90') center/cover;">
+<section class="hero-section" style="height: 50vh; min-height: 400px; background: linear-gradient(135deg, rgba(47, 51, 141, 0.92), rgba(47, 51, 141, 0.75)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1920&q=90') center/cover;">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-lg-8">
@@ -284,7 +284,7 @@ include 'includes/navbar.php';
                                     <p><i class="bi bi-envelope-fill me-2"></i>info@farhanlogistics.com</p>
                                     <p><i class="bi bi-clock-fill me-2"></i>Mon - Sat: 9:00 AM - 6:00 PM</p>
                                 </div>
-                                <a href="contact.php" class="btn btn-primary-custom mt-3">
+                                <a href="/contact" class="btn btn-primary-custom mt-3">
                                     <i class="bi bi-arrow-right me-2"></i>Get Directions
                                 </a>
                             </div>
@@ -306,7 +306,7 @@ include 'includes/navbar.php';
                     We're always looking for talented individuals who share our passion for logistics excellence. 
                     Explore career opportunities with Farhan Logistics International Ltd.
                 </p>
-                <a href="careers.php" class="btn btn-primary-custom btn-lg">
+                <a href="/careers" class="btn btn-primary-custom btn-lg">
                     <i class="bi bi-briefcase me-2"></i>View Open Positions
                 </a>
             </div>

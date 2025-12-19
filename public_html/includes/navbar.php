@@ -27,7 +27,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 <!-- Main Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark main-navbar sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="/">
             <div class="brand-container">
                 <i class="bi bi-box-seam brand-icon"></i>
                 <div class="brand-text">
@@ -45,31 +45,31 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link <?php echo ($current_page == 'index.php') ? 'active' : ''; ?>" href="index.php">Home</a>
+                    <a class="nav-link <?php echo ($current_page == 'index.php') ? 'active' : ''; ?>" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php echo ($current_page == 'about.php') ? 'active' : ''; ?>" href="about.php">About Us</a>
+                    <a class="nav-link <?php echo ($current_page == 'about.php') ? 'active' : ''; ?>" href="/about">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php echo ($current_page == 'leadership.php') ? 'active' : ''; ?>" href="leadership.php">Leadership</a>
+                    <a class="nav-link <?php echo ($current_page == 'leadership.php') ? 'active' : ''; ?>" href="/leadership">Leadership</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php echo ($current_page == 'services.php') ? 'active' : ''; ?>" href="services.php">Services</a>
+                    <a class="nav-link <?php echo ($current_page == 'services.php') ? 'active' : ''; ?>" href="/services">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php echo ($current_page == 'solutions.php') ? 'active' : ''; ?>" href="solutions.php">Solutions</a>
+                    <a class="nav-link <?php echo ($current_page == 'solutions.php') ? 'active' : ''; ?>" href="/solutions">Solutions</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php echo ($current_page == 'tracking.php') ? 'active' : ''; ?>" href="tracking.php">Track Shipment</a>
+                    <a class="nav-link <?php echo ($current_page == 'tracking.php') ? 'active' : ''; ?>" href="/tracking">Track Shipment</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php echo ($current_page == 'careers.php') ? 'active' : ''; ?>" href="careers.php">Careers</a>
+                    <a class="nav-link <?php echo ($current_page == 'careers.php') ? 'active' : ''; ?>" href="/careers">Careers</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php echo ($current_page == 'contact.php') ? 'active' : ''; ?>" href="contact.php">Contact</a>
+                    <a class="nav-link <?php echo ($current_page == 'contact.php') ? 'active' : ''; ?>" href="/contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-primary-custom ms-lg-3" href="quote.php">Get Quote</a>
+                    <a class="btn btn-primary-custom ms-lg-3" href="/quote">Get Quote</a>
                 </li>
             </ul>
         </div>
@@ -90,18 +90,18 @@ $current_page = basename($_SERVER['PHP_SELF']);
     </div>
     <div class="offcanvas-body">
         <ul class="mobile-nav-links">
-            <li><a href="index.php" class="<?php echo ($current_page == 'index.php') ? 'active' : ''; ?>"><i class="bi bi-house-door me-3"></i>Home</a></li>
-            <li><a href="about.php" class="<?php echo ($current_page == 'about.php') ? 'active' : ''; ?>"><i class="bi bi-info-circle me-3"></i>About Us</a></li>
-            <li><a href="leadership.php" class="<?php echo ($current_page == 'leadership.php') ? 'active' : ''; ?>"><i class="bi bi-people me-3"></i>Leadership</a></li>
-            <li><a href="services.php" class="<?php echo ($current_page == 'services.php') ? 'active' : ''; ?>"><i class="bi bi-grid me-3"></i>Services</a></li>
-            <li><a href="solutions.php" class="<?php echo ($current_page == 'solutions.php') ? 'active' : ''; ?>"><i class="bi bi-gear me-3"></i>Solutions</a></li>
-            <li><a href="tracking.php" class="<?php echo ($current_page == 'tracking.php') ? 'active' : ''; ?>"><i class="bi bi-geo-alt me-3"></i>Track Shipment</a></li>
-            <li><a href="careers.php" class="<?php echo ($current_page == 'careers.php') ? 'active' : ''; ?>"><i class="bi bi-briefcase me-3"></i>Careers</a></li>
-            <li><a href="contact.php" class="<?php echo ($current_page == 'contact.php') ? 'active' : ''; ?>"><i class="bi bi-envelope me-3"></i>Contact</a></li>
+            <li><a href="/" class="<?php echo ($current_page == 'index.php') ? 'active' : ''; ?>"><i class="bi bi-house-door me-3"></i>Home</a></li>
+            <li><a href="/about" class="<?php echo ($current_page == 'about.php') ? 'active' : ''; ?>"><i class="bi bi-info-circle me-3"></i>About Us</a></li>
+            <li><a href="/leadership" class="<?php echo ($current_page == 'leadership.php') ? 'active' : ''; ?>"><i class="bi bi-people me-3"></i>Leadership</a></li>
+            <li><a href="/services" class="<?php echo ($current_page == 'services.php') ? 'active' : ''; ?>"><i class="bi bi-grid me-3"></i>Services</a></li>
+            <li><a href="/solutions" class="<?php echo ($current_page == 'solutions.php') ? 'active' : ''; ?>"><i class="bi bi-gear me-3"></i>Solutions</a></li>
+            <li><a href="/tracking" class="<?php echo ($current_page == 'tracking.php') ? 'active' : ''; ?>"><i class="bi bi-geo-alt me-3"></i>Track Shipment</a></li>
+            <li><a href="/careers" class="<?php echo ($current_page == 'careers.php') ? 'active' : ''; ?>"><i class="bi bi-briefcase me-3"></i>Careers</a></li>
+            <li><a href="/contact" class="<?php echo ($current_page == 'contact.php') ? 'active' : ''; ?>"><i class="bi bi-envelope me-3"></i>Contact</a></li>
         </ul>
         
         <div class="mobile-cta">
-            <a href="quote.php" class="btn btn-primary-custom w-100 mb-3">
+            <a href="/quote" class="btn btn-primary-custom w-100 mb-3">
                 <i class="bi bi-file-text me-2"></i>Get Quote
             </a>
         </div>
