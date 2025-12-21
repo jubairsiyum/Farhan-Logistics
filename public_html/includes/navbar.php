@@ -45,9 +45,6 @@ $current_page = basename($_SERVER['PHP_SELF'] ?? 'index.php');
                     <a class="nav-link <?php echo ($current_page == 'about.php') ? 'active' : ''; ?>" href="/about">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php echo ($current_page == 'leadership.php') ? 'active' : ''; ?>" href="/leadership">Leadership</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link <?php echo ($current_page == 'services.php') ? 'active' : ''; ?>" href="/services">Services</a>
                 </li>
                 <li class="nav-item">

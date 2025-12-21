@@ -421,6 +421,56 @@ section {
     transform: translateY(-2px);
 }
 
+/* Services Dropdown Styles */
+.navbar-nav .dropdown-menu {
+    background: var(--white);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    margin-top: 10px;
+    min-width: 280px;
+}
+
+.navbar-nav .dropdown-item {
+    color: var(--primary-navy);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background: linear-gradient(135deg, rgba(47, 51, 141, 0.08), rgba(236, 32, 37, 0.05));
+    color: var(--primary-red);
+    transform: translateX(5px);
+}
+
+.navbar-nav .dropdown-item i {
+    color: var(--primary-red);
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .dropdown-item:hover i {
+    transform: scale(1.2);
+}
+
+.navbar-nav .dropdown-divider {
+    margin: 10px 0;
+    border-color: rgba(47, 51, 141, 0.1);
+}
+
+.navbar-nav .dropdown-toggle::after {
+    margin-left: 6px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav .dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+}
+
 /* ========================================================================
    4.1 MOBILE OFFCANVAS MENU
    ======================================================================== */
@@ -1623,6 +1673,37 @@ textarea.form-control {
         justify-content: space-between;
     }
     
+    /* Mobile Dropdown Styles */
+    .navbar-nav .dropdown-menu {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        margin-top: 10px;
+        box-shadow: none;
+        border: 1px solid rgba(236, 32, 37, 0.3);
+    }
+    
+    .navbar-nav .dropdown-item {
+        color: var(--white);
+        padding: 12px 25px;
+        font-size: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .navbar-nav .dropdown-item:last-child {
+        border-bottom: none;
+    }
+    
+    .navbar-nav .dropdown-item:hover {
+        background: rgba(236, 32, 37, 0.2);
+        color: var(--primary-red);
+        border-left: 3px solid var(--primary-red);
+        padding-left: 28px;
+    }
+    
+    .navbar-nav .dropdown-divider {
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+    
     .nav-link:last-child {
         border-bottom: none;
     }
@@ -1768,6 +1849,32 @@ textarea.form-control {
     .footer-links li {
         text-align: center;
     }
+    
+    /* Leadership Section Mobile */
+    .leadership-card {
+        margin-bottom: 30px;
+    }
+    
+    .leader-img {
+        min-height: 300px;
+    }
+    
+    .leader-content {
+        padding: 25px 20px;
+    }
+    
+    .leader-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .leader-content .bio {
+        font-size: 0.95rem;
+    }
+    
+    .leader-details .contact-item {
+        margin-bottom: 15px;
+    }
+
     
     .footer-bottom {
         padding: 20px 0;
@@ -1917,6 +2024,10 @@ textarea.form-control {
     overflow: hidden;
     height: 100%;
     min-height: 350px;
+}
+
+.leader-img:hover .leader-overlay {
+    opacity: 1;
 }
 
 .leader-img img {
@@ -2170,6 +2281,24 @@ textarea.form-control {
 .py-100 {
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+.py-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.py-60 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+.bg-light-custom {
+    background-color: #f8f9fa;
 }
 
 /* Modern Enhancement Classes */
@@ -2576,4 +2705,158 @@ textarea.form-control {
 .partnership-logo-card:hover img {
     filter: grayscale(0%);
     transform: scale(1.05);
+}
+
+/* ========================================================================
+   SERVICE PAGES - PROFESSIONAL STYLING
+   ======================================================================== */
+.service-page-hero {
+    height: 60vh;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-icon-box {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-red), #c91d22);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(236, 32, 37, 0.3);
+    margin-bottom: 1.5rem;
+}
+
+.service-icon-box i {
+    font-size: 2.5rem;
+    color: var(--white);
+}
+
+.service-feature-card {
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--primary-red);
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.service-feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.service-feature-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(236, 32, 37, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.service-feature-icon i {
+    font-size: 1.8rem;
+    color: var(--primary-red);
+}
+
+.service-feature-card h5 {
+    color: var(--primary-navy);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.service-feature-card p {
+    color: #6c757d;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.service-overview-section {
+    padding: 100px 0;
+}
+
+.service-overview-img {
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.service-cta-section {
+    padding: 100px 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.section-badge {
+    background: linear-gradient(135deg, var(--primary-red), #c91d22);
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(236, 32, 37, 0.3);
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.text-orange {
+    color: var(--primary-red) !important;
+}
+
+/* Responsive adjustments for service pages */
+@media (max-width: 991px) {
+    .service-page-hero {
+        min-height: 450px;
+    }
+    
+    .service-icon-box {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .service-icon-box i {
+        font-size: 2rem;
+    }
+    
+    .service-overview-img {
+        height: 350px;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .service-page-hero {
+        min-height: 400px;
+    }
+    
+    .service-icon-box {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .service-icon-box i {
+        font-size: 1.75rem;
+    }
+    
+    .service-overview-img {
+        height: 300px;
+    }
+    
+    .service-feature-card {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
 }

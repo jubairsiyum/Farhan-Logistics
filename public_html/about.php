@@ -15,8 +15,8 @@ include 'includes/navbar.php';
             <div class="col-lg-9">
                 <div class="hero-content">
                     <span class="hero-badge" data-aos="fade-up" style="background: linear-gradient(135deg, var(--primary-red), #c91d22); padding: 0.6rem 1.5rem; border-radius: 50px; font-size: 0.85rem; letter-spacing: 1.5px; font-weight: 600; box-shadow: 0 4px 20px rgba(236, 32, 37, 0.35); display: inline-block;">EST. SEPTEMBER 2016</span>
-                    <h1 data-aos="fade-up" data-aos-delay="100" style="font-size: 3.5rem; font-weight: 700; margin-top: 1.5rem; text-shadow: 0 2px 25px rgba(0,0,0,0.3);">About Farhan Logistics</h1>
-                    <p data-aos="fade-up" data-aos-delay="200" style="font-size: 1.25rem; line-height: 1.8; margin-top: 1.5rem; opacity: 0.95; text-shadow: 0 1px 15px rgba(0,0,0,0.2); max-width: 800px;">
+                    <h1 data-aos="fade-up" data-aos-delay="100" style="font-size: 3.5rem; font-weight: 700; margin-top: 1.5rem; text-shadow: 0 2px 25px rgba(0,0,0,0.3); color: white;">About Farhan Logistics</h1>
+                    <p data-aos="fade-up" data-aos-delay="200" style="font-size: 1.25rem; line-height: 1.8; margin-top: 1.5rem; opacity: 0.95; text-shadow: 0 1px 15px rgba(0,0,0,0.2); max-width: 800px; color: white;">
                         Professional 3PL company specializing in air and sea freight services. Connecting businesses worldwide with reliable, efficient, and customer-focused logistics solutions.
                     </p>
                     <div data-aos="fade-up" data-aos-delay="300" style="margin-top: 2rem;">
@@ -71,56 +71,219 @@ include 'includes/navbar.php';
     </div>
 </section>
 
-<!-- Key Highlights -->
-<section class="py-80 bg-light-custom">
+<!-- Managing Director Section -->
+<section class="py-100 bg-light-custom">
     <div class="container">
         <div class="section-title mb-60" data-aos="fade-up">
-            <h2>Why Choose Farhan Logistics</h2>
-            <p>Key highlights that make us your trusted logistics partner</p>
+            <h2>Leadership</h2>
+            <p>Meet the visionary leader driving our success</p>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="leadership-card shadow-lg" data-aos="fade-up" data-aos-delay="100" 
+                     style="background: white; border-radius: 20px; overflow: hidden; border: none;">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-5">
+                            <div class="leader-img" style="position: relative; overflow: hidden; height: 100%; min-height: 450px;">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&q=85" 
+                                     alt="Md. Farhan Ahmed - Managing Director" 
+                                     style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                                <div class="leader-overlay" 
+                                     style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+                                            background: linear-gradient(135deg, rgba(47, 51, 141, 0.9), rgba(236, 32, 37, 0.85)); 
+                                            opacity: 0; transition: all 0.4s ease; display: flex; align-items: center; justify-content: center;">
+                                    <div class="social-links text-center">
+                                        <a href="mailto:farhan@farhanlogistics.com" class="text-white d-inline-block mx-2" 
+                                           style="font-size: 1.8rem; transition: transform 0.3s;" 
+                                           onmouseover="this.style.transform='scale(1.2)'" 
+                                           onmouseout="this.style.transform='scale(1)'">
+                                            <i class="bi bi-envelope-fill"></i>
+                                        </a>
+                                        <a href="#" class="text-white d-inline-block mx-2" 
+                                           style="font-size: 1.8rem; transition: transform 0.3s;" 
+                                           onmouseover="this.style.transform='scale(1.2)'" 
+                                           onmouseout="this.style.transform='scale(1)'">
+                                            <i class="bi bi-linkedin"></i>
+                                        </a>
+                                        <a href="tel:+880XXXXXXXXX" class="text-white d-inline-block mx-2" 
+                                           style="font-size: 1.8rem; transition: transform 0.3s;" 
+                                           onmouseover="this.style.transform='scale(1.2)'" 
+                                           onmouseout="this.style.transform='scale(1)'">
+                                            <i class="bi bi-telephone-fill"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="leader-content" style="padding: 3rem 2.5rem;">
+                                <div class="mb-4">
+                                    <span class="badge px-3 py-2" 
+                                          style="background: linear-gradient(135deg, var(--primary-red), #c91d22); 
+                                                 font-size: 0.75rem; letter-spacing: 1px; font-weight: 600;">
+                                        MANAGING DIRECTOR
+                                    </span>
+                                </div>
+                                <h3 class="mb-2" style="color: var(--primary-navy); font-size: 2rem; font-weight: 700;">
+                                    Md. Farhan Ahmed
+                                </h3>
+                                <p class="position mb-4" style="color: var(--primary-red); font-size: 1.1rem; font-weight: 600;">
+                                    Managing Director & CEO
+                                </p>
+                                <p class="bio mb-4" style="line-height: 1.9; color: #495057; font-size: 1.05rem;">
+                                    With over <strong style="color: var(--primary-navy);">15 years of expertise</strong> in logistics and international trade, 
+                                    Farhan leads our strategic vision and oversees all operations with a commitment to excellence and innovation. 
+                                    His deep understanding of freight forwarding, supply chain management, and international commerce has been 
+                                    instrumental in positioning <strong style="color: var(--primary-red);">Farhan Logistics International Ltd.</strong> 
+                                    as a trusted and reliable partner for businesses throughout Bangladesh and beyond.
+                                </p>
+                                <p class="bio mb-4" style="line-height: 1.9; color: #495057; font-size: 1.05rem;">
+                                    Under his leadership, the company has grown to serve major international markets including USA, UK, Australia, 
+                                    Canada, Europe, Africa, Middle-East, and Asia, specializing in RMG exports, handicrafts, and agro products.
+                                </p>
+                                
+                                <div class="leader-details mt-4 pt-4" style="border-top: 2px solid #f0f0f0;">
+                                    <div class="row g-3">
+                                        <div class="col-12">
+                                            <div class="contact-item d-flex align-items-center">
+                                                <div class="icon-box me-3" 
+                                                     style="width: 45px; height: 45px; background: rgba(236, 32, 37, 0.1); 
+                                                            border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                                    <i class="bi bi-envelope-fill" style="color: var(--primary-red); font-size: 1.2rem;"></i>
+                                                </div>
+                                                <div>
+                                                    <small style="color: #6c757d; font-size: 0.85rem; display: block; margin-bottom: 2px;">Email</small>
+                                                    <a href="mailto:farhan@farhanlogistics.com" 
+                                                       style="color: var(--primary-navy); font-weight: 600; text-decoration: none; font-size: 1rem;">
+                                                        farhan@farhanlogistics.com
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="contact-item d-flex align-items-center">
+                                                <div class="icon-box me-3" 
+                                                     style="width: 45px; height: 45px; background: rgba(47, 51, 141, 0.1); 
+                                                            border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                                    <i class="bi bi-telephone-fill" style="color: var(--primary-navy); font-size: 1.2rem;"></i>
+                                                </div>
+                                                <div>
+                                                    <small style="color: #6c757d; font-size: 0.85rem; display: block; margin-bottom: 2px;">Phone</small>
+                                                    <a href="tel:+880XXXXXXXXX" 
+                                                       style="color: var(--primary-navy); font-weight: 600; text-decoration: none; font-size: 1rem;">
+                                                        +880 XXX-XXXXXXX
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Highlights -->
+<section class="py-100" style="background: linear-gradient(135deg, rgba(20, 24, 82, 0.97), rgba(47, 51, 141, 0.95)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=90') center/cover fixed; position: relative; overflow: hidden;">
+    <!-- Decorative Elements -->
+    <div style="position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(236, 32, 37, 0.12), transparent); border-radius: 50%; animation: pulse 4s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: -120px; left: -120px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255, 255, 255, 0.03), transparent); border-radius: 50%;"></div>
+    <div style="position: absolute; top: 50%; right: 15%; width: 200px; height: 200px; background: radial-gradient(circle, rgba(236, 32, 37, 0.08), transparent); border-radius: 50%;"></div>
+    
+    <div class="container" style="position: relative; z-index: 2;">
+        <div class="section-title mb-60 text-center" data-aos="fade-up">
+            <div class="mb-3">
+                <span class="badge text-white px-4 py-2" style="background: linear-gradient(135deg, var(--primary-red), #c91d22); font-size: 0.8rem; letter-spacing: 1.5px; font-weight: 600; box-shadow: 0 4px 15px rgba(236, 32, 37, 0.3); display: inline-block;">
+                    WHY CHOOSE US
+                </span>
+            </div>
+            <h2 class="text-white mb-3" style="font-size: 2.75rem; font-weight: 700; text-shadow: 0 2px 20px rgba(0,0,0,0.3);">
+                Key Highlights That Set Us Apart
+            </h2>
+            <p class="text-white mx-auto" style="font-size: 1.15rem; max-width: 850px; line-height: 1.8; opacity: 0.95; text-shadow: 0 1px 10px rgba(0,0,0,0.2);">
+                Delivering exceptional logistics services with proven expertise, global reach, and unwavering commitment to your business success
+            </p>
         </div>
         
         <div class="row g-4">
             <!-- Highlight 1 -->
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="highlight-card">
-                    <div class="highlight-icon">
-                        <i class="bi bi-calendar-check"></i>
+                <div class="h-100 p-4 rounded-3" 
+                     style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.15); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 32px rgba(0,0,0,0.2); cursor: pointer;"
+                     onmouseover="this.style.transform='translateY(-12px) scale(1.02)'; this.style.background='rgba(255,255,255,0.18)'; this.style.borderColor='rgba(236,32,37,0.5)'; this.style.boxShadow='0 15px 45px rgba(236,32,37,0.25)';"
+                     onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.12)'; this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.2)';">
+                    <div class="text-center">
+                        <div class="mb-4" style="width: 100px; height: 100px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 12px 35px rgba(236, 32, 37, 0.4); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);"></div>
+                            <i class="bi bi-calendar-check text-white" style="font-size: 3rem; position: relative; z-index: 1;"></i>
+                        </div>
+                        <h4 class="mb-3 text-white" style="font-weight: 700; font-size: 1.35rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Since 2016</h4>
+                        <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.8; opacity: 0.92; text-shadow: 0 1px 5px rgba(0,0,0,0.2);">
+                            9+ years of proven excellence in logistics and freight forwarding industry with consistent service quality
+                        </p>
                     </div>
-                    <h4>Since 2016</h4>
-                    <p>9+ years of proven excellence in logistics and freight forwarding industry</p>
                 </div>
             </div>
             
             <!-- Highlight 2 -->
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="highlight-card">
-                    <div class="highlight-icon">
-                        <i class="bi bi-globe-americas"></i>
+                <div class="h-100 p-4 rounded-3" 
+                     style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.15); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 32px rgba(0,0,0,0.2); cursor: pointer;"
+                     onmouseover="this.style.transform='translateY(-12px) scale(1.02)'; this.style.background='rgba(255,255,255,0.18)'; this.style.borderColor='rgba(236,32,37,0.5)'; this.style.boxShadow='0 15px 45px rgba(236,32,37,0.25)';"
+                     onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.12)'; this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.2)';">
+                    <div class="text-center">
+                        <div class="mb-4" style="width: 100px; height: 100px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 12px 35px rgba(236, 32, 37, 0.4); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);"></div>
+                            <i class="bi bi-globe-americas text-white" style="font-size: 3rem; position: relative; z-index: 1;"></i>
+                        </div>
+                        <h4 class="mb-3 text-white" style="font-weight: 700; font-size: 1.35rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Global Reach</h4>
+                        <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.8; opacity: 0.92; text-shadow: 0 1px 5px rgba(0,0,0,0.2);">
+                            Serving USA, UK, Australia, Canada, Europe, Africa, Middle-East, and Asia with comprehensive logistics solutions
+                        </p>
                     </div>
-                    <h4>Global Reach</h4>
-                    <p>Serving USA, UK, Australia, Canada, Europe, Africa, Middle-East, and Asia</p>
                 </div>
             </div>
             
             <!-- Highlight 3 -->
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="highlight-card">
-                    <div class="highlight-icon">
-                        <i class="bi bi-boxes"></i>
+                <div class="h-100 p-4 rounded-3" 
+                     style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.15); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 32px rgba(0,0,0,0.2); cursor: pointer;"
+                     onmouseover="this.style.transform='translateY(-12px) scale(1.02)'; this.style.background='rgba(255,255,255,0.18)'; this.style.borderColor='rgba(236,32,37,0.5)'; this.style.boxShadow='0 15px 45px rgba(236,32,37,0.25)';"
+                     onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.12)'; this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.2)';">
+                    <div class="text-center">
+                        <div class="mb-4" style="width: 100px; height: 100px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 12px 35px rgba(236, 32, 37, 0.4); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);"></div>
+                            <i class="bi bi-boxes text-white" style="font-size: 3rem; position: relative; z-index: 1;"></i>
+                        </div>
+                        <h4 class="mb-3 text-white" style="font-weight: 700; font-size: 1.35rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">RMG Specialists</h4>
+                        <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.8; opacity: 0.92; text-shadow: 0 1px 5px rgba(0,0,0,0.2);">
+                            Expert handling of Ready-Made Garments, handicrafts, and agro products with specialized care and compliance
+                        </p>
                     </div>
-                    <h4>RMG Specialists</h4>
-                    <p>Expert handling of Ready-Made Garments, handicrafts, and agro products</p>
                 </div>
             </div>
             
             <!-- Highlight 4 -->
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="highlight-card">
-                    <div class="highlight-icon">
-                        <i class="bi bi-people-fill"></i>
+                <div class="h-100 p-4 rounded-3" 
+                     style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.15); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 32px rgba(0,0,0,0.2); cursor: pointer;"
+                     onmouseover="this.style.transform='translateY(-12px) scale(1.02)'; this.style.background='rgba(255,255,255,0.18)'; this.style.borderColor='rgba(236,32,37,0.5)'; this.style.boxShadow='0 15px 45px rgba(236,32,37,0.25)';"
+                     onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.12)'; this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.2)';">
+                    <div class="text-center">
+                        <div class="mb-4" style="width: 100px; height: 100px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 12px 35px rgba(236, 32, 37, 0.4); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);"></div>
+                            <i class="bi bi-people-fill text-white" style="font-size: 3rem; position: relative; z-index: 1;"></i>
+                        </div>
+                        <h4 class="mb-3 text-white" style="font-weight: 700; font-size: 1.35rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Nominated Buyers</h4>
+                        <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.8; opacity: 0.92; text-shadow: 0 1px 5px rgba(0,0,0,0.2);">
+                            Trusted by nominated buyers from major international markets worldwide with proven track record
+                        </p>
                     </div>
-                    <h4>Nominated Buyers</h4>
-                    <p>Trusted by nominated buyers from major international markets worldwide</p>
                 </div>
             </div>
         </div>
@@ -369,63 +532,97 @@ include 'includes/navbar.php';
 </section>
 
 <!-- Core Values -->
-<section class="py-100">
-    <div class="container">
-        <div class="section-title mb-60" data-aos="fade-up">
-            <h2>Our Core Values</h2>
-            <p>Principles that guide every decision and action we take</p>
+<section class="py-100" style="background: linear-gradient(135deg, rgba(20, 24, 82, 0.97), rgba(47, 51, 141, 0.95)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1920&q=90') center/cover fixed; position: relative; overflow: hidden;">
+    <!-- Decorative Elements -->
+    <div style="position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(236, 32, 37, 0.12), transparent); border-radius: 50%; animation: pulse 4s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: -120px; left: -120px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255, 255, 255, 0.03), transparent); border-radius: 50%;"></div>
+    <div style="position: absolute; top: 50%; right: 15%; width: 200px; height: 200px; background: radial-gradient(circle, rgba(236, 32, 37, 0.08), transparent); border-radius: 50%;"></div>
+    
+    <div class="container" style="position: relative; z-index: 2;">
+        <div class="section-title mb-60 text-center" data-aos="fade-up">
+            <div class="mb-3">
+                <span class="badge text-white px-4 py-2" style="background: linear-gradient(135deg, var(--primary-red), #c91d22); font-size: 0.8rem; letter-spacing: 1.5px; font-weight: 600; box-shadow: 0 4px 15px rgba(236, 32, 37, 0.3); display: inline-block;">
+                    OUR FOUNDATION
+                </span>
+            </div>
+            <h2 class="text-white mb-3" style="font-size: 2.75rem; font-weight: 700; text-shadow: 0 2px 20px rgba(0,0,0,0.3);">
+                Core Values That Guide Us
+            </h2>
+            <p class="text-white mx-auto" style="font-size: 1.15rem; max-width: 850px; line-height: 1.8; opacity: 0.95; text-shadow: 0 1px 10px rgba(0,0,0,0.2);">
+                Principles that guide every decision and action we take to ensure excellence and integrity in all our operations
+            </p>
         </div>
         
         <div class="row g-4">
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="bi bi-award"></i>
+                <div class="h-100 p-4 rounded-3" 
+                     style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.15); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 32px rgba(0,0,0,0.2); cursor: pointer;"
+                     onmouseover="this.style.transform='translateY(-12px) scale(1.02)'; this.style.background='rgba(255,255,255,0.18)'; this.style.borderColor='rgba(236,32,37,0.5)'; this.style.boxShadow='0 15px 45px rgba(236,32,37,0.25)';"
+                     onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.12)'; this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.2)';">
+                    <div class="text-center">
+                        <div class="mb-4" style="width: 100px; height: 100px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 12px 35px rgba(236, 32, 37, 0.4); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);"></div>
+                            <i class="bi bi-award text-white" style="font-size: 3rem; position: relative; z-index: 1;"></i>
+                        </div>
+                        <h4 class="mb-3 text-white" style="font-weight: 700; font-size: 1.35rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Excellence</h4>
+                        <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.8; opacity: 0.92; text-shadow: 0 1px 5px rgba(0,0,0,0.2);">
+                            We pursue excellence in every shipment, striving for perfection in service delivery and customer satisfaction with continuous improvement
+                        </p>
                     </div>
-                    <h4>Excellence</h4>
-                    <p>
-                        We pursue excellence in every shipment, striving for perfection in service delivery 
-                        and customer satisfaction.
-                    </p>
                 </div>
             </div>
             
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="bi bi-shield-check"></i>
+                <div class="h-100 p-4 rounded-3" 
+                     style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.15); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 32px rgba(0,0,0,0.2); cursor: pointer;"
+                     onmouseover="this.style.transform='translateY(-12px) scale(1.02)'; this.style.background='rgba(255,255,255,0.18)'; this.style.borderColor='rgba(236,32,37,0.5)'; this.style.boxShadow='0 15px 45px rgba(236,32,37,0.25)';"
+                     onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.12)'; this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.2)';">
+                    <div class="text-center">
+                        <div class="mb-4" style="width: 100px; height: 100px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 12px 35px rgba(236, 32, 37, 0.4); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);"></div>
+                            <i class="bi bi-shield-check text-white" style="font-size: 3rem; position: relative; z-index: 1;"></i>
+                        </div>
+                        <h4 class="mb-3 text-white" style="font-weight: 700; font-size: 1.35rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Integrity</h4>
+                        <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.8; opacity: 0.92; text-shadow: 0 1px 5px rgba(0,0,0,0.2);">
+                            Honesty, transparency, and ethical business practices are the foundation of our relationships with clients and partners worldwide
+                        </p>
                     </div>
-                    <h4>Integrity</h4>
-                    <p>
-                        Honesty, transparency, and ethical business practices are the foundation of our 
-                        relationships with clients and partners.
-                    </p>
                 </div>
             </div>
             
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="bi bi-clock-history"></i>
+                <div class="h-100 p-4 rounded-3" 
+                     style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.15); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 32px rgba(0,0,0,0.2); cursor: pointer;"
+                     onmouseover="this.style.transform='translateY(-12px) scale(1.02)'; this.style.background='rgba(255,255,255,0.18)'; this.style.borderColor='rgba(236,32,37,0.5)'; this.style.boxShadow='0 15px 45px rgba(236,32,37,0.25)';"
+                     onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.12)'; this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.2)';">
+                    <div class="text-center">
+                        <div class="mb-4" style="width: 100px; height: 100px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 12px 35px rgba(236, 32, 37, 0.4); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);"></div>
+                            <i class="bi bi-clock-history text-white" style="font-size: 3rem; position: relative; z-index: 1;"></i>
+                        </div>
+                        <h4 class="mb-3 text-white" style="font-weight: 700; font-size: 1.35rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Reliability</h4>
+                        <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.8; opacity: 0.92; text-shadow: 0 1px 5px rgba(0,0,0,0.2);">
+                            Timely delivery and consistent service quality that our clients can depend on, every single time, without compromise
+                        </p>
                     </div>
-                    <h4>Reliability</h4>
-                    <p>
-                        Timely delivery and consistent service quality that our clients can depend on, 
-                        every single time.
-                    </p>
                 </div>
             </div>
             
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="bi bi-people"></i>
+                <div class="h-100 p-4 rounded-3" 
+                     style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.15); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 32px rgba(0,0,0,0.2); cursor: pointer;"
+                     onmouseover="this.style.transform='translateY(-12px) scale(1.02)'; this.style.background='rgba(255,255,255,0.18)'; this.style.borderColor='rgba(236,32,37,0.5)'; this.style.boxShadow='0 15px 45px rgba(236,32,37,0.25)';"
+                     onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.12)'; this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.2)';">
+                    <div class="text-center">
+                        <div class="mb-4" style="width: 100px; height: 100px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 12px 35px rgba(236, 32, 37, 0.4); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);"></div>
+                            <i class="bi bi-people text-white" style="font-size: 3rem; position: relative; z-index: 1;"></i>
+                        </div>
+                        <h4 class="mb-3 text-white" style="font-weight: 700; font-size: 1.35rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Partnership</h4>
+                        <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.8; opacity: 0.92; text-shadow: 0 1px 5px rgba(0,0,0,0.2);">
+                            Building long-term relationships through collaboration, trust, and mutual success with every client and partner
+                        </p>
                     </div>
-                    <h4>Partnership</h4>
-                    <p>
-                        Building long-term relationships through collaboration, trust, and mutual success 
-                        with every client.
-                    </p>
                 </div>
             </div>
         </div>
