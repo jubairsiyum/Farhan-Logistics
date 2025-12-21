@@ -28,7 +28,7 @@
                         <li><a href="/leadership">Leadership</a></li>
                         <li><a href="/services">Services</a></li>
                         <li><a href="/solutions">Solutions</a></li>
-                        <li><a href="/careers">Careers</a></li>
+                        <li><a href="/success-stories">Success Stories</a></li>
                     </ul>
                 </div>
                 
@@ -90,7 +90,7 @@
                     TRUSTED BY INDUSTRY LEADERS
                 </span>
                 <h4 class="mb-2" style="color: var(--primary-navy); font-weight: 700; font-size: 1.5rem;">Certified Partnership Networks</h4>
-                <p class="text-muted mb-0" style="font-size: 0.95rem;">Collaborating with globally recognized organizations for seamless logistics excellence</p>
+                <p class="mb-0" style="font-size: 1rem; color: #495057; font-weight: 500; line-height: 1.6;">Collaborating with globally recognized organizations for seamless logistics excellence</p>
             </div>
             <div class="row justify-content-center align-items-center g-3 mb-3">
                 <div class="col-lg-2 col-md-3 col-4" data-aos="fade-up" data-aos-delay="50">

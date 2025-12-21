@@ -2859,4 +2859,134 @@ textarea.form-control {
         padding: 1.5rem;
         margin-bottom: 1.5rem;
     }
+    
+    /* Additional Mobile Responsiveness */
+    h1 {
+        font-size: 2.25rem !important;
+    }
+    
+    h2 {
+        font-size: 1.85rem !important;
+    }
+    
+    h3 {
+        font-size: 1.5rem !important;
+    }
+    
+    .hero-section {
+        min-height: 400px !important;
+        height: auto !important;
+        padding: 4rem 0;
+    }
+    
+    .section-title h2 {
+        font-size: 1.85rem !important;
+    }
+    
+    .section-title p {
+        font-size: 0.95rem !important;
+    }
+    
+    .py-100 {
+        padding: 60px 0 !important;
+    }
+    
+    .mb-60 {
+        margin-bottom: 40px !important;
+    }
+    
+    .btn-lg {
+        padding: 0.75rem 2rem !important;
+        font-size: 0.95rem !important;
+    }
+    
+    /* Card Responsiveness */
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Image Heights Mobile */
+    img[style*="height: 450px"],
+    img[style*="height: 550px"] {
+        height: 300px !important;
+    }
+    
+    /* Float badges mobile adjustment */
+    .position-absolute[style*="m-3"],
+    .position-absolute[style*="m-4"] {
+        margin: 0.75rem !important;
+        font-size: 0.75rem !important;
+        padding: 0.5rem 0.75rem !important;
+    }
+    
+    /* Partnership section mobile */
+    .col-4 {
+        padding: 0.5rem !important;
+    }
+    
+    /* Footer mobile */
+    .footer-title {
+        font-size: 1.1rem !important;
+        margin-top: 2rem;
+    }
+    
+    /* Testimonial cards */
+    .col-lg-4[data-aos] {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Stats and metrics */
+    [style*="font-size: 2.5rem"] {
+        font-size: 2rem !important;
+    }
+    
+    [style*="font-size: 3rem"] {
+        font-size: 2.25rem !important;
+    }
+    
+    [style*="font-size: 3.5rem"] {
+        font-size: 2.5rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Extra small devices */
+    h1 {
+        font-size: 1.85rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    .btn-lg {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.75rem;
+    }
+    
+    .d-flex.gap-3 {
+        flex-direction: column;
+        gap: 0.75rem !important;
+    }
+    
+    .hero-content p {
+        font-size: 1rem !important;
+    }
+    
+    /* Container padding */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* Partnership logos */
+    .col-4 img {
+        max-height: 40px !important;
+    }
+    
+    /* Navbar mobile */
+    .navbar-brand img {
+        height: 45px !important;
+    }
 }
