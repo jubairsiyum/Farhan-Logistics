@@ -182,49 +182,156 @@ include 'includes/navbar.php';
 </section>
 
 <!-- Industries Served -->
-<section class="py-100 section-navy text-white">
-    <div class="container">
-        <div class="section-title mb-60" data-aos="fade-up">
-            <h2 class="text-white">Industries We Serve</h2>
-            <p class="text-white opacity-75">Specialized logistics solutions across diverse sectors</p>
+<section class="py-100" style="background: linear-gradient(135deg, rgba(20, 24, 82, 0.97), rgba(47, 51, 141, 0.95)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=90') center/cover fixed; position: relative; overflow: hidden;">
+    <!-- Decorative Elements -->
+    <div style="position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(236, 32, 37, 0.12), transparent); border-radius: 50%; animation: pulse 4s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: -120px; left: -120px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255, 255, 255, 0.03), transparent); border-radius: 50%;"></div>
+    <div style="position: absolute; top: 50%; right: 15%; width: 200px; height: 200px; background: radial-gradient(circle, rgba(236, 32, 37, 0.08), transparent); border-radius: 50%;"></div>
+    
+    <div class="container" style="position: relative; z-index: 2;">
+        <div class="section-title mb-60 text-center" data-aos="fade-up">
+            <div class="mb-3">
+                <span class="badge text-white px-4 py-2" style="background: linear-gradient(135deg, var(--primary-red), #c91d22); font-size: 0.8rem; letter-spacing: 1.5px; font-weight: 600; box-shadow: 0 4px 15px rgba(236, 32, 37, 0.3); display: inline-block;">
+                    INDUSTRY EXPERTISE
+                </span>
+            </div>
+            <h2 class="text-white mb-3" style="font-size: 2.75rem; font-weight: 700; text-shadow: 0 2px 20px rgba(0,0,0,0.3);">
+                Industries We Serve with Excellence
+            </h2>
+            <p class="text-white mx-auto" style="font-size: 1.15rem; max-width: 850px; line-height: 1.8; opacity: 0.95; text-shadow: 0 1px 10px rgba(0,0,0,0.2);">
+                Delivering specialized logistics solutions across diverse sectors with industry-specific expertise, 
+                compliance knowledge, and tailored handling procedures that exceed expectations
+            </p>
         </div>
         
-        <div class="row g-4">
-            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="text-center p-3 bg-white bg-opacity-10 rounded h-100" style="backdrop-filter: blur(10px);">
-                    <i class="bi bi-handbag" style="font-size: 2.5rem; color: var(--primary-red);"></i>
-                    <h6 class="mt-3 mb-0">Leather & Footwear</h6>
+        <div class="row g-4 mb-5">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="h-100 p-4 rounded-3" 
+                     style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.15); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 32px rgba(0,0,0,0.2); cursor: pointer;"
+                     onmouseover="this.style.transform='translateY(-12px) scale(1.02)'; this.style.background='rgba(255,255,255,0.18)'; this.style.borderColor='rgba(236,32,37,0.5)'; this.style.boxShadow='0 15px 45px rgba(236,32,37,0.25)';"
+                     onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.12)'; this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.2)';">
+                    <div class="text-center">
+                        <div class="mb-4" style="width: 100px; height: 100px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 12px 35px rgba(236, 32, 37, 0.4); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);"></div>
+                            <i class="bi bi-handbag text-white" style="font-size: 3rem; position: relative; z-index: 1;"></i>
+                        </div>
+                        <h4 class="mb-3 text-white" style="font-weight: 700; font-size: 1.35rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Leather & Footwear</h4>
+                        <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.8; opacity: 0.92; text-shadow: 0 1px 5px rgba(0,0,0,0.2);">
+                            Temperature-controlled shipping and expert handling for premium leather goods, footwear collections, 
+                            and fashion accessories with quality preservation throughout transit
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="150">
-                <div class="text-center p-3 bg-white bg-opacity-10 rounded h-100" style="backdrop-filter: blur(10px);">
-                    <i class="bi bi-scissors" style="font-size: 2.5rem; color: var(--primary-red);"></i>
-                    <h6 class="mt-3 mb-0">RMG & Textile</h6>
+            
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+                <div class="h-100 p-4 rounded-3" 
+                     style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.15); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 32px rgba(0,0,0,0.2); cursor: pointer;"
+                     onmouseover="this.style.transform='translateY(-12px) scale(1.02)'; this.style.background='rgba(255,255,255,0.18)'; this.style.borderColor='rgba(236,32,37,0.5)'; this.style.boxShadow='0 15px 45px rgba(236,32,37,0.25)';"
+                     onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.12)'; this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.2)';">
+                    <div class="text-center">
+                        <div class="mb-4" style="width: 100px; height: 100px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 12px 35px rgba(236, 32, 37, 0.4); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);"></div>
+                            <i class="bi bi-scissors text-white" style="font-size: 3rem; position: relative; z-index: 1;"></i>
+                        </div>
+                        <h4 class="mb-3 text-white" style="font-weight: 700; font-size: 1.35rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">RMG & Textile</h4>
+                        <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.8; opacity: 0.92; text-shadow: 0 1px 5px rgba(0,0,0,0.2);">
+                            Specialized solutions for ready-made garments and textile shipments with efficient bulk handling, 
+                            on-hanger services, and compliance with international textile trade regulations
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="text-center p-3 bg-white bg-opacity-10 rounded h-100" style="backdrop-filter: blur(10px);">
-                    <i class="bi bi-cart" style="font-size: 2.5rem; color: var(--primary-red);"></i>
-                    <h6 class="mt-3 mb-0">FMCG & Retail</h6>
+            
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="h-100 p-4 rounded-3" 
+                     style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.15); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 32px rgba(0,0,0,0.2); cursor: pointer;"
+                     onmouseover="this.style.transform='translateY(-12px) scale(1.02)'; this.style.background='rgba(255,255,255,0.18)'; this.style.borderColor='rgba(236,32,37,0.5)'; this.style.boxShadow='0 15px 45px rgba(236,32,37,0.25)';"
+                     onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.12)'; this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.2)';">
+                    <div class="text-center">
+                        <div class="mb-4" style="width: 100px; height: 100px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 12px 35px rgba(236, 32, 37, 0.4); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);"></div>
+                            <i class="bi bi-cart text-white" style="font-size: 3rem; position: relative; z-index: 1;"></i>
+                        </div>
+                        <h4 class="mb-3 text-white" style="font-weight: 700; font-size: 1.35rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">FMCG & Retail</h4>
+                        <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.8; opacity: 0.92; text-shadow: 0 1px 5px rgba(0,0,0,0.2);">
+                            Fast-moving consumer goods distribution with time-sensitive delivery, inventory management, 
+                            and retail supply chain solutions ensuring products reach shelves fresh and on-time
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="250">
-                <div class="text-center p-3 bg-white bg-opacity-10 rounded h-100" style="backdrop-filter: blur(10px);">
-                    <i class="bi bi-cpu" style="font-size: 2.5rem; color: var(--primary-red);"></i>
-                    <h6 class="mt-3 mb-0">Electronics & Parts</h6>
+            
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+                <div class="h-100 p-4 rounded-3" 
+                     style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.15); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 32px rgba(0,0,0,0.2); cursor: pointer;"
+                     onmouseover="this.style.transform='translateY(-12px) scale(1.02)'; this.style.background='rgba(255,255,255,0.18)'; this.style.borderColor='rgba(236,32,37,0.5)'; this.style.boxShadow='0 15px 45px rgba(236,32,37,0.25)';"
+                     onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.12)'; this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.2)';">
+                    <div class="text-center">
+                        <div class="mb-4" style="width: 100px; height: 100px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 12px 35px rgba(236, 32, 37, 0.4); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);"></div>
+                            <i class="bi bi-cpu text-white" style="font-size: 3rem; position: relative; z-index: 1;"></i>
+                        </div>
+                        <h4 class="mb-3 text-white" style="font-weight: 700; font-size: 1.35rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Electronics & Parts</h4>
+                        <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.8; opacity: 0.92; text-shadow: 0 1px 5px rgba(0,0,0,0.2);">
+                            Secure transportation for high-value electronics, sensitive components, and tech products with 
+                            anti-static packaging, climate control, and comprehensive insurance coverage
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="text-center p-3 bg-white bg-opacity-10 rounded h-100" style="backdrop-filter: blur(10px);">
-                    <i class="bi bi-tree" style="font-size: 2.5rem; color: var(--primary-red);"></i>
-                    <h6 class="mt-3 mb-0">Agriculture</h6>
+            
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="h-100 p-4 rounded-3" 
+                     style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.15); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 32px rgba(0,0,0,0.2); cursor: pointer;"
+                     onmouseover="this.style.transform='translateY(-12px) scale(1.02)'; this.style.background='rgba(255,255,255,0.18)'; this.style.borderColor='rgba(236,32,37,0.5)'; this.style.boxShadow='0 15px 45px rgba(236,32,37,0.25)';"
+                     onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.12)'; this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.2)';">
+                    <div class="text-center">
+                        <div class="mb-4" style="width: 100px; height: 100px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 12px 35px rgba(236, 32, 37, 0.4); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);"></div>
+                            <i class="bi bi-tree text-white" style="font-size: 3rem; position: relative; z-index: 1;"></i>
+                        </div>
+                        <h4 class="mb-3 text-white" style="font-weight: 700; font-size: 1.35rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Agriculture & Food</h4>
+                        <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.8; opacity: 0.92; text-shadow: 0 1px 5px rgba(0,0,0,0.2);">
+                            Specialized handling for agricultural products, perishables, and food items with refrigerated 
+                            containers, rapid transit, and full compliance with phytosanitary regulations
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="350">
-                <div class="text-center p-3 bg-white bg-opacity-10 rounded h-100" style="backdrop-filter: blur(10px);">
-                    <i class="bi bi-box-seam" style="font-size: 2.5rem; color: var(--primary-red);"></i>
-                    <h6 class="mt-3 mb-0">Raw Commodities</h6>
+            
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
+                <div class="h-100 p-4 rounded-3" 
+                     style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.15); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 32px rgba(0,0,0,0.2); cursor: pointer;"
+                     onmouseover="this.style.transform='translateY(-12px) scale(1.02)'; this.style.background='rgba(255,255,255,0.18)'; this.style.borderColor='rgba(236,32,37,0.5)'; this.style.boxShadow='0 15px 45px rgba(236,32,37,0.25)';"
+                     onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.12)'; this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.2)';">
+                    <div class="text-center">
+                        <div class="mb-4" style="width: 100px; height: 100px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 12px 35px rgba(236, 32, 37, 0.4); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);"></div>
+                            <i class="bi bi-box-seam text-white" style="font-size: 3rem; position: relative; z-index: 1;"></i>
+                        </div>
+                        <h4 class="mb-3 text-white" style="font-weight: 700; font-size: 1.35rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Raw Commodities</h4>
+                        <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.8; opacity: 0.92; text-shadow: 0 1px 5px rgba(0,0,0,0.2);">
+                            Bulk cargo solutions for raw materials, metals, minerals, and industrial commodities with 
+                            heavy-lift capabilities, specialized equipment, and efficient loading/unloading operations
+                        </p>
+                    </div>
                 </div>
+            </div>
+        </div>
+        
+        <div class="text-center pt-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="d-inline-block px-5 py-4 rounded-3" style="background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.15);">
+                <p class="text-white mb-3" style="font-size: 1.1rem; font-weight: 500; line-height: 1.7; text-shadow: 0 1px 8px rgba(0,0,0,0.2);">
+                    <i class="bi bi-shield-check-fill me-2" style="color: var(--primary-red); font-size: 1.5rem; vertical-align: middle; filter: drop-shadow(0 2px 8px rgba(236,32,37,0.4));"></i>
+                    Each industry receives tailored logistics solutions backed by our expertise, global network, and commitment to excellence
+                </p>
+                <a href="/services" class="btn btn-lg px-5 py-3" 
+                   style="background: linear-gradient(135deg, var(--primary-red), #c91d22); border: none; color: white; font-weight: 600; letter-spacing: 0.5px; box-shadow: 0 8px 25px rgba(236, 32, 37, 0.35); transition: all 0.3s ease;"
+                   onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(236, 32, 37, 0.5)';"
+                   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(236, 32, 37, 0.35)';">
+                    <i class="bi bi-arrow-right-circle-fill me-2"></i>Explore All Services
+                </a>
             </div>
         </div>
     </div>
