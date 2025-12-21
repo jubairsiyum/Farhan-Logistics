@@ -5,15 +5,28 @@ include 'includes/navbar.php';
 ?>
 
 <!-- Page Header -->
-<section class="hero-section" style="height: 50vh; min-height: 400px;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
+<section class="hero-section" style="height: 60vh; min-height: 500px; background: linear-gradient(135deg, rgba(20, 24, 82, 0.97), rgba(47, 51, 141, 0.92)), url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&q=90') center/cover; position: relative; overflow: hidden;">
+    <!-- Decorative Elements -->
+    <div style="position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(236, 32, 37, 0.15), transparent); border-radius: 50%; animation: pulse 4s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: -120px; left: -120px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent); border-radius: 50%;"></div>
+    
+    <div class="container h-100" style="position: relative; z-index: 2;">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg-9">
                 <div class="hero-content">
-                    <h1 data-aos="fade-up">Get in Touch</h1>
-                    <p data-aos="fade-up" data-aos-delay="100">
-                        We're here to help with all your logistics needs. Contact our team today.
+                    <span class="hero-badge" data-aos="fade-up" style="background: linear-gradient(135deg, var(--primary-red), #c91d22); padding: 0.6rem 1.5rem; border-radius: 50px; font-size: 0.85rem; letter-spacing: 1.5px; font-weight: 600; box-shadow: 0 4px 20px rgba(236, 32, 37, 0.35); display: inline-block;">24/7 SUPPORT</span>
+                    <h1 data-aos="fade-up" data-aos-delay="100" style="font-size: 3.5rem; font-weight: 700; margin-top: 1.5rem; text-shadow: 0 2px 25px rgba(0,0,0,0.3);">Get in Touch</h1>
+                    <p data-aos="fade-up" data-aos-delay="200" style="font-size: 1.25rem; line-height: 1.8; margin-top: 1.5rem; opacity: 0.95; text-shadow: 0 1px 15px rgba(0,0,0,0.2); max-width: 850px;">
+                        We're here to help with all your logistics needs. Contact our dedicated team today for personalized solutions and expert guidance.
                     </p>
+                    <div data-aos="fade-up" data-aos-delay="300" style="margin-top: 2rem;">
+                        <a href="#contact-form" class="btn btn-primary-custom btn-lg me-3">
+                            <i class="bi bi-envelope me-2"></i>Send Message
+                        </a>
+                        <a href="/quote" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-file-text me-2"></i>Request Quote
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -21,7 +34,7 @@ include 'includes/navbar.php';
 </section>
 
 <!-- Contact Section -->
-<section class="py-100">
+<section id="contact-form" class="py-100">
     <div class="container">
         <div class="row g-5">
             <!-- Contact Information -->

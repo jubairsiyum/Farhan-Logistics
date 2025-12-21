@@ -5,15 +5,28 @@ include 'includes/navbar.php';
 ?>
 
 <!-- Page Header -->
-<section class="hero-section" style="height: 50vh; min-height: 400px; background: linear-gradient(135deg, rgba(47, 51, 141, 0.92), rgba(47, 51, 141, 0.75)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1920&q=90') center/cover;">
-    <div class="container h-100">
+<section class="hero-section" style="height: 60vh; min-height: 500px; background: linear-gradient(135deg, rgba(20, 24, 82, 0.97), rgba(47, 51, 141, 0.92)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1920&q=90') center/cover; position: relative; overflow: hidden;">
+    <!-- Decorative Elements -->
+    <div style="position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(236, 32, 37, 0.15), transparent); border-radius: 50%; animation: pulse 4s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: -120px; left: -120px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent); border-radius: 50%;"></div>
+    
+    <div class="container h-100" style="position: relative; z-index: 2;">
         <div class="row h-100 align-items-center">
-            <div class="col-lg-8">
+            <div class="col-lg-9">
                 <div class="hero-content">
-                    <h1 data-aos="fade-up">Leadership Team</h1>
-                    <p data-aos="fade-up" data-aos-delay="100">
-                        Meet the experienced professionals driving Farhan Logistics International Ltd. forward
+                    <span class="hero-badge" data-aos="fade-up" style="background: linear-gradient(135deg, var(--primary-red), #c91d22); padding: 0.6rem 1.5rem; border-radius: 50px; font-size: 0.85rem; letter-spacing: 1.5px; font-weight: 600; box-shadow: 0 4px 20px rgba(236, 32, 37, 0.35); display: inline-block;">OUR TEAM</span>
+                    <h1 data-aos="fade-up" data-aos-delay="100" style="font-size: 3.5rem; font-weight: 700; margin-top: 1.5rem; text-shadow: 0 2px 25px rgba(0,0,0,0.3);">Leadership Team</h1>
+                    <p data-aos="fade-up" data-aos-delay="200" style="font-size: 1.25rem; line-height: 1.8; margin-top: 1.5rem; opacity: 0.95; text-shadow: 0 1px 15px rgba(0,0,0,0.2); max-width: 850px;">
+                        Meet the experienced professionals driving Farhan Logistics International Ltd. forward with vision, dedication, and decades of combined industry expertise.
                     </p>
+                    <div data-aos="fade-up" data-aos-delay="300" style="margin-top: 2rem;">
+                        <a href="#team-intro" class="btn btn-primary-custom btn-lg me-3">
+                            <i class="bi bi-arrow-down-circle me-2"></i>Meet The Team
+                        </a>
+                        <a href="/careers" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-briefcase me-2"></i>Join Us
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -21,7 +34,7 @@ include 'includes/navbar.php';
 </section>
 
 <!-- Leadership Introduction -->
-<section class="py-100">
+<section id="team-intro" class="py-100">
     <div class="container">
         <div class="section-title" data-aos="fade-up">
             <h2>Our Management Team</h2>

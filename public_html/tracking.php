@@ -5,15 +5,28 @@ include 'includes/navbar.php';
 ?>
 
 <!-- Page Header -->
-<section class="hero-section" style="height: 50vh; min-height: 400px;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
+<section class="hero-section" style="height: 60vh; min-height: 500px; background: linear-gradient(135deg, rgba(20, 24, 82, 0.97), rgba(47, 51, 141, 0.92)), url('https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=1920&q=90') center/cover; position: relative; overflow: hidden;">
+    <!-- Decorative Elements -->
+    <div style="position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(236, 32, 37, 0.15), transparent); border-radius: 50%; animation: pulse 4s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: -120px; left: -120px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent); border-radius: 50%;"></div>
+    
+    <div class="container h-100" style="position: relative; z-index: 2;">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg-9">
                 <div class="hero-content">
-                    <h1 data-aos="fade-up">Track Your Shipment</h1>
-                    <p data-aos="fade-up" data-aos-delay="100">
-                        Real-time tracking and visibility for your cargo anywhere in the world.
+                    <span class="hero-badge" data-aos="fade-up" style="background: linear-gradient(135deg, var(--primary-red), #c91d22); padding: 0.6rem 1.5rem; border-radius: 50px; font-size: 0.85rem; letter-spacing: 1.5px; font-weight: 600; box-shadow: 0 4px 20px rgba(236, 32, 37, 0.35); display: inline-block;">REAL-TIME VISIBILITY</span>
+                    <h1 data-aos="fade-up" data-aos-delay="100" style="font-size: 3.5rem; font-weight: 700; margin-top: 1.5rem; text-shadow: 0 2px 25px rgba(0,0,0,0.3);">Track Your Shipment</h1>
+                    <p data-aos="fade-up" data-aos-delay="200" style="font-size: 1.25rem; line-height: 1.8; margin-top: 1.5rem; opacity: 0.95; text-shadow: 0 1px 15px rgba(0,0,0,0.2); max-width: 850px;">
+                        Real-time tracking and complete visibility for your cargo anywhere in the world. Stay informed with instant updates and detailed shipment status information.
                     </p>
+                    <div data-aos="fade-up" data-aos-delay="300" style="margin-top: 2rem;">
+                        <a href="#tracking-form" class="btn btn-primary-custom btn-lg me-3">
+                            <i class="bi bi-search me-2"></i>Track Now
+                        </a>
+                        <a href="/contact" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-headset me-2"></i>Get Support
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -21,13 +34,13 @@ include 'includes/navbar.php';
 </section>
 
 <!-- Tracking Section -->
-<section class="py-100 form-section">
+<section id="tracking-form" class="py-100 form-section">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="tracking-container" data-aos="fade-up">
                     <div class="text-center mb-4">
-                        <i class="bi bi-geo-alt" style="font-size: 4rem; color: var(--primary-orange);"></i>
+                        <i class="bi bi-geo-alt" style="font-size: 4rem; color: var(--primary-red);"></i>
                         <h2 class="mt-3 mb-3">Shipment Tracking</h2>
                         <p class="text-muted">
                             Enter your tracking number to get real-time updates on your shipment status and location.
