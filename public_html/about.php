@@ -38,30 +38,53 @@ include 'includes/navbar.php';
     <div class="container">
         <div class="row align-items-center mb-5">
             <div class="col-lg-6" data-aos="fade-right">
-                <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?w=800&q=85" alt="Farhan Logistics International" class="img-fluid rounded shadow-lg" 
-                     style="height: 500px; width: 100%; object-fit: cover;">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?w=800&q=85" 
+                         alt="Farhan Logistics International" 
+                         class="img-fluid rounded shadow-lg" 
+                         style="height: 500px; width: 100%; object-fit: cover; border-radius: 15px !important;">
+                    <!-- Floating badge -->
+                    <div class="position-absolute top-0 end-0 m-3 p-3" 
+                         style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9)); 
+                                backdrop-filter: blur(10px); border-radius: 15px; box-shadow: 0 8px 32px rgba(0,0,0,0.15);"
+                         data-aos="zoom-in" data-aos-delay="300">
+                        <div class="text-center">
+                            <h4 class="mb-0" style="color: var(--primary-navy); font-weight: 700; font-size: 1.5rem;">9+</h4>
+                            <small style="color: #6c757d; font-weight: 600;">Years</small>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left">
                 <div class="ps-lg-4">
-                    <span class="badge bg-primary-red text-white px-3 py-2 mb-3" style="background: var(--primary-red); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.5px;">Est. September 2016</span>
-                    <h2 class="mb-4">Professional 3PL Excellence</h2>
-                    <p class="lead" style="color: var(--primary-navy); font-weight: 600; font-size: 1.2rem;">
+                    <div class="mb-3">
+                        <span class="badge text-white px-3 py-2" 
+                              style="background: linear-gradient(135deg, var(--primary-red), #c91d22); 
+                                     font-size: 0.85rem; letter-spacing: 1px; font-weight: 600; 
+                                     box-shadow: 0 4px 15px rgba(236, 32, 37, 0.3);">
+                            EST. SEPTEMBER 2016
+                        </span>
+                    </div>
+                    <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 700; color: var(--primary-navy);">
+                        Professional 3PL Excellence
+                    </h2>
+                    <p class="lead mb-4" style="color: var(--primary-red); font-weight: 600; font-size: 1.2rem;">
                         Third Party Logistics Specialists Based in Bangladesh
                     </p>
-                    <p style="line-height: 1.8;">
-                        <strong>Farhan Logistics International Ltd.</strong> is a professional 3PL (Third Party Logistics) company based in Bangladesh, 
-                        specializing in both <strong>air and sea freight services</strong>, including <strong>FCL (Full Container Load)</strong> and <strong>LCL (Less than Container Load)</strong> 
+                    <p class="mb-4" style="line-height: 1.8; color: #495057; font-size: 1.05rem;">
+                        <strong style="color: var(--primary-navy);">Farhan Logistics International Ltd.</strong> is a professional 3PL (Third Party Logistics) company based in Bangladesh, 
+                        specializing in both <strong style="color: var(--primary-navy);">air and sea freight services</strong>, including <strong>FCL (Full Container Load)</strong> and <strong>LCL (Less than Container Load)</strong> 
                         shipments.
                     </p>
-                    <p style="line-height: 1.8;">
-                        With specialized expertise in <strong>RMG (Ready-Made Garments)</strong>, handicrafts, agro products, and general cargo, 
+                    <p class="mb-4" style="line-height: 1.8; color: #495057; font-size: 1.05rem;">
+                        With specialized expertise in <strong style="color: var(--primary-red);">RMG (Ready-Made Garments)</strong>, handicrafts, agro products, and general cargo, 
                         we provide seamless solutions for import and export operations.
                     </p>
                     <div class="mt-4">
-                        <a href="/services" class="btn btn-primary-custom">
+                        <a href="/services" class="btn btn-primary-custom btn-lg">
                             <i class="bi bi-arrow-right-circle me-2"></i>Explore Our Services
                         </a>
-                        <a href="/contact" class="btn btn-outline-custom ms-2">
+                        <a href="/contact" class="btn btn-outline-custom btn-lg ms-2">
                             <i class="bi bi-envelope me-2"></i>Contact Us
                         </a>
                     </div>
@@ -458,25 +481,34 @@ include 'includes/navbar.php';
 </section>
 
 <!-- Our Commitment -->
-<section class="py-100 section-navy">
-    <div class="container">
+<section class="py-100" style="background: linear-gradient(135deg, rgba(20, 24, 82, 0.97), rgba(47, 51, 141, 0.95)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=90') center/cover fixed; position: relative; overflow: hidden;">
+    <!-- Decorative Elements -->
+    <div style="position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(236, 32, 37, 0.15), transparent); border-radius: 50%; animation: pulse 4s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: -120px; left: -120px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent); border-radius: 50%;"></div>
+    
+    <div class="container" style="position: relative; z-index: 2;">
         <div class="row justify-content-center">
             <div class="col-lg-10" data-aos="fade-up">
-                <div class="commitment-box">
-                    <div class="row align-items-center">
-                        <div class="col-md-2 text-center mb-4 mb-md-0">
-                            <i class="bi bi-award-fill" style="font-size: 5rem; color: var(--primary-red);"></i>
+                <div class="p-5 rounded-3" 
+                     style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(15px); 
+                            border: 2px solid rgba(255,255,255,0.2); box-shadow: 0 12px 48px rgba(0,0,0,0.3);">
+                    <div class="text-center mb-4">
+                        <div class="mb-4 d-inline-flex align-items-center justify-content-center" 
+                             style="width: 120px; height: 120px; background: linear-gradient(135deg, var(--primary-red), #c91d22); 
+                                    border-radius: 50%; box-shadow: 0 15px 50px rgba(236, 32, 37, 0.4);">
+                            <i class="bi bi-award-fill text-white" style="font-size: 4rem;"></i>
                         </div>
-                        <div class="col-md-10">
-                            <h3 class="text-white mb-3">Our Commitment to Excellence</h3>
-                            <p class="text-white mb-0" style="font-size: 1.1rem; line-height: 1.8;">
-                                At Farhan Logistics, we are committed to maintaining <strong>high standards of transparency</strong>, 
-                                <strong>timely delivery</strong>, and <strong>customer satisfaction</strong>. Our management strives to build 
-                                long-term partnerships by offering <strong>tailored logistics solutions</strong> based on each client's unique 
-                                needs. We believe in creating value through reliable service, ethical practices, and continuous improvement.
-                            </p>
-                        </div>
+                        <h3 class="text-white mb-4" style="font-size: 2.5rem; font-weight: 700; text-shadow: 0 2px 15px rgba(0,0,0,0.2);">
+                            Our Commitment to Excellence
+                        </h3>
                     </div>
+                    <p class="text-white mb-0 text-center" 
+                       style="font-size: 1.2rem; line-height: 2; opacity: 0.95; text-shadow: 0 1px 10px rgba(0,0,0,0.2); max-width: 900px; margin: 0 auto;">
+                        At Farhan Logistics, we are committed to maintaining <strong style="color: var(--primary-red); text-shadow: 0 0 10px rgba(236, 32, 37, 0.5);">high standards of transparency</strong>, 
+                        <strong style="color: var(--primary-red); text-shadow: 0 0 10px rgba(236, 32, 37, 0.5);">timely delivery</strong>, and <strong style="color: var(--primary-red); text-shadow: 0 0 10px rgba(236, 32, 37, 0.5);">customer satisfaction</strong>. 
+                        Our management strives to build long-term partnerships by offering <strong style="color: var(--primary-red); text-shadow: 0 0 10px rgba(236, 32, 37, 0.5);">tailored logistics solutions</strong> 
+                        based on each client's unique needs. We believe in creating value through reliable service, ethical practices, and continuous improvement.
+                    </p>
                 </div>
             </div>
         </div>
@@ -487,23 +519,32 @@ include 'includes/navbar.php';
 <section class="py-100 bg-light-custom">
     <div class="container">
         <div class="section-title mb-60" data-aos="fade-up">
-            <h2>Mission & Vision</h2>
-            <p>Guiding principles that drive our organization forward</p>
+            <div class="mb-3">
+                <span class="badge px-4 py-2" style="background: linear-gradient(135deg, var(--primary-red), #c91d22); font-size: 0.8rem; letter-spacing: 1.5px; font-weight: 600; box-shadow: 0 4px 15px rgba(236, 32, 37, 0.3); display: inline-block; color: white;">
+                    OUR PURPOSE
+                </span>
+            </div>
+            <h2 style="font-size: 2.75rem; font-weight: 700; color: var(--primary-navy);">Mission & Vision</h2>
+            <p style="font-size: 1.15rem; color: #6c757d;">Guiding principles that drive our organization forward</p>
         </div>
         
         <div class="row g-4">
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="mission-vision-card">
-                    <div class="mv-icon">
-                        <i class="bi bi-bullseye"></i>
+                <div class="h-100 p-5 bg-white rounded-3 shadow-lg" 
+                     style="border: 2px solid rgba(47, 51, 141, 0.1); transition: all 0.4s ease; position: relative; overflow: hidden;"
+                     onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 50px rgba(47, 51, 141, 0.15)'; this.style.borderColor='var(--primary-navy)';"
+                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.1)'; this.style.borderColor='rgba(47, 51, 141, 0.1)';">
+                    <div class="position-absolute top-0 end-0 m-4" style="width: 80px; height: 80px; background: linear-gradient(135deg, rgba(47, 51, 141, 0.05), rgba(236, 32, 37, 0.05)); border-radius: 50%;"></div>
+                    <div class="mb-4" style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-navy), rgba(47, 51, 141, 0.9)); border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(47, 51, 141, 0.3);">
+                        <i class="bi bi-bullseye text-white" style="font-size: 2.5rem;"></i>
                     </div>
-                    <h3>Our Mission</h3>
-                    <p>
+                    <h3 class="mb-4" style="color: var(--primary-navy); font-size: 2rem; font-weight: 700;">Our Mission</h3>
+                    <p style="line-height: 1.9; color: #495057; font-size: 1.05rem; margin-bottom: 1.25rem;">
                         To provide world-class logistics solutions that empower businesses to thrive in the global 
                         marketplace. We are committed to delivering exceptional service through innovation, reliability, 
                         and sustainable practices while maintaining the highest standards of safety and efficiency.
                     </p>
-                    <p class="mb-0">
+                    <p class="mb-0" style="line-height: 1.9; color: #495057; font-size: 1.05rem;">
                         Our mission is to be the logistics partner of choice, creating value for our clients through 
                         seamless supply chain management and unwavering dedication to excellence.
                     </p>
@@ -511,17 +552,21 @@ include 'includes/navbar.php';
             </div>
             
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="mission-vision-card">
-                    <div class="mv-icon">
-                        <i class="bi bi-eye"></i>
+                <div class="h-100 p-5 bg-white rounded-3 shadow-lg" 
+                     style="border: 2px solid rgba(236, 32, 37, 0.1); transition: all 0.4s ease; position: relative; overflow: hidden;"
+                     onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 50px rgba(236, 32, 37, 0.15)'; this.style.borderColor='var(--primary-red)';"
+                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.1)'; this.style.borderColor='rgba(236, 32, 37, 0.1)';">
+                    <div class="position-absolute top-0 end-0 m-4" style="width: 80px; height: 80px; background: linear-gradient(135deg, rgba(236, 32, 37, 0.05), rgba(47, 51, 141, 0.05)); border-radius: 50%;"></div>
+                    <div class="mb-4" style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-red), #c91d22); border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(236, 32, 37, 0.3);">
+                        <i class="bi bi-eye text-white" style="font-size: 2.5rem;"></i>
                     </div>
-                    <h3>Our Vision</h3>
-                    <p>
+                    <h3 class="mb-4" style="color: var(--primary-navy); font-size: 2rem; font-weight: 700;">Our Vision</h3>
+                    <p style="line-height: 1.9; color: #495057; font-size: 1.05rem; margin-bottom: 1.25rem;">
                         To be recognized as the leading logistics provider in Bangladesh and beyond, setting industry 
                         standards for innovation, sustainability, and customer satisfaction. We envision a future where 
                         international trade flows seamlessly, enabled by cutting-edge technology and human expertise.
                     </p>
-                    <p class="mb-0">
+                    <p class="mb-0" style="line-height: 1.9; color: #495057; font-size: 1.05rem;">
                         We strive to build lasting partnerships, contribute to economic growth, and create sustainable 
                         logistics solutions that benefit businesses, communities, and the environment.
                     </p>
