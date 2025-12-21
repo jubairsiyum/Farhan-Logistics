@@ -1,6 +1,6 @@
 <?php
-// Get current page name for active menu highlighting
-$current_page = basename($_SERVER['PHP_SELF']);
+// Determine the active menu item from PHP_SELF
+$current_page = basename($_SERVER['PHP_SELF'] ?? 'index.php');
 ?>
 
 <!-- Top Contact Bar (Desktop Only) -->
@@ -28,13 +28,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 <nav class="navbar navbar-expand-lg navbar-dark main-navbar sticky-top">
     <div class="container">
         <a class="navbar-brand" href="/">
-            <div class="brand-container">
-                <i class="bi bi-box-seam brand-icon"></i>
-                <div class="brand-text">
-                    <span class="brand-name">FARHAN</span>
-                    <span class="brand-tagline">LOGISTICS</span>
-                </div>
-            </div>
+            <img src="/assets/images/logo.svg" alt="Farhan Logistics International Ltd." class="navbar-logo" style="height: 60px; width: auto; object-fit: contain;">
         </a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
@@ -79,13 +73,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 <!-- Mobile Offcanvas Menu -->
 <div class="offcanvas offcanvas-end mobile-menu" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
     <div class="offcanvas-header">
-        <div class="brand-container">
-            <i class="bi bi-box-seam brand-icon"></i>
-            <div class="brand-text">
-                <span class="brand-name">FARHAN</span>
-                <span class="brand-tagline">LOGISTICS</span>
-            </div>
-        </div>
+        <img src="/assets/images/logo.svg" alt="Farhan Logistics" class="mobile-logo" style="height: 50px; width: auto; object-fit: contain;">
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">

@@ -6,11 +6,7 @@
                 <!-- Company Info -->
                 <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
                     <div class="footer-brand mb-4">
-                        <i class="bi bi-box-seam brand-icon"></i>
-                        <div class="brand-text">
-                            <span class="brand-name">FARHAN</span>
-                            <span class="brand-tagline">LOGISTICS</span>
-                        </div>
+                        <img src="/assets/images/logo.svg" alt="Farhan Logistics International Ltd." style="height: 60px; width: auto; object-fit: contain;">
                     </div>
                     <p class="footer-description">
                         Your trusted partner in global logistics. We deliver excellence across air, sea, and land freight solutions with unwavering commitment to quality and reliability.
@@ -96,28 +92,28 @@
             </div>
             <div class="row justify-content-center align-items-center g-4">
                 <div class="col-lg-2 col-md-3 col-6 text-center">
-                    <div class="partnership-logo-card p-3 bg-white rounded shadow-sm h-100">
-                        <img src="https://via.placeholder.com/150x60/2f338d/ffffff?text=BAFFA" alt="BAFFA" class="img-fluid" style="max-height: 50px; object-fit: contain;">
+                    <div class="partnership-logo-card p-3 bg-white rounded shadow-sm h-100 d-flex align-items-center justify-content-center">
+                        <img src="/assets/images/BAFFA.png" alt="BAFFA" class="img-fluid" style="max-height: 50px; object-fit: contain;">
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-6 text-center">
-                    <div class="partnership-logo-card p-3 bg-white rounded shadow-sm h-100">
-                        <img src="https://via.placeholder.com/150x60/ec2025/ffffff?text=DF+Alliance" alt="DF Alliance" class="img-fluid" style="max-height: 50px; object-fit: contain;">
+                    <div class="partnership-logo-card p-3 bg-white rounded shadow-sm h-100 d-flex align-items-center justify-content-center">
+                        <img src="/assets/images/DP WORLD LOG.jpg" alt="DP World Logistics" class="img-fluid" style="max-height: 50px; object-fit: contain;">
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-6 text-center">
-                    <div class="partnership-logo-card p-3 bg-white rounded shadow-sm h-100">
-                        <img src="https://via.placeholder.com/150x60/2f338d/ffffff?text=GLA" alt="GLA" class="img-fluid" style="max-height: 50px; object-fit: contain;">
+                    <div class="partnership-logo-card p-3 bg-white rounded shadow-sm h-100 d-flex align-items-center justify-content-center">
+                        <img src="/assets/images/GLA.webp" alt="GLA" class="img-fluid" style="max-height: 50px; object-fit: contain;">
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-6 text-center">
-                    <div class="partnership-logo-card p-3 bg-white rounded shadow-sm h-100">
-                        <img src="https://via.placeholder.com/150x60/ec2025/ffffff?text=UN+Network" alt="UN Network" class="img-fluid" style="max-height: 50px; object-fit: contain;">
+                    <div class="partnership-logo-card p-3 bg-white rounded shadow-sm h-100 d-flex align-items-center justify-content-center">
+                        <img src="/assets/images/UN2023.png" alt="UN Network 2023" class="img-fluid" style="max-height: 50px; object-fit: contain;">
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-6 text-center">
-                    <div class="partnership-logo-card p-3 bg-white rounded shadow-sm h-100">
-                        <img src="https://via.placeholder.com/150x60/2f338d/ffffff?text=LogisticLeads" alt="LogisticLeads" class="img-fluid" style="max-height: 50px; object-fit: contain;">
+                    <div class="partnership-logo-card p-3 bg-white rounded shadow-sm h-100 d-flex align-items-center justify-content-center">
+                        <img src="/assets/images/logisticleads.png" alt="Logistic Leads" class="img-fluid" style="max-height: 50px; object-fit: contain;">
                     </div>
                 </div>
             </div>

@@ -510,28 +510,28 @@ include 'includes/navbar.php';
         
         <div class="row justify-content-center align-items-center g-4">
             <div class="col-lg-2 col-md-4 col-6 text-center" data-aos="zoom-in" data-aos-delay="100">
-                <div class="partnership-logo-card p-3">
-                    <img src="https://via.placeholder.com/150x60/2f338d/ffffff?text=BAFFA" alt="BAFFA" class="img-fluid" style="max-height: 50px; width: 100%; object-fit: contain;">
+                <div class="partnership-logo-card p-4 bg-white rounded-3 shadow-sm h-100 d-flex align-items-center justify-content-center" style="transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='';">
+                    <img src="/assets/images/BAFFA.png" alt="BAFFA" class="img-fluid" style="max-height: 70px; width: 100%; object-fit: contain;">
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-6 text-center" data-aos="zoom-in" data-aos-delay="150">
-                <div class="partnership-logo-card p-3">
-                    <img src="https://via.placeholder.com/150x60/ec2025/ffffff?text=DF+Alliance" alt="DF Alliance" class="img-fluid" style="max-height: 50px; width: 100%; object-fit: contain;">
+                <div class="partnership-logo-card p-4 bg-white rounded-3 shadow-sm h-100 d-flex align-items-center justify-content-center" style="transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='';">
+                    <img src="/assets/images/DP WORLD LOG.jpg" alt="DP World Logistics" class="img-fluid" style="max-height: 70px; width: 100%; object-fit: contain;">
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-6 text-center" data-aos="zoom-in" data-aos-delay="200">
-                <div class="partnership-logo-card p-3">
-                    <img src="https://via.placeholder.com/150x60/2f338d/ffffff?text=GLA" alt="GLA" class="img-fluid" style="max-height: 50px; width: 100%; object-fit: contain;">
+                <div class="partnership-logo-card p-4 bg-white rounded-3 shadow-sm h-100 d-flex align-items-center justify-content-center" style="transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='';">
+                    <img src="/assets/images/GLA.webp" alt="GLA" class="img-fluid" style="max-height: 70px; width: 100%; object-fit: contain;">
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-6 text-center" data-aos="zoom-in" data-aos-delay="250">
-                <div class="partnership-logo-card p-3">
-                    <img src="https://via.placeholder.com/150x60/ec2025/ffffff?text=UN+Network" alt="UN Network" class="img-fluid" style="max-height: 50px; width: 100%; object-fit: contain;">
+                <div class="partnership-logo-card p-4 bg-white rounded-3 shadow-sm h-100 d-flex align-items-center justify-content-center" style="transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='';">
+                    <img src="/assets/images/UN2023.png" alt="UN Network 2023" class="img-fluid" style="max-height: 70px; width: 100%; object-fit: contain;">
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-6 text-center" data-aos="zoom-in" data-aos-delay="300">
-                <div class="partnership-logo-card p-3">
-                    <img src="https://via.placeholder.com/150x60/2f338d/ffffff?text=LogisticLeads" alt="LogisticLeads" class="img-fluid" style="max-height: 50px; width: 100%; object-fit: contain;">
+                <div class="partnership-logo-card p-4 bg-white rounded-3 shadow-sm h-100 d-flex align-items-center justify-content-center" style="transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='';">
+                    <img src="/assets/images/logisticleads.png" alt="Logistic Leads" class="img-fluid" style="max-height: 70px; width: 100%; object-fit: contain;">
                 </div>
             </div>
         </div>
