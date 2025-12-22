@@ -48,11 +48,11 @@ include 'includes/navbar.php';
                     <div class="d-flex align-items-start mb-3">
                         <i class="bi bi-geo-alt-fill text-orange me-3" style="font-size: 1.5rem;"></i>
                         <div>
-                            <h6>Head Office</h6>
+                            <h6>Dhaka Office (Head Office)</h6>
                             <p class="text-muted mb-0">
-                                Office 123, Business Bay<br>
-                                Dubai, United Arab Emirates<br>
-                                P.O. Box 12345
+                                House # 19, Road # 6/A<br>
+                                Sector-12, Uttara<br>
+                                Dhaka-1230, Bangladesh
                             </p>
                         </div>
                     </div>
@@ -64,8 +64,7 @@ include 'includes/navbar.php';
                         <div>
                             <h6>Phone</h6>
                             <p class="text-muted mb-0">
-                                Main: +971 4 XXX XXXX<br>
-                                Mobile: +971 50 XXX XXXX
+                                Mobile: +880 1844-167431
                             </p>
                         </div>
                     </div>
@@ -77,9 +76,8 @@ include 'includes/navbar.php';
                         <div>
                             <h6>Email</h6>
                             <p class="text-muted mb-0">
-                                General: info@farhanlogistics.com<br>
-                                Sales: sales@farhanlogistics.com<br>
-                                Support: support@farhanlogistics.com
+                                General: hannan@farhancargobd.com<br>
+                                Support: farhanlogisticsltd2025@gmail.com
                             </p>
                         </div>
                     </div>
@@ -226,9 +224,9 @@ include 'includes/navbar.php';
 <section class="py-0">
     <div class="container-fluid p-0">
         <div class="map-container" style="height: 450px; background: #e9ecef;" data-aos="fade-up">
-            <!-- Google Maps Embed - Replace with your actual location -->
+            <!-- Google Maps Embed - Uttara, Dhaka -->
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14427.490741265333!2d55.26516!3d25.186111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f682829c85bf9%3A0x6503191e8e92a634!2sBusiness%20Bay%20-%20Dubai!5e0!3m2!1sen!2sae!4v1234567890" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.2817937924285!2d90.38791!3d23.87534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c5d05e7074dd%3A0x4b32213e0c7c16c!2sUttara%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1234567890" 
                 width="100%" 
                 height="450" 
                 style="border:0;" 
@@ -253,12 +251,13 @@ include 'includes/navbar.php';
                 <div class="card-custom h-100">
                     <div class="card-body text-center">
                         <i class="bi bi-building" style="font-size: 3rem; color: var(--primary-orange);"></i>
-                        <h5 class="mt-3 mb-3">Dubai, UAE (HQ)</h5>
+                        <h5 class="mt-3 mb-3">Dhaka Office (Head Office)</h5>
                         <p class="text-muted">
-                            Office 123, Business Bay<br>
-                            Dubai, United Arab Emirates<br>
-                            Phone: +971 4 XXX XXXX<br>
-                            Email: dubai@farhanlogistics.com
+                            House # 19, Road # 6/A<br>
+                            Sector-12, Uttara<br>
+                            Dhaka-1230, Bangladesh<br>
+                            Phone: +880 1844-167431<br>
+                            Email: hannan@farhancargobd.com
                         </p>
                     </div>
                 </div>
@@ -268,12 +267,13 @@ include 'includes/navbar.php';
                 <div class="card-custom h-100">
                     <div class="card-body text-center">
                         <i class="bi bi-building" style="font-size: 3rem; color: var(--primary-orange);"></i>
-                        <h5 class="mt-3 mb-3">Shanghai, China</h5>
+                        <h5 class="mt-3 mb-3">Airport Office</h5>
                         <p class="text-muted">
-                            Partner Office<br>
-                            Pudong District, Shanghai<br>
-                            Phone: +86 21 XXXX XXXX<br>
-                            Email: shanghai@farhanlogistics.com
+                            Biman Cargo Village<br>
+                            HSIA, Dhaka-1230<br>
+                            Bangladesh<br>
+                            Phone: +880 1844-167431<br>
+                            Email: farhanlogisticsltd2025@gmail.com
                         </p>
                     </div>
                 </div>
@@ -283,12 +283,13 @@ include 'includes/navbar.php';
                 <div class="card-custom h-100">
                     <div class="card-body text-center">
                         <i class="bi bi-building" style="font-size: 3rem; color: var(--primary-orange);"></i>
-                        <h5 class="mt-3 mb-3">London, UK</h5>
+                        <h5 class="mt-3 mb-3">Chittagong Office</h5>
                         <p class="text-muted">
-                            Partner Office<br>
-                            Heathrow Airport Area<br>
-                            Phone: +44 20 XXXX XXXX<br>
-                            Email: london@farhanlogistics.com
+                            Hasna Towar, Agrabad<br>
+                            C/A-Chittagong<br>
+                            Bangladesh<br>
+                            Phone: +880 1844-167431<br>
+                            Email: hannan@farhancargobd.com
                         </p>
                     </div>
                 </div>

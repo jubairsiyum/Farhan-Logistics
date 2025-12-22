@@ -88,7 +88,7 @@ include 'includes/navbar.php';
                                 </p>
                                 <div class="leader-details">
                                     <p><i class="bi bi-envelope me-2"></i>farhan@farhanlogistics.com</p>
-                                    <p><i class="bi bi-telephone me-2"></i>+880 XXX-XXXXXXX</p>
+                                    <p><i class="bi bi-telephone me-2"></i>+880 1844-167431</p>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +122,7 @@ include 'includes/navbar.php';
                                 </p>
                                 <div class="leader-details">
                                     <p><i class="bi bi-envelope me-2"></i>operations@farhanlogistics.com</p>
-                                    <p><i class="bi bi-telephone me-2"></i>+880 XXX-XXXXXXX</p>
+                                    <p><i class="bi bi-telephone me-2"></i>+880 1844-167431</p>
                                 </div>
                             </div>
                         </div>
@@ -292,9 +292,9 @@ include 'includes/navbar.php';
                             <div class="office-content">
                                 <h4>Head Office - Bangladesh</h4>
                                 <div class="office-details">
-                                    <p><i class="bi bi-geo-alt-fill me-2"></i>[Office Address]<br>Dhaka, Bangladesh</p>
-                                    <p><i class="bi bi-telephone-fill me-2"></i>+880 XXX-XXXXXXX</p>
-                                    <p><i class="bi bi-envelope-fill me-2"></i>info@farhanlogistics.com</p>
+                                    <p><i class="bi bi-geo-alt-fill me-2"></i>House # 19, Road # 6/A<br>Sector-12, Uttara, Dhaka-1230</p>
+                                    <p><i class="bi bi-telephone-fill me-2"></i>+880 1844-167431</p>
+                                    <p><i class="bi bi-envelope-fill me-2"></i>hannan@farhancargobd.com</p>
                                     <p><i class="bi bi-clock-fill me-2"></i>Mon - Sat: 9:00 AM - 6:00 PM</p>
                                 </div>
                                 <a href="/contact" class="btn btn-primary-custom mt-3">

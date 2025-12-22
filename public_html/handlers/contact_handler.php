@@ -129,7 +129,7 @@ exit;
  */
 /*
 function sendEmailNotification($name, $email, $subject, $message) {
-    $to = 'info@farhanlogistics.com';
+    $to = 'hannan@farhancargobd.com';
     $email_subject = 'New Contact Form Submission: ' . $subject;
     
     $email_body = "New contact form submission:\n\n";

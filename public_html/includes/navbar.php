@@ -10,7 +10,7 @@ $current_page = basename($_SERVER['PHP_SELF'] ?? 'index.php');
             <div class="col-md-6">
                 <div class="top-contact-info">
                     <span class="me-4"><i class="bi bi-telephone-fill"></i> +971 4 XXX XXXX</span>
-                    <span><i class="bi bi-envelope-fill"></i> info@farhanlogistics.com</span>
+                    <span><i class="bi bi-envelope-fill"></i> hannan@farhancargobd.com</span>
                 </div>
             </div>
             <div class="col-md-6 text-end">
@@ -105,7 +105,7 @@ $current_page = basename($_SERVER['PHP_SELF'] ?? 'index.php');
                 <i class="bi bi-envelope-fill"></i>
                 <div>
                     <span class="label">Email Us</span>
-                    <a href="mailto:info@farhanlogistics.com">info@farhanlogistics.com</a>
+                    <a href="mailto:hannan@farhancargobd.com">hannan@farhancargobd.com</a>
                 </div>
             </div>
             <div class="contact-item">

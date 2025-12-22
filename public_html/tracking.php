@@ -249,7 +249,7 @@ include 'includes/navbar.php';
                         <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#trackingFAQ">
                             <div class="accordion-body">
                                 If your tracking number isn't working, please check that you've entered it correctly (format: FL123456789). 
-                                If the issue persists, contact our customer service team at +971 4 XXX XXXX or info@farhanlogistics.com.
+                                If the issue persists, contact our customer service team at +880 1844-167431 or hannan@farhancargobd.com.
                             </div>
                         </div>
                     </div>

@@ -62,15 +62,15 @@
                     <ul class="footer-contact">
                         <li>
                             <i class="bi bi-geo-alt-fill"></i>
-                            <span>Dhaka, Bangladesh<br>[Office Address]</span>
+                            <span>House # 19, Road # 6/A<br>Sector-12, Uttara<br>Dhaka-1230, Bangladesh</span>
                         </li>
                         <li>
                             <i class="bi bi-telephone-fill"></i>
-                            <span>+880 XXX-XXXXXXX</span>
+                            <span>+880 1844-167431</span>
                         </li>
                         <li>
                             <i class="bi bi-envelope-fill"></i>
-                            <span>info@farhanlogistics.com</span>
+                            <span>hannan@farhancargobd.com</span>
                         </li>
                         <li>
                             <i class="bi bi-clock-fill"></i>
