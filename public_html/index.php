@@ -560,7 +560,7 @@ include 'includes/navbar.php';
             
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="card-custom">
-                    <img src="https://images.unsplash.com/photo-1555217851-a1b8e327e65a?w=600&q=80" alt="Asia" 
+                    <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600&q=80" alt="Asia" 
                          class="img-fluid rounded mb-3" style="height: 250px; width: 100%; object-fit: cover;">
                     <div class="card-body text-center">
                         <h5>Asia Pacific</h5>
