@@ -109,15 +109,15 @@ include 'includes/navbar.php';
                     <div class="row g-0 align-items-center">
                         <div class="col-md-5">
                             <div class="leader-img" style="position: relative; overflow: hidden; height: 100%; min-height: 450px;">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&q=85" 
-                                     alt="Md. Farhan Ahmed - Managing Director" 
+                                <img src="/assets/images/hanna.png" 
+                                     alt="Md. Abdul Hannan - Managing Director" 
                                      style="width: 100%; height: 100%; object-fit: cover; display: block;">
                                 <div class="leader-overlay" 
                                      style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
                                             background: linear-gradient(135deg, rgba(47, 51, 141, 0.9), rgba(236, 32, 37, 0.85)); 
                                             opacity: 0; transition: all 0.4s ease; display: flex; align-items: center; justify-content: center;">
                                     <div class="social-links text-center">
-                                        <a href="mailto:farhan@farhanlogistics.com" class="text-white d-inline-block mx-2" 
+                                        <a href="mailto:hannan@farhancargobd.com" class="text-white d-inline-block mx-2" 
                                            style="font-size: 1.8rem; transition: transform 0.3s;" 
                                            onmouseover="this.style.transform='scale(1.2)'" 
                                            onmouseout="this.style.transform='scale(1)'">
@@ -149,14 +149,14 @@ include 'includes/navbar.php';
                                     </span>
                                 </div>
                                 <h3 class="mb-2" style="color: var(--primary-navy); font-size: 2rem; font-weight: 700;">
-                                    Md. Farhan Ahmed
+                                    Md. Abdul Hannan
                                 </h3>
                                 <p class="position mb-4" style="color: var(--primary-red); font-size: 1.1rem; font-weight: 600;">
                                     Managing Director & CEO
                                 </p>
                                 <p class="bio mb-4" style="line-height: 1.9; color: #495057; font-size: 1.05rem;">
                                     With over <strong style="color: var(--primary-navy);">15 years of expertise</strong> in logistics and international trade, 
-                                    Farhan leads our strategic vision and oversees all operations with a commitment to excellence and innovation. 
+                                    Md. Abdul Hannan leads our strategic vision and oversees all operations with a commitment to excellence and innovation. 
                                     His deep understanding of freight forwarding, supply chain management, and international commerce has been 
                                     instrumental in positioning <strong style="color: var(--primary-red);">Farhan Logistics International Ltd.</strong> 
                                     as a trusted and reliable partner for businesses throughout Bangladesh and beyond.
@@ -177,9 +177,9 @@ include 'includes/navbar.php';
                                                 </div>
                                                 <div>
                                                     <small style="color: #6c757d; font-size: 0.85rem; display: block; margin-bottom: 2px;">Email</small>
-                                                    <a href="mailto:farhan@farhanlogistics.com" 
+                                                    <a href="mailto:hannan@farhancargobd.com" 
                                                        style="color: var(--primary-navy); font-weight: 600; text-decoration: none; font-size: 1rem;">
-                                                        farhan@farhanlogistics.com
+                                                        hannan@farhancargobd.com
                                                     </a>
                                                 </div>
                                             </div>

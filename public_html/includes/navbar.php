@@ -9,7 +9,7 @@ $current_page = basename($_SERVER['PHP_SELF'] ?? 'index.php');
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="top-contact-info">
-                    <span class="me-4"><i class="bi bi-telephone-fill"></i> +971 4 XXX XXXX</span>
+                    <span class="me-4"><i class="bi bi-telephone-fill"></i> +880 1844-167431</span>
                     <span><i class="bi bi-envelope-fill"></i> hannan@farhancargobd.com</span>
                 </div>
             </div>
