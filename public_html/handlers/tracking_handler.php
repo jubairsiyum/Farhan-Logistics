@@ -13,9 +13,9 @@ try {
         throw new Exception('Please provide a tracking number');
     }
 
-    // Validate tracking number format (FL followed by 9 digits)
-    if (!preg_match('/^FL\d{9}$/', $trackingNumber)) {
-        throw new Exception('Invalid tracking number format. Expected format: FL123456789');
+    // Validate tracking number format (FL followed by 10 digits)
+    if (!preg_match('/^FL\d{10}$/', $trackingNumber)) {
+        throw new Exception('Invalid tracking number format. Expected format: FL1234567890 (10 digits)');
     }
 
     // Fetch shipment details

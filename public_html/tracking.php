@@ -54,21 +54,21 @@ include 'includes/navbar.php';
                                 class="form-control form-control-lg" 
                                 id="trackingNumber" 
                                 name="trackingNumber"
-                                placeholder="Enter Tracking Number (e.g., FL123456789)" 
+                                placeholder="Enter Tracking Number (e.g., FL1234567890)" 
                                 required
-                                pattern="^FL[0-9]{9}$"
+                                pattern="^FL[0-9]{10}$"
                             >
                             <button type="submit" class="btn btn-primary-custom btn-lg">
                                 <i class="bi bi-search"></i> Track Shipment
                             </button>
                         </div>
                         <div class="invalid-feedback">
-                            Please enter a valid tracking number (Format: FL123456789)
+                            Please enter a valid tracking number (Format: FL1234567890)
                         </div>
                         <div class="text-center mt-3">
                             <small class="text-muted">
                                 <i class="bi bi-info-circle"></i> 
-                                Tracking numbers start with "FL" followed by 9 digits
+                                Tracking numbers start with "FL" followed by 10 digits
                             </small>
                         </div>
                     </form>
