@@ -18,10 +18,10 @@ include 'includes/navbar.php';
                     <div class="mb-3">
                         <span class="badge text-white px-4 py-2" style="background: linear-gradient(135deg, var(--primary-red), #c91d22); font-size: 0.8rem; letter-spacing: 1.5px; font-weight: 600; box-shadow: 0 4px 15px rgba(236, 32, 37, 0.3); display: inline-block;">CLIENT SUCCESS STORIES</span>
                     </div>
-                    <h1 data-aos="fade-up" data-aos-delay="100" style="font-size: 3.8rem; font-weight: 700; margin-top: 1.5rem; text-shadow: 0 2px 25px rgba(0,0,0,0.3);">
+                    <h1 data-aos="fade-up" data-aos-delay="100" style="font-size: 3.8rem; font-weight: 700; margin-top: 1.5rem; text-shadow: 0 2px 25px rgba(0,0,0,0.3); color: #ffffff;">
                         Delivering Results That Matter
                     </h1>
-                    <p data-aos="fade-up" data-aos-delay="200" style="font-size: 1.3rem; line-height: 1.8; margin-top: 2rem; opacity: 0.95; text-shadow: 0 1px 15px rgba(0,0,0,0.2); max-width: 900px; margin-left: auto; margin-right: auto;">
+                    <p data-aos="fade-up" data-aos-delay="200" class="text-white" style="font-size: 1.3rem; line-height: 1.8; margin-top: 2rem; opacity: 0.95; text-shadow: 0 1px 15px rgba(0,0,0,0.2); max-width: 900px; margin-left: auto; margin-right: auto;">
                         Real stories of how we've transformed logistics challenges into competitive advantages for businesses across diverse industries worldwide.
                     </p>
                     <div data-aos="fade-up" data-aos-delay="300" style="margin-top: 2.5rem;">
@@ -103,7 +103,7 @@ include 'includes/navbar.php';
                      onmouseover="this.style.transform='translateY(-15px)'; this.style.boxShadow='0 20px 60px rgba(0,0,0,0.2)';" 
                      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.12)';">
                     <div class="position-relative" style="height: 280px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea3c90eb?w=800&h=500&fit=crop&q=85" 
+                        <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?w=800&q=80" 
                              class="card-img-top" 
                              alt="RMG Export" 
                              style="height: 100%; object-fit: cover; transition: transform 0.4s ease;"
@@ -153,7 +153,7 @@ include 'includes/navbar.php';
                      onmouseover="this.style.transform='translateY(-15px)'; this.style.boxShadow='0 20px 60px rgba(0,0,0,0.2)';" 
                      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.12)';">
                     <div class="position-relative" style="height: 280px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=800&h=500&fit=crop&q=85" 
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80" 
                              class="card-img-top" 
                              alt="Electronics" 
                              style="height: 100%; object-fit: cover; transition: transform 0.4s ease;"
@@ -203,7 +203,7 @@ include 'includes/navbar.php';
                      onmouseover="this.style.transform='translateY(-15px)'; this.style.boxShadow='0 20px 60px rgba(0,0,0,0.2)';" 
                      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.12)';">
                     <div class="position-relative" style="height: 280px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&h=500&fit=crop&q=85" 
+                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80" 
                              class="card-img-top" 
                              alt="Agriculture" 
                              style="height: 100%; object-fit: cover; transition: transform 0.4s ease;"
@@ -253,7 +253,7 @@ include 'includes/navbar.php';
                      onmouseover="this.style.transform='translateY(-15px)'; this.style.boxShadow='0 20px 60px rgba(0,0,0,0.2)';" 
                      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.12)';">
                     <div class="position-relative" style="height: 280px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=500&fit=crop&q=85" 
+                        <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=800&q=80" 
                              class="card-img-top" 
                              alt="FMCG" 
                              style="height: 100%; object-fit: cover; transition: transform 0.4s ease;"
@@ -303,7 +303,7 @@ include 'includes/navbar.php';
                      onmouseover="this.style.transform='translateY(-15px)'; this.style.boxShadow='0 20px 60px rgba(0,0,0,0.2)';" 
                      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.12)';">
                     <div class="position-relative" style="height: 280px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=500&fit=crop&q=85" 
+                        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80" 
                              class="card-img-top" 
                              alt="Project Cargo" 
                              style="height: 100%; object-fit: cover; transition: transform 0.4s ease;"
@@ -353,7 +353,7 @@ include 'includes/navbar.php';
                      onmouseover="this.style.transform='translateY(-15px)'; this.style.boxShadow='0 20px 60px rgba(0,0,0,0.2)';" 
                      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.12)';">
                     <div class="position-relative" style="height: 280px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=500&fit=crop&q=85" 
+                        <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?w=800&q=80" 
                              class="card-img-top" 
                              alt="E-commerce" 
                              style="height: 100%; object-fit: cover; transition: transform 0.4s ease;"
@@ -488,240 +488,6 @@ include 'includes/navbar.php';
                             <p class="text-white mb-0" style="font-size: 0.85rem; opacity: 0.8;">CEO, FreshHarvest Exports</p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-                            <span class="badge" style="background-color: var(--primary-orange);">Full-time</span>
-                        </div>
-                        <p class="text-muted mb-3">
-                            <i class="bi bi-geo-alt text-orange"></i> Dubai, UAE &nbsp;&nbsp;
-                            <i class="bi bi-briefcase text-orange"></i> 1+ years experience
-                        </p>
-                        <p>
-                            Provide exceptional customer support, handle inquiries, process bookings, and coordinate with operations team. Excellent communication skills required.
-                        </p>
-                        <ul class="list-unstyled small mb-3">
-                            <li><i class="bi bi-check-circle text-orange"></i> Customer Support</li>
-                            <li><i class="bi bi-check-circle text-orange"></i> Multitasking</li>
-                            <li><i class="bi bi-check-circle text-orange"></i> Problem Solving</li>
-                        </ul>
-                        <a href="#applyForm" class="btn btn-secondary-custom btn-sm">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="text-center mt-5" data-aos="fade-up">
-            <p class="lead">Don't see a position that matches your skills?</p>
-            <p>We're always looking for talented individuals. Submit your resume for future opportunities.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Application Form -->
-<section id="applyForm" class="py-100 form-section">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="form-container" data-aos="fade-up">
-                    <div class="text-center mb-4">
-                        <i class="bi bi-file-earmark-person" style="font-size: 4rem; color: var(--primary-orange);"></i>
-                        <h2 class="mt-3 mb-3">Submit Your Application</h2>
-                        <p class="text-muted">
-                            Fill out the form below to apply for a position at Farhan Logistics.
-                        </p>
-                    </div>
-                    
-                    <div id="alertContainer"></div>
-                    
-                    <form id="careerForm" class="needs-validation" novalidate enctype="multipart/form-data">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="first_name" class="form-label">First Name *</label>
-                                    <input 
-                                        type="text" 
-                                        class="form-control" 
-                                        id="first_name" 
-                                        name="first_name" 
-                                        required
-                                        placeholder="John"
-                                    >
-                                    <div class="invalid-feedback">Please provide your first name.</div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="last_name" class="form-label">Last Name *</label>
-                                    <input 
-                                        type="text" 
-                                        class="form-control" 
-                                        id="last_name" 
-                                        name="last_name" 
-                                        required
-                                        placeholder="Doe"
-                                    >
-                                    <div class="invalid-feedback">Please provide your last name.</div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="email" class="form-label">Email Address *</label>
-                                    <input 
-                                        type="email" 
-                                        class="form-control" 
-                                        id="email" 
-                                        name="email" 
-                                        required
-                                        placeholder="john.doe@email.com"
-                                    >
-                                    <div class="invalid-feedback">Please provide a valid email.</div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="phone" class="form-label">Phone Number *</label>
-                                    <input 
-                                        type="tel" 
-                                        class="form-control" 
-                                        id="phone" 
-                                        name="phone" 
-                                        required
-                                        placeholder="+971 50 XXX XXXX"
-                                    >
-                                    <div class="invalid-feedback">Please provide your phone number.</div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="position" class="form-label">Position Applied For *</label>
-                                    <select class="form-select" id="position" name="position" required>
-                                        <option value="">Select Position</option>
-                                        <option value="Logistics Operations Manager">Logistics Operations Manager</option>
-                                        <option value="Sales Executive">Sales Executive - Freight Services</option>
-                                        <option value="Customs Clearance Specialist">Customs Clearance Specialist</option>
-                                        <option value="Customer Service Representative">Customer Service Representative</option>
-                                        <option value="Other">Other Position</option>
-                                    </select>
-                                    <div class="invalid-feedback">Please select a position.</div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="experience_years" class="form-label">Years of Experience *</label>
-                                    <select class="form-select" id="experience_years" name="experience_years" required>
-                                        <option value="">Select Experience</option>
-                                        <option value="0">Fresh Graduate</option>
-                                        <option value="1">1-2 years</option>
-                                        <option value="2">2-3 years</option>
-                                        <option value="3">3-5 years</option>
-                                        <option value="5">5-10 years</option>
-                                        <option value="10">10+ years</option>
-                                    </select>
-                                    <div class="invalid-feedback">Please select your experience level.</div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="current_company" class="form-label">Current/Last Company</label>
-                                    <input 
-                                        type="text" 
-                                        class="form-control" 
-                                        id="current_company" 
-                                        name="current_company"
-                                        placeholder="Company Name"
-                                    >
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="education" class="form-label">Highest Education</label>
-                                    <input 
-                                        type="text" 
-                                        class="form-control" 
-                                        id="education" 
-                                        name="education"
-                                        placeholder="e.g., Bachelor's in Business"
-                                    >
-                                </div>
-                            </div>
-                            
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="linkedin_url" class="form-label">LinkedIn Profile URL</label>
-                                    <input 
-                                        type="url" 
-                                        class="form-control" 
-                                        id="linkedin_url" 
-                                        name="linkedin_url"
-                                        placeholder="https://linkedin.com/in/yourprofile"
-                                    >
-                                </div>
-                            </div>
-                            
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="cover_letter" class="form-label">Cover Letter / Why You Want to Join Us</label>
-                                    <textarea 
-                                        class="form-control" 
-                                        id="cover_letter" 
-                                        name="cover_letter" 
-                                        rows="6"
-                                        placeholder="Tell us about yourself, your experience, and why you'd be a great fit for this role..."
-                                    ></textarea>
-                                </div>
-                            </div>
-                            
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="resume" class="form-label">Upload Resume/CV * (PDF or DOC, Max 5MB)</label>
-                                    <input 
-                                        type="file" 
-                                        class="form-control" 
-                                        id="resume" 
-                                        name="resume" 
-                                        accept=".pdf,.doc,.docx"
-                                        required
-                                    >
-                                    <div class="invalid-feedback">Please upload your resume.</div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-12">
-                                <div class="form-check">
-                                    <input 
-                                        class="form-check-input" 
-                                        type="checkbox" 
-                                        id="agreement" 
-                                        name="agreement" 
-                                        required
-                                    >
-                                    <label class="form-check-label" for="agreement">
-                                        I agree to the processing of my personal data for recruitment purposes *
-                                    </label>
-                                    <div class="invalid-feedback">You must agree before submitting.</div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-12 text-center">
-                                <button type="submit" class="btn btn-primary-custom btn-lg px-5">
-                                    <i class="bi bi-send"></i> Submit Application
-                                </button>
-                                <p class="text-muted mt-3 small">
-                                    <i class="bi bi-shield-check"></i> Your information will be kept confidential and used only for recruitment purposes.
-                                </p>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
