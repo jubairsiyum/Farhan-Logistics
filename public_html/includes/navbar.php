@@ -28,7 +28,7 @@ $current_page = basename($_SERVER['PHP_SELF'] ?? 'index.php');
 <nav class="navbar navbar-expand-lg navbar-dark main-navbar sticky-top">
     <div class="container">
         <a class="navbar-brand" href="/">
-            <img src="/assets/images/logo.svg" alt="Farhan Logistics International Ltd." class="navbar-logo" style="height: 60px; width: auto; object-fit: contain;">
+            <img src="/assets/images/logo.svg" alt="Farhan Logistics International Ltd." class="navbar-logo">
         </a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
@@ -36,7 +36,7 @@ $current_page = basename($_SERVER['PHP_SELF'] ?? 'index.php');
         </button>
         
         <!-- Desktop Menu -->
-        <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a class="nav-link <?php echo ($current_page == 'index.php') ? 'active' : ''; ?>" href="/">Home</a>
@@ -102,7 +102,7 @@ $current_page = basename($_SERVER['PHP_SELF'] ?? 'index.php');
                 <i class="bi bi-telephone-fill"></i>
                 <div>
                     <span class="label">Call Us</span>
-                    <a href="tel:+97145551234">+971 4 XXX XXXX</a>
+                    <a href="tel:+8801844167431">+880 1844-167431</a>
                 </div>
             </div>
             <div class="contact-item">

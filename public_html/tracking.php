@@ -288,7 +288,7 @@ include 'includes/navbar.php';
                         <div class="p-3 border rounded">
                             <i class="bi bi-telephone-fill d-block mb-2" style="font-size: 2rem; color: var(--primary-red);"></i>
                             <h6 style="color: var(--primary-navy); font-weight: 700;">Call Us</h6>
-                            <p class="mb-0">+971 4 XXX XXXX</p>
+                            <p class="mb-0">+880 1844-167431</p>
                         </div>
                     </div>
                     <div class="col-md-4">

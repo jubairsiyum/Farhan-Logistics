@@ -317,8 +317,11 @@ section {
    4. MAIN NAVIGATION
    ======================================================================== */
 .main-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
     background: linear-gradient(180deg, rgba(47, 51, 141, 0.98) 0%, rgba(47, 51, 141, 1) 100%) !important;
-    padding: 18px 0;
+    padding: 10px 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(10px);
@@ -326,14 +329,32 @@ section {
 }
 
 .main-navbar.scrolled {
-    padding: 12px 0;
+    padding: 8px 0;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
     background: linear-gradient(180deg, rgba(30, 34, 89, 1) 0%, rgba(47, 51, 141, 1) 100%) !important;
+}
+
+.main-navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
 .navbar-brand {
     display: flex;
     align-items: center;
+    padding: 5px 0;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.navbar-brand img,
+.navbar-logo {
+    height: 45px;
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
 }
 
 .brand-container {
@@ -471,13 +492,39 @@ section {
     transform: rotate(180deg);
 }
 
+/* Navbar Toggler Button */
+.navbar-toggler {
+    border: 2px solid rgba(236, 32, 37, 0.8);
+    padding: 7px 11px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background: rgba(236, 32, 37, 0.1);
+}
+
+.navbar-toggler:hover {
+    background: rgba(236, 32, 37, 0.2);
+    border-color: var(--primary-red);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(236, 32, 37, 0.3);
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(236, 32, 37, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 /* ========================================================================
    4.1 MOBILE OFFCANVAS MENU
    ======================================================================== */
 .mobile-menu {
     background: linear-gradient(180deg, #1e2259 0%, #2f338d 100%);
     color: var(--white);
-    width: 320px !important;
+    width: 85vw !important;
+    max-width: 320px !important;
 }
 
 .mobile-menu .offcanvas-header {
@@ -840,6 +887,8 @@ section {
 
 .carousel-indicators {
     bottom: 30px;
+    z-index: 15;
+    margin-bottom: 0;
 }
 
 .carousel-indicators [data-bs-target] {
@@ -849,6 +898,7 @@ section {
     background-color: rgba(255, 255, 255, 0.5);
     border: 2px solid var(--white);
     transition: all 0.3s ease;
+    margin: 0 4px;
 }
 
 .carousel-indicators .active {
@@ -1527,7 +1577,7 @@ textarea.form-control {
     right: 30px;
     width: 50px;
     height: 50px;
-    background: var(--primary-orange);
+    background: linear-gradient(135deg, var(--primary-red), #c91d22);
     color: var(--white);
     border: none;
     border-radius: 50%;
@@ -1537,7 +1587,10 @@ textarea.form-control {
     visibility: hidden;
     transition: var(--transition-base);
     z-index: 1000;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 8px 25px rgba(236, 32, 37, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .scroll-to-top.show {
@@ -1546,8 +1599,9 @@ textarea.form-control {
 }
 
 .scroll-to-top:hover {
-    background: var(--primary-navy);
+    background: linear-gradient(135deg, var(--primary-navy), #1e2256);
     transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(47, 51, 141, 0.4);
 }
 
 /* ========================================================================
@@ -1608,8 +1662,24 @@ textarea.form-control {
         padding: 30px;
     }
     
-    .navbar-brand img {
-        max-height: 35px;
+    /* Navbar Tablet */
+    .main-navbar {
+        padding: 8px 0 !important;
+    }
+    
+    .navbar-brand {
+        padding: 4px 0;
+    }
+    
+    .navbar-brand img,
+    .navbar-logo {
+        height: 42px !important;
+        max-height: 42px !important;
+        max-width: 170px !important;
+    }
+    
+    .navbar-toggler {
+        padding: 7px 11px;
     }
     
     .service-card {
@@ -1643,17 +1713,43 @@ textarea.form-control {
         margin: 0 8px !important;
     }
     
-    /* Navigation */
-    .navbar-brand img {
-        max-height: 30px;
-    }
-    
-    .navbar-brand span {
-        font-size: 14px;
-    }
-    
+    /* Navigation Mobile */
     .main-navbar {
-        padding: 15px 0;
+        padding: 8px 0 !important;
+    }
+    
+    .main-navbar .container {
+        padding-left: 15px;
+        padding-right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    
+    .navbar-brand {
+        padding: 4px 0;
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+    
+    .navbar-brand img,
+    .navbar-logo {
+        height: 38px !important;
+        max-height: 38px !important;
+        max-width: 150px !important;
+    }
+    
+    .navbar-toggler {
+        padding: 6px 10px;
+        border-width: 2px;
+        flex-shrink: 0;
+        margin-left: auto;
+    }
+    
+    .navbar-toggler-icon {
+        width: 22px;
+        height: 22px;
     }
     
     .navbar-collapse {
@@ -2982,14 +3078,71 @@ textarea.form-control {
         padding-right: 1rem;
     }
     
+    /* Navbar extra small */
+    .main-navbar {
+        padding: 6px 0 !important;
+    }
+    
+    .main-navbar .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    
+    .navbar-brand {
+        padding: 3px 0;
+        margin-right: 8px;
+    }
+    
+    .navbar-brand img,
+    .navbar-logo {
+        height: 34px !important;
+        max-height: 34px !important;
+        max-width: 130px !important;
+    }
+    
+    .navbar-toggler {
+        padding: 5px 8px;
+    }
+    
+    .navbar-toggler-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
     /* Partnership logos */
     .col-4 img {
         max-height: 40px !important;
     }
     
     /* Navbar mobile */
-    .navbar-brand img {
-        height: 45px !important;
+    .navbar-brand img,
+    .navbar-logo {
+        height: 32px !important;
+        max-height: 32px !important;
+        max-width: 120px !important;
+    }
+    
+    .navbar-brand {
+        padding: 4px 0;
+        margin-right: 8px;
+    }
+    
+    .navbar-toggler {
+        padding: 5px 8px;
+    }
+    
+    .navbar-toggler-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .main-navbar {
+        padding: 8px 0;
+    }
+    
+    .main-navbar .container {
+        padding-left: 12px;
+        padding-right: 12px;
     }
 }
 
@@ -3450,5 +3603,587 @@ textarea.form-control {
     .form-container h3::after {
         left: 50%;
         transform: translateX(-50%);
+    }
+}
+
+/* ========================================================================
+   COMPREHENSIVE MOBILE RESPONSIVENESS (PIXEL PERFECT)
+   ======================================================================== */
+
+/* Prevent horizontal scroll on all devices */
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden !important;
+}
+
+.container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Fix images that might cause overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tablet Responsive (992px and below) */
+@media (max-width: 992px) {
+    /* Container adjustments */
+    .container {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    /* Hero adjustments */
+    .hero-section,
+    .hero-slide {
+        min-height: 500px !important;
+        height: auto !important;
+    }
+    
+    .hero-content {
+        padding: 40px 20px;
+    }
+    
+    .hero-content h1,
+    .display-3 {
+        font-size: 2.5rem !important;
+        line-height: 1.2;
+    }
+    
+    .hero-content .lead {
+        font-size: 1.1rem !important;
+    }
+    
+    .hero-badge {
+        font-size: 0.8rem;
+        padding: 8px 20px;
+    }
+    
+    /* Button groups mobile */
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        margin: 0 !important;
+    }
+    
+    /* Section padding */
+    section,
+    .py-100 {
+        padding: 60px 0 !important;
+    }
+    
+    /* Typography mobile */
+    h1 { font-size: 2.25rem !important; }
+    h2 { font-size: 1.9rem !important; }
+    h3 { font-size: 1.5rem !important; }
+    h4 { font-size: 1.25rem !important; }
+    
+    /* Cards mobile */
+    .service-card,
+    .card-custom,
+    .feature-card {
+        margin-bottom: 25px;
+    }
+    
+    /* Grid columns mobile */
+    .row.g-4 {
+        row-gap: 1.5rem !important;
+    }
+    
+    .row.g-5 {
+        row-gap: 2rem !important;
+    }
+}
+
+/* Mobile Specific (768px and below) */
+@media (max-width: 768px) {
+    /* Body and Container */
+    body {
+        font-size: 15px;
+    }
+    
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Hero Carousel Mobile */
+    .hero-carousel,
+    .carousel-item,
+    .hero-slide {
+        min-height: 500px !important;
+        height: 500px !important;
+    }
+    
+    .carousel-indicators {
+        bottom: 15px !important;
+        margin-bottom: 0;
+    }
+    
+    .carousel-indicators [data-bs-target] {
+        width: 10px;
+        height: 10px;
+        margin: 0 3px;
+    }
+    
+    .carousel-indicators .active {
+        width: 30px;
+    }
+    
+    .hero-content {
+        padding: 30px 15px 70px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .hero-content h1,
+    .display-3 {
+        font-size: 1.85rem !important;
+        margin-bottom: 1rem !important;
+        line-height: 1.15;
+    }
+    
+    .hero-content .lead,
+    .hero-content p {
+        font-size: 0.95rem !important;
+        line-height: 1.5;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .hero-badge {
+        font-size: 0.7rem;
+        padding: 6px 16px;
+    }
+    
+    /* Buttons Mobile */
+    .btn,
+    .btn-lg {
+        padding: 12px 24px !important;
+        font-size: 14px !important;
+        width: 100%;
+        margin: 5px 0 !important;
+    }
+    
+    .btn-primary-custom,
+    .btn-outline-light {
+        display: block;
+        text-align: center;
+    }
+    
+    .hero-buttons,
+    .d-flex.gap-3 {
+        flex-direction: column;
+        gap: 10px !important;
+    }
+    
+    .me-3,
+    .ms-3 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    /* Section Headings Mobile */
+    .section-title h2 {
+        font-size: 1.65rem !important;
+        margin-bottom: 1rem;
+    }
+    
+    .section-title p,
+    .section-subtitle {
+        font-size: 0.9rem !important;
+        line-height: 1.5;
+    }
+    
+    /* Badges Mobile */
+    .badge {
+        font-size: 0.7rem !important;
+        padding: 6px 12px !important;
+    }
+    
+    /* Cards and Services Mobile */
+    .service-card,
+    .feature-card,
+    .card-custom {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+    }
+    
+    .service-icon,
+    .feature-icon {
+        width: 55px !important;
+        height: 55px !important;
+        font-size: 1.5rem !important;
+        margin-bottom: 15px;
+    }
+    
+    .service-card h3,
+    .feature-card h3 {
+        font-size: 1.25rem !important;
+        margin-bottom: 10px;
+    }
+    
+    .service-card p,
+    .feature-card p {
+        font-size: 0.9rem !important;
+        line-height: 1.5;
+    }
+    
+    /* Stats Counter Mobile */
+    .stat-item {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .stat-number {
+        font-size: 2rem !important;
+    }
+    
+    .stat-label {
+        font-size: 0.85rem !important;
+    }
+    
+    /* Images Mobile */
+    img[style*="height"] {
+        height: auto !important;
+        max-height: 300px !important;
+    }
+    
+    /* Grid Spacing Mobile */
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    
+    .row > * {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    /* Spacing Utilities Mobile */
+    .mb-5 { margin-bottom: 2rem !important; }
+    .mb-4 { margin-bottom: 1.5rem !important; }
+    .mb-3 { margin-bottom: 1rem !important; }
+    .py-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+    
+    /* Forms Mobile */
+    .form-control {
+        font-size: 14px;
+        padding: 12px 15px;
+        border-radius: 6px;
+    }
+    
+    .form-label {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    
+    .form-select {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+    
+    textarea.form-control {
+        min-height: 120px;
+    }
+    
+    /* Tables Mobile */
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .table {
+        font-size: 13px;
+    }
+    
+    .table th,
+    .table td {
+        padding: 10px 8px;
+        white-space: nowrap;
+    }
+    
+    /* Footer Mobile */
+    .footer {
+        padding: 40px 0 20px;
+        text-align: center;
+    }
+    
+    .footer-section {
+        margin-bottom: 30px;
+    }
+    
+    .footer-title {
+        font-size: 1rem !important;
+        margin-bottom: 15px;
+    }
+    
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+    
+    .footer-bottom {
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+    /* Scroll to Top Button Mobile */
+    .scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.25rem;
+    }
+    
+    /* Partnership Logos Mobile */
+    .col-6.col-md-4.col-lg-2,
+    .col-4 {
+        padding: 10px !important;
+    }
+    
+    .col-4 img,
+    .col-6 img {
+        max-height: 50px !important;
+        width: auto;
+        margin: 0 auto;
+    }
+    
+    /* Testimonials Mobile */
+    .testimonial-card {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    /* Contact Info Mobile */
+    .contact-info-item {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    
+    .contact-info-item i {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    /* Map Mobile */
+    .map-container {
+        height: 300px !important;
+        margin-top: 20px;
+    }
+}
+
+/* Small Mobile (576px and below) */
+@media (max-width: 576px) {
+    /* Extra small typography */
+    body {
+        font-size: 14px;
+    }
+    
+    h1, .display-3 { font-size: 1.5rem !important; }
+    h2 { font-size: 1.35rem !important; }
+    h3 { font-size: 1.15rem !important; }
+    h4 { font-size: 1rem !important; }
+    
+    .hero-content h1,
+    .display-3 {
+        font-size: 1.65rem !important;
+    }
+    
+    .hero-content .lead,
+    .hero-content p {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Container extra small */
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    
+    /* Sections extra small */
+    section,
+    .py-100 {
+        padding: 40px 0 !important;
+    }
+    
+    /* Buttons extra small */
+    .btn,
+    .btn-lg,
+    .btn-sm {
+        padding: 10px 20px !important;
+        font-size: 13px !important;
+    }
+    
+    /* Cards extra small */
+    .service-card,
+    .card-custom,
+    .feature-card {
+        padding: 18px 12px;
+    }
+    
+    /* Icons extra small */
+    .service-icon,
+    .feature-icon {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.35rem !important;
+    }
+    
+    /* Stats extra small */
+    .stat-number {
+        font-size: 1.75rem !important;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem !important;
+    }
+    
+    /* Grid extra small */
+    .row {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    
+    .row > * {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    
+    /* Hero extra small */
+    .hero-carousel,
+    .carousel-item,
+    .hero-slide {
+        min-height: 480px !important;
+        height: 480px !important;
+    }
+    
+    .carousel-indicators {
+        bottom: 12px !important;
+    }
+    
+    .carousel-indicators [data-bs-target] {
+        width: 8px;
+        height: 8px;
+        margin: 0 2px;
+    }
+    
+    .carousel-indicators .active {
+        width: 24px;
+    }
+    
+    .hero-content {
+        padding: 25px 12px 65px 12px;
+    }
+    
+    /* Partnership logos extra small */
+    .col-4 img,
+    .col-6 img {
+        max-height: 40px !important;
+    }
+    
+    /* Forms extra small */
+    .form-control,
+    .form-select {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+    
+    .form-label {
+        font-size: 13px;
+    }
+    
+    /* Tables extra small */
+    .table {
+        font-size: 12px;
+    }
+    
+    .table th,
+    .table td {
+        padding: 8px 6px;
+    }
+    
+    /* Footer extra small */
+    .footer-title {
+        font-size: 0.95rem !important;
+    }
+    
+    .footer-links li {
+        font-size: 13px;
+    }
+    
+    /* Social icons extra small */
+    .social-icon {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 1rem !important;
+    }
+    
+    /* Scroll to top extra small */
+    .scroll-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Landscape Phone (height less than 500px) */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-carousel,
+    .carousel-item,
+    .hero-slide {
+        min-height: 100vh !important;
+        height: 100vh !important;
+    }
+    
+    .hero-content {
+        padding: 20px 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .hero-content p {
+        font-size: 0.85rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .hero-badge {
+        padding: 5px 12px;
+        font-size: 0.65rem;
+    }
+}
+
+/* Fix for iOS Safari bottom bar */
+@supports (-webkit-touch-callout: none) {
+    .hero-carousel,
+    .hero-slide {
+        min-height: -webkit-fill-available;
+    }
+}
+
+/* Prevent zoom on input focus (iOS) */
+@media screen and (max-width: 767px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    textarea,
+    select {
+        font-size: 16px !important;
     }
 }
