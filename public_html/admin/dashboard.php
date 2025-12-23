@@ -51,201 +51,80 @@ try {
 } catch (PDOException $e) {
     $error = "Database error: " . $e->getMessage();
 }
+
+$page_title = 'Dashboard';
+require_once __DIR__ . '/includes/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - Farhan Logistics</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <style>
-        :root {
-            --primary-navy: #2f338d;
-            --primary-red: #ec2025;
-            --sidebar-width: 260px;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #f8f9fa;
-        }
-        
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100vh;
-            width: var(--sidebar-width);
-            background: linear-gradient(180deg, var(--primary-navy) 0%, #1e2256 100%);
-            color: white;
-            overflow-y: auto;
-            z-index: 1000;
-            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .sidebar-header {
-            padding: 1.5rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .sidebar-menu {
-            list-style: none;
-            padding: 1rem 0;
-            margin: 0;
-        }
-        
-        .sidebar-menu li a {
-            display: flex;
-            align-items: center;
-            padding: 0.75rem 1.5rem;
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .sidebar-menu li a:hover,
-        .sidebar-menu li a.active {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            padding-left: 2rem;
-        }
-        
-        .sidebar-menu li a i {
-            margin-right: 0.75rem;
-            font-size: 1.2rem;
-        }
-        
-        .main-content {
-            margin-left: var(--sidebar-width);
-            padding: 2rem;
-            min-height: 100vh;
-        }
-        
-        .top-bar {
-            background: white;
-            padding: 1rem 1.5rem;
-            border-radius: 15px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            margin-bottom: 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .stat-card {
-            background: white;
-            border-radius: 15px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        }
-        
-        .stat-card.red {
-            border-left: 4px solid var(--primary-red);
-        }
-        
-        .stat-card.navy {
-            border-left: 4px solid var(--primary-navy);
-        }
-        
-        .stat-card.success {
-            border-left: 4px solid #28a745;
-        }
-        
-        .stat-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            color: white;
-        }
-        
-        .activity-card {
-            background: white;
-            border-radius: 15px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            margin-bottom: 1.5rem;
-        }
-        
-        .activity-item {
-            padding: 1rem;
-            border-bottom: 1px solid #e9ecef;
-            transition: background 0.2s ease;
-        }
-        
-        .activity-item:last-child {
-            border-bottom: none;
-        }
-        
-        .activity-item:hover {
-            background: #f8f9fa;
-        }
-        
-        .badge-status {
-            padding: 0.35rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-        
-        @media (max-width: 768px) {
-            .sidebar {
-                transform: translateX(-100%);
-            }
-            
-            .main-content {
-                margin-left: 0;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="sidebar-header">
-            <h5 class="mb-0"><i class="bi bi-shield-lock-fill me-2"></i>Admin Portal</h5>
-            <small class="text-white-50">Farhan Logistics</small>
-        </div>
-        
-        <ul class="sidebar-menu">
-            <li><a href="/admin/dashboard" class="active"><i class="bi bi-speedometer2"></i>Dashboard</a></li>
-            <li><a href="/admin/quotes"><i class="bi bi-file-text"></i>Quote Requests</a></li>
-            <li><a href="/admin/contacts"><i class="bi bi-envelope"></i>Contact Submissions</a></li>
-            <li><a href="/admin/careers"><i class="bi bi-briefcase"></i>Career Applications</a></li>
-            <li><a href="/admin/logout"><i class="bi bi-box-arrow-right"></i>Logout</a></li>
-        </ul>
-    </div>
+
+<style>
+    .stat-card {
+        background: white;
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        height: 100%;
+    }
     
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- Top Bar -->
-        <div class="top-bar">
-            <div>
-                <h4 class="mb-0" style="color: var(--primary-navy); font-weight: 700;">Dashboard Overview</h4>
-                <small class="text-muted">Welcome back, <?php echo htmlspecialchars($_SESSION['admin_username']); ?></small>
-            </div>
-            <div>
-                <span class="badge bg-success me-2"><i class="bi bi-circle-fill me-1" style="font-size: 0.5rem;"></i>Online</span>
-                <a href="/admin/logout" class="btn btn-outline-danger btn-sm">
-                    <i class="bi bi-box-arrow-right me-1"></i>Logout
-                </a>
-            </div>
-        </div>
-        
-        <!-- Statistics Cards -->
-        <div class="row g-4 mb-4">
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .stat-card.red {
+        border-left: 4px solid var(--primary-red);
+    }
+    
+    .stat-card.navy {
+        border-left: 4px solid var(--primary-navy);
+    }
+    
+    .stat-card.success {
+        border-left: 4px solid #28a745;
+    }
+    
+    .stat-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        color: white;
+    }
+    
+    .activity-card {
+        background: white;
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        margin-bottom: 1.5rem;
+        height: 100%;
+    }
+    
+    .activity-item {
+        padding: 1rem;
+        border-bottom: 1px solid #e9ecef;
+        transition: background 0.2s ease;
+    }
+    
+    .activity-item:last-child {
+        border-bottom: none;
+    }
+    
+    .activity-item:hover {
+        background: #f8f9fa;
+        border-radius: 8px;
+    }
+</style>
+
+<!-- Dashboard Content -->
+<!-- Dashboard Content -->
+
+<!-- Statistics Cards -->
+<div class="row g-4 mb-4">
             <div class="col-lg-4 col-md-6">
                 <div class="stat-card red">
                     <div class="d-flex justify-content-between align-items-start">
@@ -367,7 +246,5 @@ try {
             </div>
         </div>
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+
+<?php require_once __DIR__ . '/includes/footer.php'; ?>

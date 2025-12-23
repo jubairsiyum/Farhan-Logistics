@@ -65,9 +65,16 @@ include __DIR__ . '/includes/header.php';
         <h2 style="color: var(--primary-navy); font-weight: 700;">
             <i class="bi bi-briefcase me-2" style="color: var(--primary-red);"></i>Career Applications
         </h2>
-        <span class="badge bg-primary" style="font-size: 1rem; padding: 0.5rem 1rem;">
-            Total: <?php echo $total; ?>
-        </span>
+        <div class="d-flex gap-2">
+            <?php if (!$single_app): ?>
+            <button class="btn btn-success" onclick="exportToCSV()">
+                <i class="bi bi-file-earmark-spreadsheet me-2"></i>Export CSV
+            </button>
+            <?php endif; ?>
+            <span class="badge bg-primary" style="font-size: 1rem; padding: 0.5rem 1rem;">
+                Total: <?php echo $total_applications; ?>
+            </span>
+        </div>
     </div>
     
     <?php if ($single_app): ?>
@@ -156,7 +163,7 @@ include __DIR__ . '/includes/header.php';
         <div class="card shadow-sm">
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-hover">
+                    <table class="table table-hover" id="careersTable">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -221,5 +228,37 @@ include __DIR__ . '/includes/header.php';
         </div>
     <?php endif; ?>
 </div>
+
+<script>
+function exportToCSV() {
+    const table = document.getElementById('careersTable');
+    if(!table) return;
+    
+    let csv = [];
+    const headers = [];
+    table.querySelectorAll('thead th').forEach(th => {
+        if(th.textContent.trim() !== 'Actions') headers.push(th.textContent.trim());
+    });
+    csv.push(headers.join(','));
+    
+    table.querySelectorAll('tbody tr').forEach(tr => {
+        const cells = tr.querySelectorAll('td');
+        if(cells.length > 1) {
+            const row = [];
+            for(let i = 0; i < cells.length - 1; i++) {
+                row.push('"' + cells[i].textContent.trim().replace(/"/g, '""').replace(/\n/g, ' ') + '"');
+            }
+            csv.push(row.join(','));
+        }
+    });
+    
+    const blob = new Blob([csv.join('\n')], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'career_applications_' + new Date().toISOString().slice(0,10) + '.csv';
+    a.click();
+}
+</script>
 
 <?php include __DIR__ . '/includes/footer.php'; ?>
