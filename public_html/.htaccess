@@ -1,10 +1,83 @@
-# Apache .htaccess Configuration for Farhan Logistics Website
-# Minimal configuration for maximum compatibility
+# ========================================================================
+# FARHAN LOGISTICS - SECURITY & ROUTING CONFIGURATION
+# Apache .htaccess with industry-standard security measures
+# ========================================================================
 
-# Enable mod_rewrite
+# ========================================================================
+# 1. SECURITY HEADERS
+# ========================================================================
+
+<IfModule mod_headers.c>
+    # Prevent clickjacking attacks
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # XSS Protection
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Prevent MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Remove Server signature
+    Header always unset X-Powered-By
+    Header unset X-Powered-By
+</IfModule>
+
+# Hide server signature
+ServerSignature Off
+
+# ========================================================================
+# 2. FILE & DIRECTORY PROTECTION
+# ========================================================================
+
+# Disable Directory Browsing
+Options -Indexes
+
+# Disable MultiViews
+Options -MultiViews
+
+# Protect sensitive files
+<FilesMatch "^(\.htaccess|\.htpasswd|\.env|composer\.json|composer\.lock|package\.json|database_schema\.sql|\.git.*|security\.php|db\.php)$">
+    Require all denied
+</FilesMatch>
+
+# Protect storage/logs directory
+<DirectoryMatch "storage/logs">
+    Require all denied
+</DirectoryMatch>
+
+# Prevent PHP execution in uploads directory
+<DirectoryMatch "uploads">
+    <FilesMatch "\.php$">
+        Require all denied
+    </FilesMatch>
+</DirectoryMatch>
+
+# ========================================================================
+# 3. BLOCK MALICIOUS REQUESTS
+# ========================================================================
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
+    
+    # Block suspicious user agents
+    RewriteCond %{HTTP_USER_AGENT} (nikto|sqlmap|fimap|nessus|openvas|metasploit|havij|acunetix|nmap) [NC]
+    RewriteRule ^(.*)$ - [F,L]
+    
+    # Block malicious query strings
+    RewriteCond %{QUERY_STRING} (<|%3C)([^s]*s)+cript.*(>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+    RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2}) [OR]
+    RewriteCond %{QUERY_STRING} (union.*select|insert.*into|drop.*table|update.*set|delete.*from) [NC,OR]
+    RewriteCond %{QUERY_STRING} (bash|git|hg|log|svn|swp|cvs|etc/passwd|boot\.ini) [NC]
+    RewriteRule ^(.*)$ - [F,L]
+    
+    # ========================================================================
+    # 4. ROUTING (after security checks)
+    # ========================================================================
     
     # Skip rewriting for static assets
     RewriteCond %{REQUEST_URI} \.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot|webp|pdf)$ [NC]
@@ -20,11 +93,55 @@
     RewriteRule ^(.*)$ router.php [QSA,L]
 </IfModule>
 
-# Disable Directory Browsing
-Options -Indexes
+# ========================================================================
+# 5. PHP SECURITY SETTINGS
+# ========================================================================
+
+# Limit file upload size
+php_value upload_max_filesize 5M
+php_value post_max_size 6M
+
+# Remove PHP version from headers
+php_flag expose_php Off
+
+# ========================================================================
+# 6. PERFORMANCE OPTIMIZATION
+# ========================================================================
+
+# GZIP Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+    AddOutputFilterByType DEFLATE application/javascript application/json application/xml
+</IfModule>
+
+# Browser Caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
+# ========================================================================
+# 7. DEFAULT SETTINGS
+# ========================================================================
 
 # Default Document Order
 DirectoryIndex index.php index.html
 
 # UTF-8 Encoding
 AddDefaultCharset UTF-8
+
+# ========================================================================
+# 8. HTTPS REDIRECT (Enable after SSL certificate is installed)
+# ========================================================================
+
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{HTTPS} off
+#     RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+# </IfModule>

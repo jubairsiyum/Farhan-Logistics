@@ -4,10 +4,27 @@
  * Processes contact form submissions and stores in database
  */
 
+// Include security configuration
+require_once dirname(__DIR__) . '/config/security.php';
+
 // Prevent direct access
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('HTTP/1.1 403 Forbidden');
     exit('Direct access not allowed');
+}
+
+// CSRF Protection
+if (!isset($_POST['csrf_token']) || !validateCSRFToken($_POST['csrf_token'])) {
+    logSecurityEvent('csrf_violation', ['form' => 'contact']);
+    echo json_encode(['success' => false, 'message' => 'Security validation failed']);
+    exit;
+}
+
+// Rate Limiting
+if (!checkRateLimit('contact_form', 3, 300)) {
+    logSecurityEvent('rate_limit_exceeded', ['form' => 'contact']);
+    echo json_encode(['success' => false, 'message' => 'Too many requests. Please try again in 5 minutes.']);
+    exit;
 }
 
 // Set JSON response header

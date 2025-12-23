@@ -1,5 +1,6 @@
 <?php
-session_start();
+// Include security configuration
+require_once dirname(__DIR__) . '/config/security.php';
 
 // Include database connection
 require_once dirname(__DIR__) . '/config/db.php';
@@ -13,41 +14,60 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true
 $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = trim($_POST['username'] ?? '');
-    $password = $_POST['password'] ?? '';
-    
-    if (!empty($username) && !empty($password)) {
-        try {
-            // Fetch user from database
-            $stmt = $pdo->prepare("SELECT * FROM admin_users WHERE username = ? AND status = 'active' LIMIT 1");
-            $stmt->execute([$username]);
-            $user = $stmt->fetch(PDO::FETCH_ASSOC);
-            
-            // Verify password
-            if ($user && password_verify($password, $user['password'])) {
-                // Update last login time
-                $update_stmt = $pdo->prepare("UPDATE admin_users SET last_login = NOW() WHERE id = ?");
-                $update_stmt->execute([$user['id']]);
-                
-                // Set session variables
-                $_SESSION['admin_logged_in'] = true;
-                $_SESSION['admin_id'] = $user['id'];
-                $_SESSION['admin_username'] = $user['username'];
-                $_SESSION['admin_email'] = $user['email'];
-                $_SESSION['admin_name'] = $user['full_name'];
-                $_SESSION['admin_role'] = $user['role'];
-                
-                header('Location: /admin/dashboard');
-                exit();
-            } else {
-                $error = 'Invalid username or password';
-            }
-        } catch (PDOException $e) {
-            $error = 'Database error occurred. Please try again.';
-            error_log('Login error: ' . $e->getMessage());
-        }
+    // CSRF Protection
+    if (!isset($_POST['csrf_token']) || !validateCSRFToken($_POST['csrf_token'])) {
+        logSecurityEvent('csrf_violation', ['form' => 'admin_login']);
+        $error = 'Security validation failed';
     } else {
-        $error = 'Please enter both username and password';
+        $username = sanitizeString($_POST['username'] ?? '');
+        $password = $_POST['password'] ?? '';
+        
+        // Check if account is locked due to failed attempts
+        if (isAccountLocked($username)) {
+            logSecurityEvent('login_attempt_locked', ['username' => $username]);
+            $error = 'Account temporarily locked due to too many failed login attempts. Please try again in 15 minutes.';
+        } elseif (!empty($username) && !empty($password)) {
+            try {
+                // Fetch user from database
+                $stmt = $pdo->prepare("SELECT * FROM admin_users WHERE username = ? AND status = 'active' LIMIT 1");
+                $stmt->execute([$username]);
+                $user = $stmt->fetch(PDO::FETCH_ASSOC);
+                
+                // Verify password
+                if ($user && verifyPassword($password, $user['password'])) {
+                    // Reset failed login attempts
+                    resetFailedLogins($username);
+                    
+                    // Update last login time
+                    $update_stmt = $pdo->prepare("UPDATE admin_users SET last_login = NOW() WHERE id = ?");
+                    $update_stmt->execute([$user['id']]);
+                    
+                    // Regenerate session ID for security
+                    session_regenerate_id(true);
+                    
+                    // Set session variables
+                    $_SESSION['admin_logged_in'] = true;
+                    $_SESSION['admin_id'] = $user['id'];
+                    $_SESSION['admin_username'] = $user['username'];
+                    $_SESSION['admin_email'] = $user['email'];
+                    $_SESSION['admin_name'] = $user['full_name'];
+                    $_SESSION['admin_role'] = $user['role'];
+                    
+                    logSecurityEvent('admin_login_success', ['username' => $username]);
+                    
+                    header('Location: /admin/dashboard');
+                    exit();
+                } else {
+                    trackFailedLogin($username);
+                    $error = 'Invalid username or password';
+                }
+            } catch (PDOException $e) {
+                $error = 'Database error occurred. Please try again.';
+                error_log('Login error: ' . $e->getMessage());
+            }
+        } else {
+            $error = 'Please enter both username and password';
+        }
     }
 }
 ?>
@@ -157,17 +177,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endif; ?>
             
             <form method="POST" action="">
+                <?php echo csrfField(); ?>
                 <div class="mb-3">
                     <label for="username" class="form-label" style="font-weight: 600; color: var(--primary-navy);">
                         <i class="bi bi-person-circle me-2"></i>Username
                     </label>
-                    <input type="text" class="form-control" id="username" name="username" required autofocus>
+                    <input type="text" class="form-control" id="username" name="username" required autofocus autocomplete="username">
                 </div>
                 
                 <div class="mb-4">
                     <label for="password" class="form-label" style="font-weight: 600; color: var(--primary-navy);">
                         <i class="bi bi-key-fill me-2"></i>Password
                     </label>
+                    <input type="password" class="form-control" id="password" name="password" required autocomplete="current-password">
                     <input type="password" class="form-control" id="password" name="password" required>
                 </div>
                 

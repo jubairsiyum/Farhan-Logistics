@@ -4,6 +4,23 @@
  * Processes job application form submissions with resume upload
  */
 
+// Include security configuration
+require_once dirname(__DIR__) . '/config/security.php';
+
+// CSRF Protection
+if (!isset($_POST['csrf_token']) || !validateCSRFToken($_POST['csrf_token'])) {
+    logSecurityEvent('csrf_violation', ['form' => 'career']);
+    echo json_encode(['success' => false, 'message' => 'Security validation failed']);
+    exit;
+}
+
+// Rate Limiting (stricter for file uploads)
+if (!checkRateLimit('career_form', 2, 600)) {
+    logSecurityEvent('rate_limit_exceeded', ['form' => 'career']);
+    echo json_encode(['success' => false, 'message' => 'Too many applications. Please try again in 10 minutes.']);
+    exit;
+}
+
 // Set JSON response header
 header('Content-Type: application/json');
 
@@ -57,34 +74,30 @@ try {
     $resume_filename = null;
     
     if (isset($_FILES['resume']) && $_FILES['resume']['error'] === UPLOAD_ERR_OK) {
-        $upload_dir = dirname(__DIR__) . '/uploads/resumes/';
+        // Use secure file validation from security.php
+        $validation = validateFileUpload($_FILES['resume'], ['pdf', 'doc', 'docx'], 5242880);
         
-        // Create directory if it doesn't exist
-        if (!is_dir($upload_dir)) {
-            mkdir($upload_dir, 0755, true);
-        }
-        
-        $file_tmp = $_FILES['resume']['tmp_name'];
-        $file_name = $_FILES['resume']['name'];
-        $file_size = $_FILES['resume']['size'];
-        $file_ext = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
-        
-        // Allowed extensions
-        $allowed_ext = ['pdf', 'doc', 'docx'];
-        
-        // Validate file
-        if (!in_array($file_ext, $allowed_ext)) {
-            $response['errors'][] = 'Resume must be PDF or DOC format';
-        } elseif ($file_size > 5242880) { // 5MB max
-            $response['errors'][] = 'Resume file size must not exceed 5MB';
+        if (!$validation['valid']) {
+            $response['errors'] = array_merge($response['errors'], $validation['errors']);
         } else {
-            // Generate unique filename
-            $new_filename = uniqid('resume_', true) . '_' . time() . '.' . $file_ext;
+            $upload_dir = dirname(__DIR__) . '/uploads/resumes/';
+            
+            // Create directory if it doesn't exist
+            if (!is_dir($upload_dir)) {
+                mkdir($upload_dir, 0755, true);
+            }
+            
+            // Generate secure filename
+            $file_ext = $validation['extension'];
+            $new_filename = uniqid('resume_', true) . '_' . time() . '.' . sanitizeFilename($file_ext);
             $upload_path = $upload_dir . $new_filename;
             
-            // Move uploaded file
-            if (move_uploaded_file($file_tmp, $upload_path)) {
+            
+            // Move uploaded file securely
+            if (move_uploaded_file($_FILES['resume']['tmp_name'], $upload_path)) {
                 $resume_filename = $new_filename;
+                // Set restrictive permissions
+                chmod($upload_path, 0644);
             } else {
                 $response['errors'][] = 'Failed to upload resume';
             }

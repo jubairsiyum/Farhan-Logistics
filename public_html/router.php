@@ -31,19 +31,19 @@ if (strpos($page, '..') !== false) {
     return true;
 }
 
-// Try to load the PHP file (with or without .php extension)
-$file = __DIR__ . '/' . $page . '.php';
-if (file_exists($file)) {
-    $_SERVER['PHP_SELF'] = '/' . $page . '.php';
-    include $file;
-    return true;
-}
-
-// Try without adding .php (for files already with .php in path like config/migrate.php)
+// Try without adding .php first (for files already with .php in path like handlers/tracking_handler.php)
 $file_direct = __DIR__ . '/' . $page;
 if (file_exists($file_direct) && pathinfo($file_direct, PATHINFO_EXTENSION) === 'php') {
     $_SERVER['PHP_SELF'] = '/' . $page;
     include $file_direct;
+    return true;
+}
+
+// Try to load the PHP file (add .php extension)
+$file = __DIR__ . '/' . $page . '.php';
+if (file_exists($file)) {
+    $_SERVER['PHP_SELF'] = '/' . $page . '.php';
+    include $file;
     return true;
 }
 

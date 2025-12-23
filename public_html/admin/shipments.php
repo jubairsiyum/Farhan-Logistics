@@ -1,10 +1,9 @@
 <?php
-session_start();
+// Include security configuration
+require_once dirname(__DIR__) . '/config/security.php';
 
-if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
-    header('Location: /admin/');
-    exit;
-}
+// Check authentication
+requireAdmin();
 
 require_once dirname(__DIR__) . '/config/db.php';
 $pageTitle = 'Shipment Tracking Management';
@@ -119,6 +118,14 @@ function sendTrackingEmail($customer_email, $customer_name, $tracking_number, $o
 
 // Handle actions
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // CSRF Protection
+    if (!isset($_POST['csrf_token']) || !validateCSRFToken($_POST['csrf_token'])) {
+        logSecurityEvent('csrf_violation', ['form' => 'admin_shipments']);
+        $_SESSION['error_message'] = 'Security validation failed';
+        header('Location: /admin/shipments');
+        exit;
+    }
+    
     if (isset($_POST['action'])) {
         if ($_POST['action'] === 'create_shipment') {
             // Auto-generate tracking number
@@ -382,6 +389,7 @@ require_once __DIR__ . '/includes/header.php';
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <form method="POST">
+                    <?php echo csrfField(); ?>
                     <input type="hidden" name="action" value="update_status">
                     <input type="hidden" name="tracking_number" value="<?= htmlspecialchars($viewing_shipment['tracking_number']) ?>">
                     <div class="modal-body">
@@ -524,6 +532,7 @@ require_once __DIR__ . '/includes/header.php';
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <form method="POST">
+                <?php echo csrfField(); ?>
                 <input type="hidden" name="action" value="create_shipment">
                 <div class="modal-body">
                     <div class="alert alert-info mb-3">

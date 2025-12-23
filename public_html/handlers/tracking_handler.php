@@ -1,6 +1,14 @@
 <?php
+require_once dirname(__DIR__) . '/config/security.php';
 header('Content-Type: application/json');
 require_once dirname(__DIR__) . '/config/db.php';
+
+// Rate Limiting for tracking queries
+if (!checkRateLimit('tracking_query', 10, 60)) {
+    logSecurityEvent('rate_limit_exceeded', ['form' => 'tracking']);
+    echo json_encode(['success' => false, 'message' => 'Too many requests. Please try again in a minute.']);
+    exit;
+}
 
 try {
     if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
@@ -50,7 +58,7 @@ try {
         SELECT 
             event_type,
             location,
-            description,
+            event_description as description,
             event_date
         FROM tracking_events 
         WHERE tracking_number = ?
