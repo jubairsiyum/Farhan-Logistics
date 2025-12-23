@@ -4,17 +4,11 @@
  * Processes job application form submissions with resume upload
  */
 
-// Prevent direct access
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('HTTP/1.1 403 Forbidden');
-    exit('Direct access not allowed');
-}
-
 // Set JSON response header
 header('Content-Type: application/json');
 
 // Include database configuration
-require_once '../config/db.php';
+require_once dirname(__DIR__) . '/config/db.php';
 
 // Initialize response
 $response = [
@@ -63,7 +57,7 @@ try {
     $resume_filename = null;
     
     if (isset($_FILES['resume']) && $_FILES['resume']['error'] === UPLOAD_ERR_OK) {
-        $upload_dir = '../uploads/resumes/';
+        $upload_dir = dirname(__DIR__) . '/uploads/resumes/';
         
         // Create directory if it doesn't exist
         if (!is_dir($upload_dir)) {
@@ -106,33 +100,24 @@ try {
         exit;
     }
     
-    // Get database connection
-    $conn = getDatabaseConnection();
-    
-    if (!$conn) {
-        throw new Exception('Database connection failed');
-    }
-    
-    // Prepare SQL statement
-    $stmt = $conn->prepare("
-        INSERT INTO career_applications 
-        (first_name, last_name, email, phone, position, experience_years, 
-        current_company, education, linkedin_url, cover_letter, resume_filename, 
-        ip_address, user_agent, status) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'received')
-    ");
-    
-    if (!$stmt) {
-        throw new Exception('Failed to prepare statement: ' . $conn->error);
-    }
-    
     // Get client information
     $ip_address = $_SERVER['REMOTE_ADDR'] ?? 'Unknown';
     $user_agent = $_SERVER['HTTP_USER_AGENT'] ?? 'Unknown';
     
-    // Bind parameters
-    $stmt->bind_param(
-        'sssssississss',
+    // Prepare SQL statement with PDO
+    $stmt = $pdo->prepare("
+        INSERT INTO career_applications 
+        (first_name, last_name, email, phone, position, experience_years, 
+        current_company, education, linkedin_url, cover_letter, resume_filename, resume_path,
+        ip_address, user_agent, status) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'received')
+    ");
+    
+    // Store resume path
+    $resume_path = $resume_filename ? 'uploads/resumes/' . $resume_filename : null;
+    
+    // Execute statement
+    if ($stmt->execute([
         $first_name,
         $last_name,
         $email,
@@ -144,13 +129,15 @@ try {
         $linkedin_url,
         $cover_letter,
         $resume_filename,
+        $resume_path,
         $ip_address,
         $user_agent
-    );
-    
-    // Execute statement
-    if ($stmt->execute()) {
-        $application_id = $conn->insert_id;
+    ])) {
+        $application_id = $pdo->lastInsertId();
+        
+        // Update job postings application count
+        $update_stmt = $pdo->prepare("UPDATE job_postings SET applications_count = applications_count + 1 WHERE title = ? AND status = 'active'");
+        $update_stmt->execute([$position]);
         
         $response['success'] = true;
         $response['message'] = 'Application submitted successfully! Our HR team will review your application and contact you if your profile matches our requirements.';
@@ -160,58 +147,22 @@ try {
         // sendApplicationEmailNotification($first_name, $last_name, $email, $position);
         
         // Log success
-        logError("Career application submitted successfully by: $email (ID: $application_id)", 'INFO');
+        $response['success'] = true;
+        $response['message'] = 'Application submitted successfully! Our HR team will review your application and contact you if your profile matches our requirements.';
     } else {
-        throw new Exception('Failed to save application: ' . $stmt->error);
+        throw new Exception('Failed to save application');
     }
     
-    // Close statement and connection
-    $stmt->close();
-    closeDatabaseConnection($conn);
+} catch (PDOException $e) {
+    $response['success'] = false;
+    $response['message'] = 'An error occurred while processing your application. Please try again later.';
+    error_log('Career application error: ' . $e->getMessage());
     
 } catch (Exception $e) {
     $response['success'] = false;
-    $response['message'] = 'An error occurred while processing your application. Please try again later.';
-    
-    // Log error
-    logError('Career application error: ' . $e->getMessage(), 'ERROR');
+    $response['message'] = $e->getMessage();
 }
 
 // Send response
 echo json_encode($response);
 exit;
-
-/**
- * Send email notification for job application (optional)
- */
-/*
-function sendApplicationEmailNotification($first_name, $last_name, $email, $position) {
-    // To candidate
-    $to_candidate = $email;
-    $subject_candidate = 'Application Received - Farhan Logistics';
-    
-    $body_candidate = "Dear $first_name $last_name,\n\n";
-    $body_candidate .= "Thank you for your interest in the $position position at Farhan Logistics.\n\n";
-    $body_candidate .= "We have received your application and our HR team will review it shortly.\n";
-    $body_candidate .= "If your profile matches our requirements, we will contact you for the next steps.\n\n";
-    $body_candidate .= "Best regards,\n";
-    $body_candidate .= "Farhan Logistics HR Team\n";
-    
-    $headers = "From: hr@farhanlogistics.com\r\n";
-    
-    mail($to_candidate, $subject_candidate, $body_candidate, $headers);
-    
-    // To HR team
-    $to_hr = 'hr@farhanlogistics.com';
-    $subject_hr = 'New Job Application: ' . $position;
-    
-    $body_hr = "New job application received:\n\n";
-    $body_hr .= "Name: $first_name $last_name\n";
-    $body_hr .= "Email: $email\n";
-    $body_hr .= "Position: $position\n\n";
-    $body_hr .= "Please log in to review the full application.\n";
-    
-    mail($to_hr, $subject_hr, $body_hr, $headers);
-}
-*/
-?>

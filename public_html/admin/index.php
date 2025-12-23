@@ -1,9 +1,8 @@
 <?php
 session_start();
 
-// Simple authentication - In production, use proper password hashing
-$ADMIN_USERNAME = 'admin';
-$ADMIN_PASSWORD = 'farhan@2024'; // Change this!
+// Include database connection
+require_once dirname(__DIR__) . '/config/db.php';
 
 // Check if already logged in
 if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true) {
@@ -14,16 +13,41 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true
 $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username'] ?? '';
+    $username = trim($_POST['username'] ?? '');
     $password = $_POST['password'] ?? '';
     
-    if ($username === $ADMIN_USERNAME && $password === $ADMIN_PASSWORD) {
-        $_SESSION['admin_logged_in'] = true;
-        $_SESSION['admin_username'] = $username;
-        header('Location: /admin/dashboard');
-        exit();
+    if (!empty($username) && !empty($password)) {
+        try {
+            // Fetch user from database
+            $stmt = $pdo->prepare("SELECT * FROM admin_users WHERE username = ? AND status = 'active' LIMIT 1");
+            $stmt->execute([$username]);
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            // Verify password
+            if ($user && password_verify($password, $user['password'])) {
+                // Update last login time
+                $update_stmt = $pdo->prepare("UPDATE admin_users SET last_login = NOW() WHERE id = ?");
+                $update_stmt->execute([$user['id']]);
+                
+                // Set session variables
+                $_SESSION['admin_logged_in'] = true;
+                $_SESSION['admin_id'] = $user['id'];
+                $_SESSION['admin_username'] = $user['username'];
+                $_SESSION['admin_email'] = $user['email'];
+                $_SESSION['admin_name'] = $user['full_name'];
+                $_SESSION['admin_role'] = $user['role'];
+                
+                header('Location: /admin/dashboard');
+                exit();
+            } else {
+                $error = 'Invalid username or password';
+            }
+        } catch (PDOException $e) {
+            $error = 'Database error occurred. Please try again.';
+            error_log('Login error: ' . $e->getMessage());
+        }
     } else {
-        $error = 'Invalid username or password';
+        $error = 'Please enter both username and password';
     }
 }
 ?>

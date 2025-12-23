@@ -304,6 +304,53 @@ try {
     $pdo->exec($sql);
     $migration_log[] = ['type' => 'success', 'message' => '✓ Table <code>newsletter_subscribers</code> created'];
     
+    // 7. Admin Users Table
+    $sql = "CREATE TABLE IF NOT EXISTS `admin_users` (
+        `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+        `username` VARCHAR(50) UNIQUE NOT NULL,
+        `password` VARCHAR(255) NOT NULL,
+        `email` VARCHAR(100) UNIQUE NOT NULL,
+        `full_name` VARCHAR(100) NOT NULL,
+        `role` ENUM('super_admin', 'admin', 'manager') DEFAULT 'admin',
+        `status` ENUM('active', 'inactive', 'suspended') DEFAULT 'active',
+        `last_login` TIMESTAMP NULL DEFAULT NULL,
+        `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        PRIMARY KEY (`id`),
+        UNIQUE KEY `uk_username` (`username`),
+        UNIQUE KEY `uk_email` (`email`),
+        INDEX `idx_status` (`status`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci";
+    
+    $pdo->exec($sql);
+    $migration_log[] = ['type' => 'success', 'message' => '✓ Table <code>admin_users</code> created'];
+    
+    // 8. Job Postings Table
+    $sql = "CREATE TABLE IF NOT EXISTS `job_postings` (
+        `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+        `title` VARCHAR(200) NOT NULL,
+        `department` VARCHAR(100) NOT NULL,
+        `location` VARCHAR(100) NOT NULL,
+        `employment_type` ENUM('full_time', 'part_time', 'contract', 'internship') DEFAULT 'full_time',
+        `description` TEXT NOT NULL,
+        `responsibilities` TEXT NOT NULL,
+        `requirements` TEXT NOT NULL,
+        `salary_range` VARCHAR(100) DEFAULT NULL,
+        `experience_required` VARCHAR(50) DEFAULT NULL,
+        `status` ENUM('active', 'closed', 'draft') DEFAULT 'active',
+        `posted_by` INT(11) UNSIGNED DEFAULT NULL,
+        `applications_count` INT(11) DEFAULT 0,
+        `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        PRIMARY KEY (`id`),
+        INDEX `idx_status` (`status`),
+        INDEX `idx_department` (`department`),
+        INDEX `idx_created` (`created_at`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci";
+    
+    $pdo->exec($sql);
+    $migration_log[] = ['type' => 'success', 'message' => '✓ Table <code>job_postings</code> created'];
+    
     // Insert sample tracking data
     $migration_log[] = ['type' => 'info', 'message' => 'Inserting sample tracking data...'];
     
@@ -325,6 +372,57 @@ try {
     
     $pdo->exec($sql);
     $migration_log[] = ['type' => 'success', 'message' => '✓ Sample tracking events inserted'];
+    
+    // Insert default admin user with secure password
+    $migration_log[] = ['type' => 'info', 'message' => 'Creating default admin user...'];
+    $admin_password = password_hash('Farhan@2024!', PASSWORD_BCRYPT, ['cost' => 12]);
+    
+    $sql = "INSERT IGNORE INTO `admin_users` (`username`, `password`, `email`, `full_name`, `role`, `status`) VALUES
+    ('admin', ?, 'admin@farhanlogistics.com', 'System Administrator', 'super_admin', 'active')";
+    
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$admin_password]);
+    $migration_log[] = ['type' => 'success', 'message' => '✓ Default admin user created (username: <code>admin</code>, password: <code>Farhan@2024!</code>)'];
+    
+    // Insert sample job postings
+    $migration_log[] = ['type' => 'info', 'message' => 'Creating sample job postings...'];
+    
+    $sql = "INSERT IGNORE INTO `job_postings` (`title`, `department`, `location`, `employment_type`, `description`, `responsibilities`, `requirements`, `salary_range`, `experience_required`, `status`) VALUES
+    ('Operations Manager', 'Operations', 'Dubai, UAE', 'full_time', 
+     'Lead our operations team to ensure smooth logistics operations and exceptional customer service delivery.',
+     '• Oversee daily operations and logistics activities\n• Manage team of operations staff\n• Ensure compliance with regulations\n• Optimize operational processes\n• Monitor KPIs and performance metrics',
+     '• 5+ years experience in logistics operations\n• Strong leadership and team management skills\n• Knowledge of customs and shipping regulations\n• Excellent problem-solving abilities\n• Bachelor''s degree in Business or related field',
+     'AED 15,000 - 20,000/month', '5+ years', 'active'),
+    
+    ('Sales Executive', 'Sales', 'Dubai, UAE', 'full_time',
+     'Drive business growth by acquiring new clients and maintaining strong relationships with existing customers.',
+     '• Develop and execute sales strategies\n• Build and maintain client relationships\n• Prepare quotes and proposals\n• Meet and exceed sales targets\n• Attend industry events and networking',
+     '• 3+ years B2B sales experience\n• Excellent communication skills\n• Understanding of logistics industry\n• Proven track record in sales\n• Valid UAE driving license',
+     'AED 8,000 - 12,000 + Commission', '3+ years', 'active'),
+    
+    ('Customs Clearance Specialist', 'Customs', 'Dubai, UAE', 'full_time',
+     'Handle customs clearance processes and ensure compliance with international trade regulations.',
+     '• Process customs documentation\n• Liaise with customs authorities\n• Ensure regulatory compliance\n• Handle import/export procedures\n• Resolve customs-related issues',
+     '• 2+ years customs clearance experience\n• Knowledge of UAE customs regulations\n• Strong attention to detail\n• Excellent documentation skills\n• Proficiency in customs software',
+     'AED 6,000 - 9,000/month', '2+ years', 'active'),
+    
+    ('Customer Service Representative', 'Customer Service', 'Dubai, UAE', 'full_time',
+     'Provide exceptional customer support and handle inquiries related to shipments and logistics services.',
+     '• Handle customer inquiries via phone and email\n• Track and update shipment information\n• Resolve customer complaints\n• Maintain customer records\n• Provide quotations and information',
+     '• 1-2li>✓ admin_users</li>";
+    echo "<li>✓ job_postings</li>";
+    echo "</ul>";
+    
+    echo "<div class='step warning' style='margin-top:20px;'>";
+    echo "<h3>🔐 Default Admin Credentials</h3>";
+    echo "<p><strong>Username:</strong> <code>admin</code></p>";
+    echo "<p><strong>Password:</strong> <code>Farhan@2024!</code></p>";
+    echo "<p style='color:#ec2025; font-weight:600; margin-top:10px;'>⚠️ IMPORTANT: Change this password immediately after first login!</p>";
+    echo "</divars customer service experience\n• Excellent English communication (Arabic is a plus)\n• Strong problem-solving skills\n• Computer proficiency\n• Friendly and professional demeanor',
+     'AED 4,000 - 6,000/month', '1-2 years', 'active')";
+    
+    $pdo->exec($sql);
+    $migration_log[] = ['type' => 'success', 'message' => '✓ Sample job postings created'];
     
     // Verify tables
     $migration_log[] = ['type' => 'info', 'message' => 'Verifying tables...'];

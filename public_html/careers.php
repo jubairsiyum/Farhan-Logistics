@@ -1,5 +1,19 @@
 <?php 
 $pageTitle = 'Careers';
+
+// Include database connection
+require_once 'config/db.php';
+
+// Fetch active job postings
+try {
+    $stmt = $pdo->prepare("SELECT * FROM job_postings WHERE status = 'active' ORDER BY created_at DESC");
+    $stmt->execute();
+    $jobs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    $jobs = [];
+    error_log('Careers page error: ' . $e->getMessage());
+}
+
 include 'includes/header.php'; 
 include 'includes/navbar.php'; 
 ?>
@@ -162,164 +176,85 @@ include 'includes/navbar.php';
             </p>
         </div>
 
-        <div class="row g-4">
-            <!-- Job 1 -->
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="card h-100 border-0 shadow-lg" style="overflow: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 20px;"
-                     onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 45px rgba(0,0,0,0.15)';"
-                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.12)';">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(236,32,37,0.3);">
-                                <i class="bi bi-diagram-3 text-white" style="font-size: 2rem;"></i>
-                            </div>
-                            <span class="badge" style="background: linear-gradient(135deg, var(--primary-navy), #1e2256); font-size: 0.75rem; padding: 0.5rem 1rem; font-weight: 600;">FULL-TIME</span>
-                        </div>
-                        <h4 class="mb-3" style="color: var(--primary-navy); font-weight: 700; font-size: 1.5rem;">
-                            Logistics Operations Manager
-                        </h4>
-                        <div class="mb-3 d-flex flex-wrap gap-3">
-                            <span class="text-muted"><i class="bi bi-geo-alt me-2" style="color: var(--primary-red);"></i>Dhaka, Bangladesh</span>
-                            <span class="text-muted"><i class="bi bi-briefcase me-2" style="color: var(--primary-red);"></i>5+ years exp</span>
-                            <span class="text-muted"><i class="bi bi-cash me-2" style="color: var(--primary-red);"></i>Competitive</span>
-                        </div>
-                        <p class="text-muted mb-3" style="line-height: 1.8;">
-                            Lead and optimize end-to-end logistics operations including air/sea freight, customs clearance, and warehouse management. Drive operational excellence and team performance.
-                        </p>
-                        <div class="mb-4">
-                            <h6 class="mb-2" style="color: var(--primary-navy); font-weight: 600;">Key Requirements:</h6>
-                            <ul class="list-unstyled small mb-0">
-                                <li class="mb-1"><i class="bi bi-check-circle me-2" style="color: var(--primary-red);"></i>Bachelor's in Supply Chain/Logistics</li>
-                                <li class="mb-1"><i class="bi bi-check-circle me-2" style="color: var(--primary-red);"></i>5+ years in freight forwarding</li>
-                                <li class="mb-1"><i class="bi bi-check-circle me-2" style="color: var(--primary-red);"></i>Strong leadership & analytical skills</li>
-                                <li class="mb-1"><i class="bi bi-check-circle me-2" style="color: var(--primary-red);"></i>Experience with WMS/TMS systems</li>
-                            </ul>
-                        </div>
-                        <a href="#applyForm" class="btn btn-primary-custom w-100">
-                            <i class="bi bi-file-earmark-person me-2"></i>Apply Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Job 2 -->
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="card h-100 border-0 shadow-lg" style="overflow: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 20px;"
-                     onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 45px rgba(0,0,0,0.15)';"
-                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.12)';">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary-navy), #1e2256); border-radius: 15px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(47,51,141,0.3);">
-                                <i class="bi bi-graph-up text-white" style="font-size: 2rem;"></i>
-                            </div>
-                            <span class="badge" style="background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); font-size: 0.75rem; padding: 0.5rem 1rem; font-weight: 600;">FULL-TIME</span>
-                        </div>
-                        <h4 class="mb-3" style="color: var(--primary-navy); font-weight: 700; font-size: 1.5rem;">
-                            Sales Executive - Freight Services
-                        </h4>
-                        <div class="mb-3 d-flex flex-wrap gap-3">
-                            <span class="text-muted"><i class="bi bi-geo-alt me-2" style="color: var(--primary-red);"></i>Dubai, UAE</span>
-                            <span class="text-muted"><i class="bi bi-briefcase me-2" style="color: var(--primary-red);"></i>3+ years exp</span>
-                            <span class="text-muted"><i class="bi bi-cash me-2" style="color: var(--primary-red);"></i>Base + Commission</span>
-                        </div>
-                        <p class="text-muted mb-3" style="line-height: 1.8;">
-                            Drive business growth by acquiring new clients and managing key accounts. Develop customized logistics solutions and achieve sales targets in the freight forwarding sector.
-                        </p>
-                        <div class="mb-4">
-                            <h6 class="mb-2" style="color: var(--primary-navy); font-weight: 600;">Key Requirements:</h6>
-                            <ul class="list-unstyled small mb-0">
-                                <li class="mb-1"><i class="bi bi-check-circle me-2" style="color: var(--primary-red);"></i>Proven B2B sales experience</li>
-                                <li class="mb-1"><i class="bi bi-check-circle me-2" style="color: var(--primary-red);"></i>Freight/logistics industry knowledge</li>
-                                <li class="mb-1"><i class="bi bi-check-circle me-2" style="color: var(--primary-red);"></i>Excellent communication skills</li>
-                                <li class="mb-1"><i class="bi bi-check-circle me-2" style="color: var(--primary-red);"></i>Client relationship management</li>
-                            </ul>
-                        </div>
-                        <a href="#applyForm" class="btn btn-primary-custom w-100">
-                            <i class="bi bi-file-earmark-person me-2"></i>Apply Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Job 3 -->
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="card h-100 border-0 shadow-lg" style="overflow: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 20px;"
-                     onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 45px rgba(0,0,0,0.15)';"
-                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.12)';">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(236,32,37,0.3);">
-                                <i class="bi bi-file-earmark-text text-white" style="font-size: 2rem;"></i>
-                            </div>
-                            <span class="badge" style="background: linear-gradient(135deg, var(--primary-navy), #1e2256); font-size: 0.75rem; padding: 0.5rem 1rem; font-weight: 600;">FULL-TIME</span>
-                        </div>
-                        <h4 class="mb-3" style="color: var(--primary-navy); font-weight: 700; font-size: 1.5rem;">
-                            Customs Clearance Specialist
-                        </h4>
-                        <div class="mb-3 d-flex flex-wrap gap-3">
-                            <span class="text-muted"><i class="bi bi-geo-alt me-2" style="color: var(--primary-red);"></i>Chattogram, Bangladesh</span>
-                            <span class="text-muted"><i class="bi bi-briefcase me-2" style="color: var(--primary-red);"></i>3+ years exp</span>
-                            <span class="text-muted"><i class="bi bi-cash me-2" style="color: var(--primary-red);"></i>Competitive</span>
-                        </div>
-                        <p class="text-muted mb-3" style="line-height: 1.8;">
-                            Handle import/export documentation, liaise with customs authorities, ensure compliance with regulations, and expedite clearance processes for various cargo types.
-                        </p>
-                        <div class="mb-4">
-                            <h6 class="mb-2" style="color: var(--primary-navy); font-weight: 600;">Key Requirements:</h6>
-                            <ul class="list-unstyled small mb-0">
-                                <li class="mb-1"><i class="bi bi-check-circle me-2" style="color: var(--primary-red);"></i>Customs procedures expertise</li>
-                                <li class="mb-1"><i class="bi bi-check-circle me-2" style="color: var(--primary-red);"></i>Knowledge of HS codes & tariffs</li>
-                                <li class="mb-1"><i class="bi bi-check-circle me-2" style="color: var(--primary-red);"></i>Strong documentation skills</li>
-                                <li class="mb-1"><i class="bi bi-check-circle me-2" style="color: var(--primary-red);"></i>Relationship with customs officials</li>
-                            </ul>
-                        </div>
-                        <a href="#applyForm" class="btn btn-primary-custom w-100">
-                            <i class="bi bi-file-earmark-person me-2"></i>Apply Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Job 4 -->
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="card h-100 border-0 shadow-lg" style="overflow: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 20px;"
-                     onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 45px rgba(0,0,0,0.15)';"
-                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.12)';">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary-navy), #1e2256); border-radius: 15px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(47,51,141,0.3);">
-                                <i class="bi bi-headset text-white" style="font-size: 2rem;"></i>
-                            </div>
-                            <span class="badge" style="background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); font-size: 0.75rem; padding: 0.5rem 1rem; font-weight: 600;">FULL-TIME</span>
-                        </div>
-                        <h4 class="mb-3" style="color: var(--primary-navy); font-weight: 700; font-size: 1.5rem;">
-                            Customer Service Representative
-                        </h4>
-                        <div class="mb-3 d-flex flex-wrap gap-3">
-                            <span class="text-muted"><i class="bi bi-geo-alt me-2" style="color: var(--primary-red);"></i>Dubai, UAE</span>
-                            <span class="text-muted"><i class="bi bi-briefcase me-2" style="color: var(--primary-red);"></i>1+ years exp</span>
-                            <span class="text-muted"><i class="bi bi-cash me-2" style="color: var(--primary-red);"></i>Competitive</span>
-                        </div>
-                        <p class="text-muted mb-3" style="line-height: 1.8;">
-                            Provide exceptional customer support, handle inquiries, process bookings, track shipments, and coordinate with operations team to ensure client satisfaction.
-                        </p>
-                        <div class="mb-4">
-                            <h6 class="mb-2" style="color: var(--primary-navy); font-weight: 600;">Key Requirements:</h6>
-                            <ul class="list-unstyled small mb-0">
-                                <li class="mb-1"><i class="bi bi-check-circle me-2" style="color: var(--primary-red);"></i>Excellent communication skills</li>
-                                <li class="mb-1"><i class="bi bi-check-circle me-2" style="color: var(--primary-red);"></i>Customer-centric approach</li>
-                                <li class="mb-1"><i class="bi bi-check-circle me-2" style="color: var(--primary-red);"></i>Multitasking abilities</li>
-                                <li class="mb-1"><i class="bi bi-check-circle me-2" style="color: var(--primary-red);"></i>Basic logistics knowledge</li>
-                            </ul>
-                        </div>
-                        <a href="#applyForm" class="btn btn-primary-custom w-100">
-                            <i class="bi bi-file-earmark-person me-2"></i>Apply Now
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <?php if (empty($jobs)): ?>
+        <div class="text-center py-5" data-aos="fade-up">
+            <i class="bi bi-briefcase" style="font-size: 4rem; color: #dee2e6;"></i>
+            <h4 class="mt-3 text-muted">No Open Positions Currently</h4>
+            <p class="text-muted">Check back soon for new opportunities or submit your resume below!</p>
         </div>
-
+        <?php else: ?>
+        <div class="row g-4">
+            <?php 
+            $delay = 100;
+            foreach ($jobs as $job): 
+                // Get icon based on department
+                $icon_map = [
+                    'Operations' => 'diagram-3',
+                    'Sales' => 'graph-up',
+                    'Customs' => 'shield-check',
+                    'Customer Service' => 'headset',
+                    'IT' => 'laptop',
+                    'Finance' => 'calculator',
+                    'HR' => 'people'
+                ];
+                $icon = $icon_map[$job['department']] ?? 'briefcase';
+                
+                // Get employment type badge
+                $emp_type = ucwords(str_replace('_', ' ', $job['employment_type']));
+                
+                // Parse responsibilities and requirements
+                $responsibilities = array_filter(explode("\n", $job['responsibilities']));
+                $requirements = array_filter(explode("\n", $job['requirements']));
+            ?>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="<?= $delay ?>">
+                <div class="card h-100 border-0 shadow-lg" style="overflow: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 20px;"
+                     onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 45px rgba(0,0,0,0.15)';"
+                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.12)';">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div style="width: 70px; height: 70px; background: linear-gradient(135deg, <?= $delay % 200 === 0 ? '#ec2025 0%, #c91d22' : 'var(--primary-navy), #1e2256' ?> 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(<?= $delay % 200 === 0 ? '236,32,37' : '47,51,141' ?>,0.3);">
+                                <i class="bi bi-<?= $icon ?> text-white" style="font-size: 2rem;"></i>
+                            </div>
+                            <span class="badge" style="background: linear-gradient(135deg, <?= $delay % 200 === 0 ? 'var(--primary-navy), #1e2256' : '#ec2025 0%, #c91d22' ?> 100%); font-size: 0.75rem; padding: 0.5rem 1rem; font-weight: 600;"><?= strtoupper($emp_type) ?></span>
+                        </div>
+                        <h4 class="mb-3" style="color: var(--primary-navy); font-weight: 700; font-size: 1.5rem;">
+                            <?= htmlspecialchars($job['title']) ?>
+                        </h4>
+                        <div class="mb-3 d-flex flex-wrap gap-3">
+                            <span class="text-muted"><i class="bi bi-geo-alt me-2" style="color: var(--primary-red);"></i><?= htmlspecialchars($job['location']) ?></span>
+                            <?php if ($job['experience_required']): ?>
+                            <span class="text-muted"><i class="bi bi-briefcase me-2" style="color: var(--primary-red);"></i><?= htmlspecialchars($job['experience_required']) ?></span>
+                            <?php endif; ?>
+                            <?php if ($job['salary_range']): ?>
+                            <span class="text-muted"><i class="bi bi-cash me-2" style="color: var(--primary-red);"></i><?= htmlspecialchars($job['salary_range']) ?></span>
+                            <?php endif; ?>
+                        </div>
+                        <p class="text-muted mb-3" style="line-height: 1.8;">
+                            <?= htmlspecialchars($job['description']) ?>
+                        </p>
+                        <?php if (!empty($requirements)): ?>
+                        <div class="mb-4">
+                            <h6 class="mb-2" style="color: var(--primary-navy); font-weight: 600;">Key Requirements:</h6>
+                            <ul class="list-unstyled small mb-0">
+                                <?php foreach (array_slice($requirements, 0, 4) as $requirement): ?>
+                                <li class="mb-1"><i class="bi bi-check-circle me-2" style="color: var(--primary-red);"></i><?= htmlspecialchars(trim($requirement, '• -')) ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                        <?php endif; ?>
+                        <a href="#applyForm" class="btn btn-primary-custom w-100" onclick="document.getElementById('position').value='<?= htmlspecialchars($job['title']) ?>'">
+                            <i class="bi bi-file-earmark-person me-2"></i>Apply Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <?php 
+            $delay += 100;
+            endforeach; 
+            ?>
+        </div>
+        <?php endif; ?>
+        
         <div class="text-center mt-5" data-aos="fade-up">
             <div class="p-5 rounded-3" style="background: rgba(236, 32, 37, 0.05); border: 2px dashed var(--primary-red);">
                 <i class="bi bi-envelope-paper" style="font-size: 3rem; color: var(--primary-red);"></i>

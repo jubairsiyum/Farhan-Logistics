@@ -109,7 +109,8 @@
             <li><a href="/admin/dashboard" class="<?php echo basename($_SERVER['PHP_SELF']) == 'dashboard.php' ? 'active' : ''; ?>"><i class="bi bi-speedometer2"></i>Dashboard</a></li>
             <li><a href="/admin/quotes" class="<?php echo basename($_SERVER['PHP_SELF']) == 'quotes.php' ? 'active' : ''; ?>"><i class="bi bi-file-text"></i>Quote Requests</a></li>
             <li><a href="/admin/contacts" class="<?php echo basename($_SERVER['PHP_SELF']) == 'contacts.php' ? 'active' : ''; ?>"><i class="bi bi-envelope"></i>Contact Submissions</a></li>
-            <li><a href="/admin/careers" class="<?php echo basename($_SERVER['PHP_SELF']) == 'careers.php' ? 'active' : ''; ?>"><i class="bi bi-briefcase"></i>Career Applications</a></li>
+            <li><a href="/admin/careers" class="<?php echo basename($_SERVER['PHP_SELF']) == 'careers.php' ? 'active' : ''; ?>"><i class="bi bi-person-badge"></i>Applications</a></li>
+            <li><a href="/admin/jobs" class="<?php echo basename($_SERVER['PHP_SELF']) == 'jobs.php' ? 'active' : ''; ?>"><i class="bi bi-briefcase"></i>Job Postings</a></li>
             <li><a href="/admin/logout"><i class="bi bi-box-arrow-right"></i>Logout</a></li>
         </ul>
         

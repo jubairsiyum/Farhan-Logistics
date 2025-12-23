@@ -125,9 +125,10 @@ include __DIR__ . '/includes/header.php';
                     <div class="col-md-6 mb-3">
                         <strong>Resume:</strong><br>
                         <?php if ($single_app['resume_path']): ?>
-                            <a href="<?php echo htmlspecialchars($single_app['resume_path']); ?>" target="_blank" class="btn btn-sm btn-outline-primary">
+                            <a href="/<?php echo htmlspecialchars($single_app['resume_path']); ?>" target="_blank" class="btn btn-sm btn-outline-primary">
                                 <i class="bi bi-file-pdf me-1"></i>Download Resume
                             </a>
+                            <br><small class="text-muted"><?php echo htmlspecialchars($single_app['resume_filename'] ?? ''); ?></small>
                         <?php else: ?>
                             N/A
                         <?php endif; ?>
