@@ -57,6 +57,9 @@ $current_page = basename($_SERVER['PHP_SELF'] ?? 'index.php');
                     <a class="nav-link <?php echo ($current_page == 'success-stories.php') ? 'active' : ''; ?>" href="/success-stories">Success Stories</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link <?php echo ($current_page == 'careers.php') ? 'active' : ''; ?>" href="/careers">Careers</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link <?php echo ($current_page == 'contact.php') ? 'active' : ''; ?>" href="/contact">Contact</a>
                 </li>
                 <li class="nav-item">
@@ -82,6 +85,7 @@ $current_page = basename($_SERVER['PHP_SELF'] ?? 'index.php');
             <li><a href="/solutions" class="<?php echo ($current_page == 'solutions.php') ? 'active' : ''; ?>"><i class="bi bi-gear me-3"></i>Solutions</a></li>
             <li><a href="/tracking" class="<?php echo ($current_page == 'tracking.php') ? 'active' : ''; ?>"><i class="bi bi-geo-alt me-3"></i>Track Shipment</a></li>
             <li><a href="/success-stories" class="<?php echo ($current_page == 'success-stories.php') ? 'active' : ''; ?>"><i class="bi bi-trophy me-3"></i>Success Stories</a></li>
+            <li><a href="/careers" class="<?php echo ($current_page == 'careers.php') ? 'active' : ''; ?>"><i class="bi bi-briefcase me-3"></i>Careers</a></li>
             <li><a href="/contact" class="<?php echo ($current_page == 'contact.php') ? 'active' : ''; ?>"><i class="bi bi-envelope me-3"></i>Contact</a></li>
         </ul>
         

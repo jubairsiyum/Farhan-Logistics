@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 header('Content-Type: application/json');
 
 // Include database configuration
-require_once '../config/db.php';
+require_once dirname(__DIR__) . '/config/db.php';
 
 // Initialize response
 $response = [
@@ -58,31 +58,21 @@ try {
         exit;
     }
     
-    // Get database connection
-    $conn = getDatabaseConnection();
-    
-    if (!$conn) {
-        throw new Exception('Database connection failed');
-    }
+    // Use PDO connection from db.php (already initialized)
     
     // Prepare SQL statement
-    $stmt = $conn->prepare("
+    $stmt = $pdo->prepare("
         INSERT INTO contact_submissions 
         (name, email, phone, company, subject, message, ip_address, user_agent, status) 
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'new')
     ");
     
-    if (!$stmt) {
-        throw new Exception('Failed to prepare statement: ' . $conn->error);
-    }
-    
     // Get client information
     $ip_address = $_SERVER['REMOTE_ADDR'] ?? 'Unknown';
     $user_agent = $_SERVER['HTTP_USER_AGENT'] ?? 'Unknown';
     
-    // Bind parameters
-    $stmt->bind_param(
-        'ssssssss',
+    // Execute statement
+    if ($stmt->execute([
         $name,
         $email,
         $phone,
@@ -91,32 +81,24 @@ try {
         $message,
         $ip_address,
         $user_agent
-    );
-    
-    // Execute statement
-    if ($stmt->execute()) {
+    ])) {
         $response['success'] = true;
         $response['message'] = 'Thank you for contacting us! We will get back to you within 24 hours.';
         
         // Optional: Send email notification to admin
         // sendEmailNotification($name, $email, $subject, $message);
-        
-        // Log success
-        logError("Contact form submitted successfully by: $email", 'INFO');
     } else {
-        throw new Exception('Failed to save contact form: ' . $stmt->error);
+        throw new Exception('Failed to save contact form');
     }
-    
-    // Close statement and connection
-    $stmt->close();
-    closeDatabaseConnection($conn);
     
 } catch (Exception $e) {
     $response['success'] = false;
     $response['message'] = 'An error occurred while processing your request. Please try again later.';
     
-    // Log error
-    logError('Contact form error: ' . $e->getMessage(), 'ERROR');
+    // In debug mode, include the error message
+    if (DB_DEBUG) {
+        $response['debug'] = $e->getMessage();
+    }
 }
 
 // Send response

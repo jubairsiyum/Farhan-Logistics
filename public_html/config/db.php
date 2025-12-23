@@ -1,7 +1,7 @@
 <?php
 /**
  * Database Configuration File
- * cPanel MySQL Connection
+ * PDO MySQL Connection for Admin Panel & Frontend
  * 
  * INSTRUCTIONS FOR DEPLOYMENT:
  * 1. Create a MySQL database in cPanel
@@ -13,16 +13,37 @@
 
 // Database Configuration Constants
 define('DB_HOST', 'localhost');           // Usually 'localhost' on cPanel
-define('DB_NAME', 'farhanlogistics');  // Your database name (e.g., cpanel_user_farhanlogistics)
-define('DB_USER', 'root');  // Your database username
-define('DB_PASS', '');  // Your database password
+define('DB_NAME', 'farhanlogistics');     // Your database name (e.g., cpanel_user_farhanlogistics)
+define('DB_USER', 'root');                // Your database username
+define('DB_PASS', '');                    // Your database password
 define('DB_CHARSET', 'utf8mb4');          // Character set
 
 // Error Reporting (Set to false in production)
 define('DB_DEBUG', true);
 
 /**
- * Create Database Connection
+ * PDO Database Connection
+ * Used by admin panel and form handlers
+ */
+try {
+    $dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET;
+    $options = [
+        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::ATTR_EMULATE_PREPARES   => false,
+    ];
+    
+    $pdo = new PDO($dsn, DB_USER, DB_PASS, $options);
+} catch (PDOException $e) {
+    if (DB_DEBUG) {
+        die("Database Connection Failed: " . $e->getMessage());
+    } else {
+        die("Database connection error. Please contact support.");
+    }
+}
+
+/**
+ * Legacy mysqli Connection (for backward compatibility)
  * 
  * @return mysqli|false Database connection object or false on failure
  */

@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 header('Content-Type: application/json');
 
 // Include database configuration
-require_once '../config/db.php';
+require_once dirname(__DIR__) . '/config/db.php';
 
 // Initialize response
 $response = [
@@ -76,32 +76,22 @@ try {
         exit;
     }
     
-    // Get database connection
-    $conn = getDatabaseConnection();
-    
-    if (!$conn) {
-        throw new Exception('Database connection failed');
-    }
+    // Use PDO connection from db.php (already initialized)
     
     // Prepare SQL statement
-    $stmt = $conn->prepare("
+    $stmt = $pdo->prepare("
         INSERT INTO quote_requests 
         (name, email, phone, company, service_type, cargo_type, origin, destination, 
-        weight, dimensions, shipment_date, additional_info, ip_address, user_agent, status) 
+        weight, dimensions, shipment_date, additional_details, ip_address, user_agent, status) 
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'pending')
     ");
-    
-    if (!$stmt) {
-        throw new Exception('Failed to prepare statement: ' . $conn->error);
-    }
     
     // Get client information
     $ip_address = $_SERVER['REMOTE_ADDR'] ?? 'Unknown';
     $user_agent = $_SERVER['HTTP_USER_AGENT'] ?? 'Unknown';
     
-    // Bind parameters
-    $stmt->bind_param(
-        'ssssssssssssss',
+    // Execute statement
+    if ($stmt->execute([
         $name,
         $email,
         $phone,
@@ -116,11 +106,8 @@ try {
         $additional_info,
         $ip_address,
         $user_agent
-    );
-    
-    // Execute statement
-    if ($stmt->execute()) {
-        $quote_id = $conn->insert_id;
+    ])) {
+        $quote_id = $pdo->lastInsertId();
         
         $response['success'] = true;
         $response['message'] = 'Quote request submitted successfully! Our team will contact you within 24 hours with a detailed quotation.';
@@ -128,23 +115,18 @@ try {
         
         // Optional: Send email notification
         // sendQuoteEmailNotification($name, $email, $service_type, $origin, $destination);
-        
-        // Log success
-        logError("Quote request submitted successfully by: $email (ID: $quote_id)", 'INFO');
     } else {
-        throw new Exception('Failed to save quote request: ' . $stmt->error);
+        throw new Exception('Failed to save quote request');
     }
-    
-    // Close statement and connection
-    $stmt->close();
-    closeDatabaseConnection($conn);
     
 } catch (Exception $e) {
     $response['success'] = false;
     $response['message'] = 'An error occurred while processing your request. Please try again later.';
     
-    // Log error
-    logError('Quote request error: ' . $e->getMessage(), 'ERROR');
+    // In debug mode, include the error message
+    if (DB_DEBUG) {
+        $response['debug'] = $e->getMessage();
+    }
 }
 
 // Send response
