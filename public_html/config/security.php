@@ -11,16 +11,23 @@
 
 if (session_status() === PHP_SESSION_NONE) {
     // Secure session configuration
-    ini_set('session.cookie_httponly', 1);      // Prevent JavaScript access to session cookie
-    ini_set('session.use_only_cookies', 1);     // Only use cookies for session ID
-    ini_set('session.cookie_secure', 0);        // Set to 1 when using HTTPS
-    ini_set('session.cookie_samesite', 'Strict'); // CSRF protection
-    ini_set('session.use_strict_mode', 1);      // Reject uninitialized session IDs
+    ini_set('session.cookie_httponly', '1');      // Prevent JavaScript access to session cookie
+    ini_set('session.use_only_cookies', '1');     // Only use cookies for session ID
+    ini_set('session.cookie_secure', '0');        // Set to 1 when using HTTPS
+    
+    // SameSite cookie setting (PHP 7.3+)
+    if (PHP_VERSION_ID >= 70300) {
+        ini_set('session.cookie_samesite', 'Lax'); // Changed from Strict to Lax for better compatibility
+    }
+    
+    ini_set('session.use_strict_mode', '1');      // Reject uninitialized session IDs
     
     session_name('FARHAN_LOGISTICS_SESSION');
     session_start();
-    
-    // Regenerate session ID periodically to prevent session fixation
+}
+
+// Regenerate session ID periodically to prevent session fixation (only if logged in)
+if (session_status() === PHP_SESSION_ACTIVE) {
     if (!isset($_SESSION['created_at'])) {
         $_SESSION['created_at'] = time();
     } else if (time() - $_SESSION['created_at'] > 1800) { // 30 minutes

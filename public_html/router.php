@@ -22,7 +22,7 @@ if ($uri === '/' || $uri === '') {
 
 // Extract page name
 $page = ltrim($uri, '/');
-$page = strtolower($page);
+// Don't lowercase - preserve original case for file paths
 $page = preg_replace('/\?.*/', '', $page);
 
 // Security check

@@ -5,6 +5,11 @@ require_once dirname(__DIR__) . '/config/security.php';
 // Include database connection
 require_once dirname(__DIR__) . '/config/db.php';
 
+// Prevent form caching
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+
 // Check if already logged in
 if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true) {
     header('Location: /admin/dashboard');
@@ -16,8 +21,8 @@ $error = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // CSRF Protection
     if (!isset($_POST['csrf_token']) || !validateCSRFToken($_POST['csrf_token'])) {
-        logSecurityEvent('csrf_violation', ['form' => 'admin_login']);
-        $error = 'Security validation failed';
+        logSecurityEvent('csrf_violation', ['form' => 'admin_login', 'token_present' => isset($_POST['csrf_token'])]);
+        $error = 'Security validation failed. Please refresh the page and try again.';
     } else {
         $username = sanitizeString($_POST['username'] ?? '');
         $password = $_POST['password'] ?? '';
@@ -190,7 +195,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <i class="bi bi-key-fill me-2"></i>Password
                     </label>
                     <input type="password" class="form-control" id="password" name="password" required autocomplete="current-password">
-                    <input type="password" class="form-control" id="password" name="password" required>
                 </div>
                 
                 <button type="submit" class="btn btn-login">
