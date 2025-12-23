@@ -57,7 +57,7 @@ include 'includes/navbar.php';
                      onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 50px rgba(47, 51, 141, 0.15)'; this.style.borderColor='var(--primary-red)';"
                      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.1)'; this.style.borderColor='rgba(47, 51, 141, 0.1)';">
                     <div class="position-relative" style="height: 220px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea3c90eb?w=600&h=400&fit=crop&q=85" 
+                        <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?w=800&q=80" 
                              alt="RMG & Textile" 
                              class="w-100 h-100" 
                              style="object-fit: cover; transition: transform 0.4s ease;"
@@ -91,7 +91,7 @@ include 'includes/navbar.php';
                      onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 50px rgba(47, 51, 141, 0.15)'; this.style.borderColor='var(--primary-red)';"
                      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.1)'; this.style.borderColor='rgba(47, 51, 141, 0.1)';">
                     <div class="position-relative" style="height: 220px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&h=400&fit=crop&q=85" 
+                        <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=800&q=80" 
                              alt="Leather & Footwear" 
                              class="w-100 h-100" 
                              style="object-fit: cover; transition: transform 0.4s ease;"
@@ -125,7 +125,7 @@ include 'includes/navbar.php';
                      onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 50px rgba(47, 51, 141, 0.15)'; this.style.borderColor='var(--primary-red)';"
                      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.1)'; this.style.borderColor='rgba(47, 51, 141, 0.1)';">
                     <div class="position-relative" style="height: 220px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=600&h=400&fit=crop&q=85" 
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80" 
                              alt="Electronics & Technology" 
                              class="w-100 h-100" 
                              style="object-fit: cover; transition: transform 0.4s ease;"
@@ -159,7 +159,7 @@ include 'includes/navbar.php';
                      onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 50px rgba(47, 51, 141, 0.15)'; this.style.borderColor='var(--primary-red)';"
                      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.1)'; this.style.borderColor='rgba(47, 51, 141, 0.1)';">
                     <div class="position-relative" style="height: 220px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&h=400&fit=crop&q=85" 
+                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80" 
                              alt="Agriculture & Food" 
                              class="w-100 h-100" 
                              style="object-fit: cover; transition: transform 0.4s ease;"
@@ -193,7 +193,7 @@ include 'includes/navbar.php';
                      onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 50px rgba(47, 51, 141, 0.15)'; this.style.borderColor='var(--primary-red)';"
                      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.1)'; this.style.borderColor='rgba(47, 51, 141, 0.1)';">
                     <div class="position-relative" style="height: 220px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop&q=85" 
+                        <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=800&q=80" 
                              alt="FMCG & Retail" 
                              class="w-100 h-100" 
                              style="object-fit: cover; transition: transform 0.4s ease;"
@@ -227,7 +227,7 @@ include 'includes/navbar.php';
                      onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 50px rgba(47, 51, 141, 0.15)'; this.style.borderColor='var(--primary-red)';"
                      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.1)'; this.style.borderColor='rgba(47, 51, 141, 0.1)';">
                     <div class="position-relative" style="height: 220px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1597008641621-cefdcf718025?w=600&h=400&fit=crop&q=85" 
+                        <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=800&q=80" 
                              alt="Raw Commodities" 
                              class="w-100 h-100" 
                              style="object-fit: cover; transition: transform 0.4s ease;"
