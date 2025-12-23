@@ -17,7 +17,7 @@
         <label class="form-label">Full Name *</label>
         <input type="text" class="form-control" name="full_name" required
                value="<?= $editing_user ? htmlspecialchars($editing_user['full_name']) : '' ?>"
-               placeholder="John Doe">
+               placeholder="Your Full Name">
     </div>
     
     <div class="col-md-6 mb-3">

@@ -63,7 +63,7 @@ include 'includes/navbar.php';
                                             id="name" 
                                             name="name" 
                                             required
-                                            placeholder="John Doe"
+                                            placeholder="Your Full Name"
                                         >
                                         <div class="invalid-feedback">Please provide your name.</div>
                                     </div>
@@ -93,7 +93,7 @@ include 'includes/navbar.php';
                                             id="phone" 
                                             name="phone" 
                                             required
-                                            placeholder="+971 50 XXX XXXX"
+                                            placeholder="+880 1XXX-XXXXXX"
                                         >
                                         <div class="invalid-feedback">Please provide your phone number.</div>
                                     </div>

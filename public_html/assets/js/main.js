@@ -642,7 +642,7 @@
         initSmoothScroll();
         initLazyLoad();
 
-        console.log('Farhan Logistics - Website initialized successfully');
+        // console.log('Farhan Logistics - Website initialized successfully');
     });
 
     // ========================================================================

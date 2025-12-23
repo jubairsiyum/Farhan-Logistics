@@ -313,7 +313,7 @@ include 'includes/navbar.php';
                                 
                                 <div class="col-md-6">
                                     <label for="phone" class="form-label" style="font-weight: 600; color: var(--primary-navy);">Phone Number *</label>
-                                    <input type="tel" class="form-control" id="phone" name="phone" required placeholder="+971 50 XXX XXXX">
+                                    <input type="tel" class="form-control" id="phone" name="phone" required placeholder="+880 1XXX-XXXXXX">
                                     <div class="invalid-feedback">Please provide your phone number.</div>
                                 </div>
                                 

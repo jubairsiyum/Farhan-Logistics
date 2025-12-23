@@ -130,7 +130,7 @@ include 'includes/navbar.php';
                                         id="name" 
                                         name="name" 
                                         required
-                                        placeholder="John Doe"
+                                        placeholder="Your Full Name"
                                     >
                                     <div class="invalid-feedback">Please provide your name.</div>
                                 </div>
@@ -145,7 +145,7 @@ include 'includes/navbar.php';
                                         id="email" 
                                         name="email" 
                                         required
-                                        placeholder="john@example.com"
+                                        placeholder="your.email@company.com"
                                     >
                                     <div class="invalid-feedback">Please provide a valid email.</div>
                                 </div>
@@ -159,7 +159,7 @@ include 'includes/navbar.php';
                                         class="form-control" 
                                         id="phone" 
                                         name="phone"
-                                        placeholder="+971 50 XXX XXXX"
+                                        placeholder="+880 1XXX-XXXXXX"
                                     >
                                 </div>
                             </div>

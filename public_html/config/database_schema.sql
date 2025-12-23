@@ -150,18 +150,18 @@ CREATE TABLE IF NOT EXISTS `newsletter_subscribers` (
 -- 8. INSERT SAMPLE TRACKING DATA (For Testing)
 -- ========================================================================
 INSERT INTO `shipment_tracking` (`tracking_number`, `customer_name`, `customer_email`, `origin`, `destination`, `service_type`, `current_status`, `current_location`, `estimated_delivery`) VALUES
-('FL123456789', 'John Doe', 'john@example.com', 'Dubai, UAE', 'London, UK', 'air', 'in_transit', 'Dubai International Airport', '2025-12-25'),
-('FL987654321', 'Jane Smith', 'jane@example.com', 'Shanghai, China', 'New York, USA', 'sea', 'customs', 'New York Port', '2026-01-15'),
-('FL456789123', 'Ahmed Hassan', 'ahmed@example.com', 'Riyadh, Saudi Arabia', 'Dubai, UAE', 'road', 'out_for_delivery', 'Dubai Logistics Hub', '2025-12-20');
+('FL1234567890', 'Abdul Rahman', 'abdulrahman@techbdltd.com', 'Dhaka, Bangladesh', 'London, UK', 'air', 'in_transit', 'Hazrat Shahjalal International Airport', '2025-12-30'),
+('FL9876543210', 'Fatima Ahmed', 'fatima.ahmed@exportbd.com', 'Chittagong, Bangladesh', 'New York, USA', 'sea', 'customs', 'New York Port', '2026-01-20'),
+('FL4567891230', 'Mohammad Hasan', 'mohammad@textilesbd.com', 'Dhaka, Bangladesh', 'Dubai, UAE', 'air', 'out_for_delivery', 'Dubai International Airport', '2025-12-26');
 
 -- Insert sample tracking events
 INSERT INTO `tracking_events` (`tracking_number`, `event_type`, `event_description`, `location`, `event_date`) VALUES
-('FL123456789', 'Collected', 'Shipment collected from sender', 'Dubai, UAE', '2025-12-15 09:00:00'),
-('FL123456789', 'In Transit', 'Departed from Dubai International Airport', 'Dubai International Airport', '2025-12-15 14:30:00'),
-('FL123456789', 'In Transit', 'Arrived at transit hub', 'Frankfurt Airport', '2025-12-16 02:00:00'),
-('FL987654321', 'Collected', 'Container loaded at origin port', 'Shanghai Port', '2025-11-20 10:00:00'),
-('FL987654321', 'In Transit', 'Vessel departed', 'Shanghai Port', '2025-11-22 08:00:00'),
-('FL987654321', 'Customs', 'Arrived and under customs clearance', 'New York Port', '2025-12-15 16:00:00');
+('FL1234567890', 'Collected', 'Shipment collected from sender', 'Dhaka, Bangladesh', '2025-12-18 10:00:00'),
+('FL1234567890', 'In Transit', 'Departed from Hazrat Shahjalal International Airport', 'Hazrat Shahjalal International Airport', '2025-12-18 16:30:00'),
+('FL1234567890', 'In Transit', 'Arrived at transit hub', 'Dubai International Airport', '2025-12-19 05:00:00'),
+('FL9876543210', 'Collected', 'Container loaded at origin port', 'Chittagong Port', '2025-11-25 11:00:00'),
+('FL9876543210', 'In Transit', 'Vessel departed', 'Chittagong Port', '2025-11-27 09:00:00'),
+('FL9876543210', 'Customs', 'Arrived and under customs clearance', 'New York Port', '2025-12-20 17:00:00');
 
 -- ========================================================================
 -- SETUP COMPLETE
