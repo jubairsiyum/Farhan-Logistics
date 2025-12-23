@@ -288,8 +288,33 @@
             margin: 0;
         }
         
+        .table-responsive {
+            border-radius: 12px;
+            overflow-x: auto;
+            overflow-y: visible;
+        }
+        
+        .table-responsive::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .table-responsive::-webkit-scrollbar-track {
+            background: #f1f3f5;
+            border-radius: 4px;
+        }
+        
+        .table-responsive::-webkit-scrollbar-thumb {
+            background: #adb5bd;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+        
+        .table-responsive::-webkit-scrollbar-thumb:hover {
+            background: #868e96;
+        }
+        
         .table thead th {
-            background: #f8f9fa;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
             border-bottom: 2px solid #dee2e6;
             font-weight: 600;
             text-transform: uppercase;
@@ -297,15 +322,26 @@
             letter-spacing: 0.5px;
             color: #495057;
             padding: 1rem;
+            white-space: nowrap;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
         
         .table tbody tr {
-            transition: all 0.2s ease;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+            border-bottom: 1px solid #f1f3f5;
         }
         
         .table tbody tr:hover {
-            background: #f8f9fa;
-            transform: scale(1.01);
+            background-color: #f8f9fa;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        
+        .table tbody td {
+            padding: 1rem;
+            vertical-align: middle;
+            color: #495057;
         }
         
         /* Badge Styles */
@@ -314,6 +350,108 @@
             border-radius: 8px;
             font-weight: 600;
             font-size: 0.75rem;
+            letter-spacing: 0.3px;
+        }
+        
+        .badge.bg-success {
+            background: linear-gradient(135deg, #28a745, #20c997) !important;
+        }
+        
+        .badge.bg-danger {
+            background: linear-gradient(135deg, #dc3545, #c82333) !important;
+        }
+        
+        .badge.bg-warning {
+            background: linear-gradient(135deg, #ffc107, #e0a800) !important;
+            color: #000;
+        }
+        
+        .badge.bg-info {
+            background: linear-gradient(135deg, #17a2b8, #138496) !important;
+        }
+        
+        .badge.bg-primary {
+            background: linear-gradient(135deg, var(--primary-navy), #1e2256) !important;
+        }
+        
+        /* Action Buttons in Tables */
+        .table .btn-sm {
+            padding: 0.375rem 0.75rem;
+            font-size: 0.8rem;
+            border-radius: 6px;
+        }
+        
+        .table .btn-group {
+            display: flex;
+            gap: 0.375rem;
+        }
+        
+        /* Search and Filter Controls */
+        .form-control, .form-select {
+            border-radius: 10px;
+            border: 1px solid #dee2e6;
+            padding: 0.625rem 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary-red);
+            box-shadow: 0 0 0 3px rgba(236, 32, 37, 0.1);
+        }
+        
+        /* Modal Enhancements */
+        .modal-content {
+            border-radius: 16px;
+            border: none;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .modal-header {
+            background: linear-gradient(135deg, var(--primary-navy), #1e2256);
+            color: white;
+            border-radius: 16px 16px 0 0;
+            padding: 1.25rem 1.5rem;
+            border-bottom: none;
+        }
+        
+        .modal-header .btn-close {
+            filter: invert(1);
+        }
+        
+        .modal-footer {
+            border-top: 1px solid #e9ecef;
+            padding: 1rem 1.5rem;
+        }
+        
+        /* Pagination Styling */
+        .pagination {
+            margin: 1.5rem 0 0;
+        }
+        
+        .page-link {
+            border-radius: 8px;
+            margin: 0 0.25rem;
+            border: 1px solid #dee2e6;
+            color: var(--primary-navy);
+            padding: 0.5rem 0.875rem;
+            transition: all 0.3s ease;
+        }
+        
+        .page-link:hover {
+            background: var(--primary-red);
+            border-color: var(--primary-red);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .page-item.active .page-link {
+            background: linear-gradient(135deg, var(--primary-red), #c91d22);
+            border-color: var(--primary-red);
+        }
+        
+        .page-item.disabled .page-link {
+            background: #f8f9fa;
+            border-color: #dee2e6;
         }
         
         /* Animation */
