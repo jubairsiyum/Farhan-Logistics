@@ -14,9 +14,9 @@ include 'includes/navbar.php';
         <div class="row h-100 align-items-center">
             <div class="col-lg-9">
                 <div class="hero-content">
-                    <span class="hero-badge" data-aos="fade-up" style="background: linear-gradient(135deg, var(--primary-red), #c91d22); padding: 0.6rem 1.5rem; border-radius: 50px; font-size: 0.85rem; letter-spacing: 1.5px; font-weight: 600; box-shadow: 0 4px 20px rgba(236, 32, 37, 0.35); display: inline-block;">24/7 SUPPORT</span>
-                    <h1 data-aos="fade-up" data-aos-delay="100" style="font-size: 3.5rem; font-weight: 700; margin-top: 1.5rem; text-shadow: 0 2px 25px rgba(0,0,0,0.3);">Get in Touch</h1>
-                    <p data-aos="fade-up" data-aos-delay="200" style="font-size: 1.25rem; line-height: 1.8; margin-top: 1.5rem; opacity: 0.95; text-shadow: 0 1px 15px rgba(0,0,0,0.2); max-width: 850px;">
+                    <span class="hero-badge" data-aos="fade-up" style="background: linear-gradient(135deg, var(--primary-red), #c91d22); padding: 0.6rem 1.5rem; border-radius: 50px; font-size: 0.85rem; letter-spacing: 1.5px; font-weight: 600; box-shadow: 0 4px 20px rgba(236, 32, 37, 0.35); display: inline-block; color: white;">24/7 SUPPORT</span>
+                    <h1 data-aos="fade-up" data-aos-delay="100" style="font-size: 3.5rem; font-weight: 700; margin-top: 1.5rem; text-shadow: 0 2px 25px rgba(0,0,0,0.3); color: white;">Get in Touch</h1>
+                    <p data-aos="fade-up" data-aos-delay="200" style="font-size: 1.25rem; line-height: 1.8; margin-top: 1.5rem; opacity: 0.95; text-shadow: 0 1px 15px rgba(0,0,0,0.2); max-width: 850px; color: white;">
                         We're here to help with all your logistics needs. Contact our dedicated team today for personalized solutions and expert guidance.
                     </p>
                     <div data-aos="fade-up" data-aos-delay="300" style="margin-top: 2rem;">
@@ -39,16 +39,16 @@ include 'includes/navbar.php';
         <div class="row g-5">
             <!-- Contact Information -->
             <div class="col-lg-4" data-aos="fade-right">
-                <h3 class="mb-4">Contact Information</h3>
+                <h3 class="mb-4" style="color: var(--primary-navy); font-weight: 700;">Contact Information</h3>
                 <p class="text-muted mb-4">
                     Reach out to us through any of the following channels. We're available 24/7 to serve you.
                 </p>
                 
                 <div class="mb-4">
                     <div class="d-flex align-items-start mb-3">
-                        <i class="bi bi-geo-alt-fill text-orange me-3" style="font-size: 1.5rem;"></i>
+                        <i class="bi bi-geo-alt-fill me-3" style="font-size: 1.5rem; color: var(--primary-red);"></i>
                         <div>
-                            <h6>Dhaka Office (Head Office)</h6>
+                            <h6 style="color: var(--primary-navy); font-weight: 700;">Dhaka Office (Head Office)</h6>
                             <p class="text-muted mb-0">
                                 House # 19, Road # 6/A<br>
                                 Sector-12, Uttara<br>
@@ -60,9 +60,9 @@ include 'includes/navbar.php';
                 
                 <div class="mb-4">
                     <div class="d-flex align-items-start mb-3">
-                        <i class="bi bi-telephone-fill text-orange me-3" style="font-size: 1.5rem;"></i>
+                        <i class="bi bi-telephone-fill me-3" style="font-size: 1.5rem; color: var(--primary-red);"></i>
                         <div>
-                            <h6>Phone</h6>
+                            <h6 style="color: var(--primary-navy); font-weight: 700;">Phone</h6>
                             <p class="text-muted mb-0">
                                 Mobile: +880 1844-167431
                             </p>
@@ -72,9 +72,9 @@ include 'includes/navbar.php';
                 
                 <div class="mb-4">
                     <div class="d-flex align-items-start mb-3">
-                        <i class="bi bi-envelope-fill text-orange me-3" style="font-size: 1.5rem;"></i>
+                        <i class="bi bi-envelope-fill me-3" style="font-size: 1.5rem; color: var(--primary-red);"></i>
                         <div>
-                            <h6>Email</h6>
+                            <h6 style="color: var(--primary-navy); font-weight: 700;">Email</h6>
                             <p class="text-muted mb-0">
                                 General: hannan@farhancargobd.com<br>
                                 Support: farhanlogisticsltd2025@gmail.com
@@ -85,9 +85,9 @@ include 'includes/navbar.php';
                 
                 <div class="mb-4">
                     <div class="d-flex align-items-start mb-3">
-                        <i class="bi bi-clock-fill text-orange me-3" style="font-size: 1.5rem;"></i>
+                        <i class="bi bi-clock-fill me-3" style="font-size: 1.5rem; color: var(--primary-red);"></i>
                         <div>
-                            <h6>Business Hours</h6>
+                            <h6 style="color: var(--primary-navy); font-weight: 700;">Business Hours</h6>
                             <p class="text-muted mb-0">
                                 Monday - Friday: 9:00 AM - 6:00 PM<br>
                                 Saturday: 9:00 AM - 2:00 PM<br>
@@ -112,7 +112,7 @@ include 'includes/navbar.php';
             <!-- Contact Form -->
             <div class="col-lg-8" data-aos="fade-left">
                 <div class="form-container">
-                    <h3 class="mb-4">Send Us a Message</h3>
+                    <h3 class="mb-4" style="color: var(--primary-navy); font-weight: 700;">Send Us a Message</h3>
                     <p class="text-muted mb-4">
                         Fill out the form below and our team will get back to you within 24 hours.
                     </p>
@@ -242,16 +242,16 @@ include 'includes/navbar.php';
 <section class="py-100 bg-light-custom">
     <div class="container">
         <div class="section-title" data-aos="fade-up">
-            <h2>Our Global Offices</h2>
-            <p>Find a Farhan Logistics office near you</p>
+            <h2 style="color: var(--primary-navy); font-weight: 700;">Our Global Offices</h2>
+            <p style="color: var(--dark-gray); font-size: 1.1rem;">Find a Farhan Logistics office near you</p>
         </div>
         
         <div class="row g-4">
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <div class="card-custom h-100">
                     <div class="card-body text-center">
-                        <i class="bi bi-building" style="font-size: 3rem; color: var(--primary-orange);"></i>
-                        <h5 class="mt-3 mb-3">Dhaka Office (Head Office)</h5>
+                        <i class="bi bi-building" style="font-size: 3rem; color: var(--primary-red);"></i>
+                        <h5 class="mt-3 mb-3" style="color: var(--primary-navy); font-weight: 700;">Dhaka Office (Head Office)</h5>
                         <p class="text-muted">
                             House # 19, Road # 6/A<br>
                             Sector-12, Uttara<br>
@@ -266,8 +266,8 @@ include 'includes/navbar.php';
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="card-custom h-100">
                     <div class="card-body text-center">
-                        <i class="bi bi-building" style="font-size: 3rem; color: var(--primary-orange);"></i>
-                        <h5 class="mt-3 mb-3">Airport Office</h5>
+                        <i class="bi bi-building" style="font-size: 3rem; color: var(--primary-red);"></i>
+                        <h5 class="mt-3 mb-3" style="color: var(--primary-navy); font-weight: 700;">Airport Office</h5>
                         <p class="text-muted">
                             Biman Cargo Village<br>
                             HSIA, Dhaka-1230<br>
@@ -282,8 +282,8 @@ include 'includes/navbar.php';
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                 <div class="card-custom h-100">
                     <div class="card-body text-center">
-                        <i class="bi bi-building" style="font-size: 3rem; color: var(--primary-orange);"></i>
-                        <h5 class="mt-3 mb-3">Chittagong Office</h5>
+                        <i class="bi bi-building" style="font-size: 3rem; color: var(--primary-red);"></i>
+                        <h5 class="mt-3 mb-3" style="color: var(--primary-navy); font-weight: 700;">Chittagong Office</h5>
                         <p class="text-muted">
                             Hasna Towar, Agrabad<br>
                             C/A-Chittagong<br>
@@ -303,8 +303,8 @@ include 'includes/navbar.php';
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center" data-aos="zoom-in">
-                <h2>Ready to Start Your Shipment?</h2>
-                <p>Get an instant quote and experience world-class logistics service.</p>
+                <h2 style="color: white; font-weight: 700;">Ready to Start Your Shipment?</h2>
+                <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.2rem;">Get an instant quote and experience world-class logistics service.</p>
                 <div class="mt-4">
                     <a href="/quote" class="btn btn-primary-custom btn-lg me-3">Get a Quote</a>
                     <a href="/services" class="btn btn-outline-custom btn-lg">View Services</a>

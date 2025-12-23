@@ -72,7 +72,7 @@ include __DIR__ . '/includes/header.php';
             </button>
             <?php endif; ?>
             <span class="badge bg-primary" style="font-size: 1rem; padding: 0.5rem 1rem;">
-                Total: <?php echo $total_applications; ?>
+                Total: <?php echo $total; ?>
             </span>
         </div>
     </div>

@@ -14,9 +14,9 @@ include 'includes/navbar.php';
         <div class="row h-100 align-items-center">
             <div class="col-lg-9">
                 <div class="hero-content">
-                    <span class="hero-badge" data-aos="fade-up" style="background: linear-gradient(135deg, var(--primary-red), #c91d22); padding: 0.6rem 1.5rem; border-radius: 50px; font-size: 0.85rem; letter-spacing: 1.5px; font-weight: 600; box-shadow: 0 4px 20px rgba(236, 32, 37, 0.35); display: inline-block;">REAL-TIME VISIBILITY</span>
-                    <h1 data-aos="fade-up" data-aos-delay="100" style="font-size: 3.5rem; font-weight: 700; margin-top: 1.5rem; text-shadow: 0 2px 25px rgba(0,0,0,0.3);">Track Your Shipment</h1>
-                    <p data-aos="fade-up" data-aos-delay="200" style="font-size: 1.25rem; line-height: 1.8; margin-top: 1.5rem; opacity: 0.95; text-shadow: 0 1px 15px rgba(0,0,0,0.2); max-width: 850px;">
+                    <span class="hero-badge" data-aos="fade-up" style="background: linear-gradient(135deg, var(--primary-red), #c91d22); padding: 0.6rem 1.5rem; border-radius: 50px; font-size: 0.85rem; letter-spacing: 1.5px; font-weight: 600; box-shadow: 0 4px 20px rgba(236, 32, 37, 0.35); display: inline-block; color: white;">REAL-TIME VISIBILITY</span>
+                    <h1 data-aos="fade-up" data-aos-delay="100" style="font-size: 3.5rem; font-weight: 700; margin-top: 1.5rem; text-shadow: 0 2px 25px rgba(0,0,0,0.3); color: white;">Track Your Shipment</h1>
+                    <p data-aos="fade-up" data-aos-delay="200" style="font-size: 1.25rem; line-height: 1.8; margin-top: 1.5rem; opacity: 0.95; text-shadow: 0 1px 15px rgba(0,0,0,0.2); max-width: 850px; color: white;">
                         Real-time tracking and complete visibility for your cargo anywhere in the world. Stay informed with instant updates and detailed shipment status information.
                     </p>
                     <div data-aos="fade-up" data-aos-delay="300" style="margin-top: 2rem;">
@@ -41,7 +41,7 @@ include 'includes/navbar.php';
                 <div class="tracking-container" data-aos="fade-up">
                     <div class="text-center mb-4">
                         <i class="bi bi-geo-alt" style="font-size: 4rem; color: var(--primary-red);"></i>
-                        <h2 class="mt-3 mb-3">Shipment Tracking</h2>
+                        <h2 class="mt-3 mb-3" style="color: var(--primary-navy); font-weight: 700;">Shipment Tracking</h2>
                         <p class="text-muted">
                             Enter your tracking number to get real-time updates on your shipment status and location.
                         </p>
@@ -84,17 +84,17 @@ include 'includes/navbar.php';
 <section class="py-100 bg-light-custom">
     <div class="container">
         <div class="section-title" data-aos="fade-up">
-            <h2>How to Track Your Shipment</h2>
-            <p>Simple steps to stay updated on your cargo's journey</p>
+            <h2 style="color: var(--primary-navy); font-weight: 700;">How to Track Your Shipment</h2>
+            <p style="color: var(--dark-gray); font-size: 1.1rem;">Simple steps to stay updated on your cargo's journey</p>
         </div>
         
         <div class="row g-4">
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <div class="text-center">
                     <div class="mb-3">
-                        <span class="badge rounded-circle bg-primary" style="width: 60px; height: 60px; line-height: 60px; font-size: 1.5rem; background-color: var(--primary-orange) !important;">1</span>
+                        <span class="badge rounded-circle bg-primary" style="width: 60px; height: 60px; line-height: 60px; font-size: 1.5rem; background-color: var(--primary-red) !important;">1</span>
                     </div>
-                    <h5>Get Tracking Number</h5>
+                    <h5 style="color: var(--primary-navy); font-weight: 700;">Get Tracking Number</h5>
                     <p class="text-muted">
                         Receive your unique tracking number via email when your shipment is booked with us.
                     </p>
@@ -104,9 +104,9 @@ include 'includes/navbar.php';
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="text-center">
                     <div class="mb-3">
-                        <span class="badge rounded-circle bg-primary" style="width: 60px; height: 60px; line-height: 60px; font-size: 1.5rem; background-color: var(--primary-orange) !important;">2</span>
+                        <span class="badge rounded-circle bg-primary" style="width: 60px; height: 60px; line-height: 60px; font-size: 1.5rem; background-color: var(--primary-red) !important;">2</span>
                     </div>
-                    <h5>Enter Number</h5>
+                    <h5 style="color: var(--primary-navy); font-weight: 700;">Enter Number</h5>
                     <p class="text-muted">
                         Input your tracking number in the search box above and click the track button.
                     </p>
@@ -116,9 +116,9 @@ include 'includes/navbar.php';
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                 <div class="text-center">
                     <div class="mb-3">
-                        <span class="badge rounded-circle bg-primary" style="width: 60px; height: 60px; line-height: 60px; font-size: 1.5rem; background-color: var(--primary-orange) !important;">3</span>
+                        <span class="badge rounded-circle bg-primary" style="width: 60px; height: 60px; line-height: 60px; font-size: 1.5rem; background-color: var(--primary-red) !important;">3</span>
                     </div>
-                    <h5>View Status</h5>
+                    <h5 style="color: var(--primary-navy); font-weight: 700;">View Status</h5>
                     <p class="text-muted">
                         See real-time updates including current location, status, and estimated delivery date.
                     </p>
@@ -128,9 +128,9 @@ include 'includes/navbar.php';
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                 <div class="text-center">
                     <div class="mb-3">
-                        <span class="badge rounded-circle bg-primary" style="width: 60px; height: 60px; line-height: 60px; font-size: 1.5rem; background-color: var(--primary-orange) !important;">4</span>
+                        <span class="badge rounded-circle bg-primary" style="width: 60px; height: 60px; line-height: 60px; font-size: 1.5rem; background-color: var(--primary-red) !important;">4</span>
                     </div>
-                    <h5>Stay Updated</h5>
+                    <h5 style="color: var(--primary-navy); font-weight: 700;">Stay Updated</h5>
                     <p class="text-muted">
                         Receive automatic email notifications for major milestone updates during transit.
                     </p>
@@ -145,8 +145,8 @@ include 'includes/navbar.php';
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6" data-aos="fade-right">
-                <h2 class="mb-4">Advanced Tracking Features</h2>
-                <p class="lead text-orange">Complete Visibility Throughout the Journey</p>
+                <h2 class="mb-4" style="color: var(--primary-navy); font-weight: 700;">Advanced Tracking Features</h2>
+                <p class="lead" style="color: var(--primary-red); font-weight: 600;">Complete Visibility Throughout the Journey</p>
                 <p>
                     Our state-of-the-art tracking system provides comprehensive visibility of your shipments 
                     from origin to final destination, giving you peace of mind and control.
@@ -205,8 +205,8 @@ include 'includes/navbar.php';
 <section class="py-100 bg-light-custom">
     <div class="container">
         <div class="section-title" data-aos="fade-up">
-            <h2>Tracking FAQ</h2>
-            <p>Common questions about shipment tracking</p>
+            <h2 style="color: var(--primary-navy); font-weight: 700;">Tracking FAQ</h2>
+            <p style="color: var(--dark-gray); font-size: 1.1rem;">Common questions about shipment tracking</p>
         </div>
         
         <div class="row justify-content-center">
@@ -278,30 +278,30 @@ include 'includes/navbar.php';
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center" data-aos="fade-up">
-                <i class="bi bi-headset" style="font-size: 4rem; color: var(--primary-orange);"></i>
-                <h2 class="mt-4 mb-3">Need Help Tracking Your Shipment?</h2>
+                <i class="bi bi-headset" style="font-size: 4rem; color: var(--primary-red);"></i>
+                <h2 class="mt-4 mb-3" style="color: var(--primary-navy); font-weight: 700;">Need Help Tracking Your Shipment?</h2>
                 <p class="lead mb-4">
                     Our customer support team is available 24/7 to assist you with any tracking inquiries.
                 </p>
                 <div class="row g-3 justify-content-center">
                     <div class="col-md-4">
                         <div class="p-3 border rounded">
-                            <i class="bi bi-telephone-fill text-orange d-block mb-2" style="font-size: 2rem;"></i>
-                            <h6>Call Us</h6>
+                            <i class="bi bi-telephone-fill d-block mb-2" style="font-size: 2rem; color: var(--primary-red);"></i>
+                            <h6 style="color: var(--primary-navy); font-weight: 700;">Call Us</h6>
                             <p class="mb-0">+971 4 XXX XXXX</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="p-3 border rounded">
-                            <i class="bi bi-envelope-fill text-orange d-block mb-2" style="font-size: 2rem;"></i>
-                            <h6>Email Us</h6>
+                            <i class="bi bi-envelope-fill d-block mb-2" style="font-size: 2rem; color: var(--primary-red);"></i>
+                            <h6 style="color: var(--primary-navy); font-weight: 700;">Email Us</h6>
                             <p class="mb-0">tracking@farhanlogistics.com</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="p-3 border rounded">
-                            <i class="bi bi-chat-dots-fill text-orange d-block mb-2" style="font-size: 2rem;"></i>
-                            <h6>Live Chat</h6>
+                            <i class="bi bi-chat-dots-fill d-block mb-2" style="font-size: 2rem; color: var(--primary-red);"></i>
+                            <h6 style="color: var(--primary-navy); font-weight: 700;">Live Chat</h6>
                             <p class="mb-0">Available 24/7</p>
                         </div>
                     </div>

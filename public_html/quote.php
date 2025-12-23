@@ -14,9 +14,9 @@ include 'includes/navbar.php';
         <div class="row h-100 align-items-center">
             <div class="col-lg-9">
                 <div class="hero-content">
-                    <span class="hero-badge" data-aos="fade-up" style="background: linear-gradient(135deg, var(--primary-red), #c91d22); padding: 0.6rem 1.5rem; border-radius: 50px; font-size: 0.85rem; letter-spacing: 1.5px; font-weight: 600; box-shadow: 0 4px 20px rgba(236, 32, 37, 0.35); display: inline-block;">INSTANT QUOTES</span>
-                    <h1 data-aos="fade-up" data-aos-delay="100" style="font-size: 3.5rem; font-weight: 700; margin-top: 1.5rem; text-shadow: 0 2px 25px rgba(0,0,0,0.3);">Request a Quote</h1>
-                    <p data-aos="fade-up" data-aos-delay="200" style="font-size: 1.25rem; line-height: 1.8; margin-top: 1.5rem; opacity: 0.95; text-shadow: 0 1px 15px rgba(0,0,0,0.2); max-width: 850px;">
+                    <span class="hero-badge" data-aos="fade-up" style="background: linear-gradient(135deg, var(--primary-red), #c91d22); padding: 0.6rem 1.5rem; border-radius: 50px; font-size: 0.85rem; letter-spacing: 1.5px; font-weight: 600; box-shadow: 0 4px 20px rgba(236, 32, 37, 0.35); display: inline-block; color: white;">INSTANT QUOTES</span>
+                    <h1 data-aos="fade-up" data-aos-delay="100" style="font-size: 3.5rem; font-weight: 700; margin-top: 1.5rem; text-shadow: 0 2px 25px rgba(0,0,0,0.3); color: white;">Request a Quote</h1>
+                    <p data-aos="fade-up" data-aos-delay="200" style="font-size: 1.25rem; line-height: 1.8; margin-top: 1.5rem; opacity: 0.95; text-shadow: 0 1px 15px rgba(0,0,0,0.2); max-width: 850px; color: white;">
                         Get competitive rates for your shipment with our instant quote service. Fast response within 24 hours guaranteed by our experienced team.
                     </p>
                     <div data-aos="fade-up" data-aos-delay="300" style="margin-top: 2rem;">
@@ -52,7 +52,7 @@ include 'includes/navbar.php';
                     <form id="quoteForm" class="needs-validation" novalidate>
                         <!-- Personal Information -->
                         <div class="mb-4">
-                            <h4 class="mb-3"><i class="bi bi-person text-danger"></i> Contact Information</h4>
+                            <h4 class="mb-3" style="color: var(--primary-navy); font-weight: 700;"><i class="bi bi-person" style="color: var(--primary-red);"></i> Contact Information</h4>
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -116,7 +116,7 @@ include 'includes/navbar.php';
                         
                         <!-- Shipment Details -->
                         <div class="mb-4">
-                            <h4 class="mb-3"><i class="bi bi-box-seam text-orange"></i> Shipment Details</h4>
+                            <h4 class="mb-3" style="color: var(--primary-navy); font-weight: 700;"><i class="bi bi-box-seam" style="color: var(--primary-red);"></i> Shipment Details</h4>
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -223,7 +223,7 @@ include 'includes/navbar.php';
                         
                         <!-- Additional Information -->
                         <div class="mb-4">
-                            <h4 class="mb-3"><i class="bi bi-info-circle text-orange"></i> Additional Information</h4>
+                            <h4 class="mb-3" style="color: var(--primary-navy); font-weight: 700;"><i class="bi bi-info-circle" style="color: var(--primary-red);"></i> Additional Information</h4>
                             <div class="form-group">
                                 <label for="additional_info" class="form-label">Special Requirements or Comments</label>
                                 <textarea 
@@ -238,7 +238,7 @@ include 'includes/navbar.php';
                         
                         <!-- Services Options -->
                         <div class="mb-4">
-                            <h4 class="mb-3"><i class="bi bi-list-check text-orange"></i> Additional Services</h4>
+                            <h4 class="mb-3" style="color: var(--primary-navy); font-weight: 700;"><i class="bi bi-list-check" style="color: var(--primary-red);"></i> Additional Services</h4>
                             <div class="row g-3">
                                 <div class="col-md-4">
                                     <div class="form-check">
@@ -311,15 +311,15 @@ include 'includes/navbar.php';
 <section class="py-100 bg-light-custom">
     <div class="container">
         <div class="section-title" data-aos="fade-up">
-            <h2>Why Request a Quote from Us?</h2>
-            <p>Experience the Farhan Logistics advantage</p>
+            <h2 style="color: var(--primary-navy); font-weight: 700;">Why Request a Quote from Us?</h2>
+            <p style="color: var(--dark-gray); font-size: 1.1rem;">Experience the Farhan Logistics advantage</p>
         </div>
         
         <div class="row g-4">
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <div class="text-center">
-                    <i class="bi bi-lightning-charge" style="font-size: 3.5rem; color: var(--primary-orange);"></i>
-                    <h5 class="mt-3 mb-3">Quick Response</h5>
+                    <i class="bi bi-lightning-charge" style="font-size: 3.5rem; color: var(--primary-red);"></i>
+                    <h5 class="mt-3 mb-3" style="color: var(--primary-navy); font-weight: 700;">Quick Response</h5>
                     <p class="text-muted">
                         Receive detailed quotes within 24 hours from our expert team.
                     </p>
@@ -328,8 +328,8 @@ include 'includes/navbar.php';
             
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="text-center">
-                    <i class="bi bi-cash-coin" style="font-size: 3.5rem; color: var(--primary-orange);"></i>
-                    <h5 class="mt-3 mb-3">Competitive Rates</h5>
+                    <i class="bi bi-cash-coin" style="font-size: 3.5rem; color: var(--primary-red);"></i>
+                    <h5 class="mt-3 mb-3" style="color: var(--primary-navy); font-weight: 700;">Competitive Rates</h5>
                     <p class="text-muted">
                         Best market rates with transparent pricing and no hidden fees.
                     </p>
@@ -338,8 +338,8 @@ include 'includes/navbar.php';
             
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                 <div class="text-center">
-                    <i class="bi bi-person-check" style="font-size: 3.5rem; color: var(--primary-orange);"></i>
-                    <h5 class="mt-3 mb-3">Expert Advice</h5>
+                    <i class="bi bi-person-check" style="font-size: 3.5rem; color: var(--primary-red);"></i>
+                    <h5 class="mt-3 mb-3" style="color: var(--primary-navy); font-weight: 700;">Expert Advice</h5>
                     <p class="text-muted">
                         Professional guidance on the best shipping solution for your needs.
                     </p>
@@ -348,8 +348,8 @@ include 'includes/navbar.php';
             
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                 <div class="text-center">
-                    <i class="bi bi-shield-check" style="font-size: 3.5rem; color: var(--primary-orange);"></i>
-                    <h5 class="mt-3 mb-3">No Obligation</h5>
+                    <i class="bi bi-shield-check" style="font-size: 3.5rem; color: var(--primary-red);"></i>
+                    <h5 class="mt-3 mb-3" style="color: var(--primary-navy); font-weight: 700;">No Obligation</h5>
                     <p class="text-muted">
                         Free quote with absolutely no commitment required.
                     </p>
@@ -364,8 +364,8 @@ include 'includes/navbar.php';
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-8" data-aos="fade-right">
-                <h3 class="mb-3">Need Immediate Assistance?</h3>
-                <p class="lead text-muted mb-0">
+                <h3 class="mb-3" style="color: var(--primary-navy); font-weight: 700;">Need Immediate Assistance?</h3>
+                <p class="lead mb-0" style="color: var(--dark-gray);">
                     Our logistics experts are available 24/7 to discuss your shipping requirements and provide instant quotes over the phone.
                 </p>
             </div>
@@ -377,5 +377,7 @@ include 'includes/navbar.php';
         </div>
     </div>
 </section>
+
+<?php include 'includes/quote-widget.php'; ?>
 
 <?php include 'includes/footer.php'; ?>
