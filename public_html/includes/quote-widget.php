@@ -36,7 +36,7 @@
                             <i class="bi bi-file-text-fill me-2"></i> Request a Quote
                         </a>
                         <p class="mt-3 mb-0 small text-white-50">
-                            Or call us: <a href="tel:+971XXXXXXXX" class="text-white fw-bold text-decoration-none">+971 XX XXX XXXX</a>
+                            Or call us: <a href="tel:+8801844167431" class="text-white fw-bold text-decoration-none">+880 1844-167431</a>
                         </p>
                     </div>
                 </div>
