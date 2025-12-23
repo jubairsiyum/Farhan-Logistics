@@ -152,7 +152,7 @@ include 'includes/navbar.php';
                                     Md. Abdul Hannan
                                 </h3>
                                 <p class="position mb-4" style="color: var(--primary-red); font-size: 1.1rem; font-weight: 600;">
-                                    Managing Director & CEO
+                                    Managing Director
                                 </p>
                                 <p class="bio mb-4" style="line-height: 1.9; color: #495057; font-size: 1.05rem;">
                                     With over <strong style="color: var(--primary-navy);">15 years of expertise</strong> in logistics and international trade, 
