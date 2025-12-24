@@ -6,6 +6,8 @@ require_once dirname(__DIR__) . '/config/security.php';
 requireAdmin();
 
 require_once dirname(__DIR__) . '/config/db.php';
+require_once dirname(__DIR__) . '/config/mail.php';
+require_once dirname(__DIR__) . '/config/email_templates.php';
 $pageTitle = 'Shipment Tracking Management';
 
 // Function to generate unique 10-digit tracking number
@@ -23,97 +25,60 @@ function generateTrackingNumber($pdo) {
     return $tracking_number;
 }
 
-// Function to send tracking email to customer
-function sendTrackingEmail($customer_email, $customer_name, $tracking_number, $origin, $destination, $service_type, $estimated_delivery) {
-    $subject = "Your Shipment Tracking Number - Farhan Logistics";
+// Function to send tracking email to customer using new email system
+function sendTrackingEmailToCustomer($customer_email, $customer_name, $tracking_number, $origin, $destination, $service_type, $estimated_delivery) {
+    // Prepare data for email template
+    $email_data = [
+        'tracking_number' => $tracking_number,
+        'customer_name' => $customer_name,
+        'origin' => $origin,
+        'destination' => $destination,
+        'service_type' => $service_type,
+        'estimated_delivery' => $estimated_delivery
+    ];
     
-    // Format service type
-    $service_display = ucwords(str_replace('_', ' ', $service_type));
+    // Generate email from template
+    $email_body = trackingEmailTemplate($email_data);
+    $subject = "Your Shipment Tracking Number: {$tracking_number} - Farhan Logistics";
     
-    // Format estimated delivery date
-    $delivery_date = date('F j, Y', strtotime($estimated_delivery));
+    // Send email using new email system
+    $result = sendEmail($customer_email, $subject, $email_body, [
+        'to_name' => $customer_name
+    ]);
     
-    // Create email body
-    $message = "
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <style>
-            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-            .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-            .header { background: linear-gradient(135deg, #0066cc 0%, #004d99 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
-            .content { background: #f8f9fa; padding: 30px; border-radius: 0 0 10px 10px; }
-            .tracking-box { background: white; padding: 20px; border-left: 4px solid #0066cc; margin: 20px 0; border-radius: 5px; }
-            .tracking-number { font-size: 28px; font-weight: bold; color: #0066cc; letter-spacing: 2px; }
-            .info-row { padding: 10px 0; border-bottom: 1px solid #e9ecef; }
-            .info-label { font-weight: bold; color: #666; }
-            .btn { display: inline-block; background: #0066cc; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; margin: 20px 0; }
-            .footer { text-align: center; padding: 20px; color: #666; font-size: 12px; }
-        </style>
-    </head>
-    <body>
-        <div class='container'>
-            <div class='header'>
-                <h1>Shipment Created Successfully</h1>
-            </div>
-            <div class='content'>
-                <p>Dear " . htmlspecialchars($customer_name) . ",</p>
-                <p>Thank you for choosing Farhan Logistics. Your shipment has been successfully created and is now being processed.</p>
-                
-                <div class='tracking-box'>
-                    <div style='text-align: center;'>
-                        <p style='margin: 0; font-size: 14px; color: #666;'>Your Tracking Number</p>
-                        <div class='tracking-number'>" . $tracking_number . "</div>
-                    </div>
-                </div>
-                
-                <h3>Shipment Details:</h3>
-                <div class='info-row'>
-                    <span class='info-label'>Service Type:</span> " . $service_display . "
-                </div>
-                <div class='info-row'>
-                    <span class='info-label'>Origin:</span> " . htmlspecialchars($origin) . "
-                </div>
-                <div class='info-row'>
-                    <span class='info-label'>Destination:</span> " . htmlspecialchars($destination) . "
-                </div>
-                <div class='info-row'>
-                    <span class='info-label'>Estimated Delivery:</span> " . $delivery_date . "
-                </div>
-                
-                <h3>How to Track Your Shipment:</h3>
-                <ol>
-                    <li>Visit our tracking page: <a href='https://" . $_SERVER['HTTP_HOST'] . "/tracking'>" . $_SERVER['HTTP_HOST'] . "/tracking</a></li>
-                    <li>Enter your tracking number: <strong>" . $tracking_number . "</strong></li>
-                    <li>Click 'Track Shipment' to view real-time status updates</li>
-                </ol>
-                
-                <div style='text-align: center;'>
-                    <a href='https://" . $_SERVER['HTTP_HOST'] . "/tracking' class='btn'>Track Your Shipment Now</a>
-                </div>
-                
-                <p style='margin-top: 20px;'><strong>Need Help?</strong><br>
-                If you have any questions, please contact our support team:<br>
-                Email: support@farhanlogistics.com<br>
-                Phone: +971 XX XXX XXXX</p>
-            </div>
-            <div class='footer'>
-                <p>&copy; " . date('Y') . " Farhan Logistics. All rights reserved.</p>
-                <p>This is an automated message, please do not reply to this email.</p>
-            </div>
-        </div>
-    </body>
-    </html>
-    ";
+    // Log email result
+    if (!$result['success']) {
+        error_log("Failed to send tracking email to {$customer_email}: " . $result['message']);
+    }
     
-    // Email headers
-    $headers = "From: Farhan Logistics <noreply@farhanlogistics.com>\r\n";
-    $headers .= "Reply-To: support@farhanlogistics.com\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+    return $result['success'];
+}
+
+// Function to send status update email to customer
+function sendStatusUpdateEmailToCustomer($customer_email, $customer_name, $tracking_number, $new_status, $location, $description) {
+    // Prepare data for email template
+    $email_data = [
+        'tracking_number' => $tracking_number,
+        'customer_name' => $customer_name,
+        'status' => $new_status,
+        'location' => $location,
+        'description' => $description
+    ];
+    
+    // Generate email from template
+    $email_body = statusUpdateEmailTemplate($email_data);
+    $subject = "Shipment Update: {$tracking_number} - " . ucwords(str_replace('_', ' ', $new_status));
     
     // Send email
-    return mail($customer_email, $subject, $message, $headers);
+    $result = sendEmail($customer_email, $subject, $email_body, [
+        'to_name' => $customer_name
+    ]);
+    
+    if (!$result['success']) {
+        error_log("Failed to send status update email to {$customer_email}: " . $result['message']);
+    }
+    
+    return $result['success'];
 }
 
 // Handle actions
@@ -148,13 +113,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $event_stmt = $pdo->prepare("INSERT INTO tracking_events (tracking_number, event_type, event_description, location, event_date) VALUES (?, ?, ?, ?, NOW())");
                 $event_stmt->execute([$tracking_number, 'Created', 'Shipment created in system', $origin]);
                 
-                // Send tracking email to customer
-                $email_sent = sendTrackingEmail($customer_email, $customer_name, $tracking_number, $origin, $destination, $service_type, $estimated_delivery);
+                // Send tracking email to customer using new email system
+                $email_sent = sendTrackingEmailToCustomer($customer_email, $customer_name, $tracking_number, $origin, $destination, $service_type, $estimated_delivery);
                 
                 if ($email_sent) {
-                    $_SESSION['success_message'] = 'Shipment created successfully! Tracking number: ' . $tracking_number . '. Email sent to customer.';
+                    $_SESSION['success_message'] = 'Shipment created successfully! Tracking number: ' . $tracking_number . '. Email notification sent to customer.';
                 } else {
-                    $_SESSION['success_message'] = 'Shipment created successfully! Tracking number: ' . $tracking_number . '. (Warning: Email notification failed to send.)';
+                    $_SESSION['success_message'] = 'Shipment created successfully! Tracking number: ' . $tracking_number . '. (Warning: Email notification failed to send - check email configuration)';
                 }
                 
                 header('Location: /admin/shipments');
@@ -171,6 +136,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $event_description = trim($_POST['event_description']);
             
             try {
+                // Get customer details for email
+                $customer_stmt = $pdo->prepare("SELECT customer_name, customer_email FROM shipment_tracking WHERE tracking_number = ?");
+                $customer_stmt->execute([$tracking_number]);
+                $customer_info = $customer_stmt->fetch(PDO::FETCH_ASSOC);
+                
+                // Update shipment status
                 $stmt = $pdo->prepare("UPDATE shipment_tracking SET current_status = ?, current_location = ?, updated_at = NOW() WHERE tracking_number = ?");
                 $stmt->execute([$new_status, $location, $tracking_number]);
                 
@@ -184,7 +155,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $delivered_stmt->execute([$tracking_number]);
                 }
                 
-                $_SESSION['success_message'] = 'Shipment status updated successfully';
+                // Send status update email to customer
+                if ($customer_info && !empty($customer_info['customer_email'])) {
+                    $email_sent = sendStatusUpdateEmailToCustomer(
+                        $customer_info['customer_email'],
+                        $customer_info['customer_name'],
+                        $tracking_number,
+                        $new_status,
+                        $location,
+                        $event_description
+                    );
+                    
+                    if ($email_sent) {
+                        $_SESSION['success_message'] = 'Shipment status updated successfully. Email notification sent to customer.';
+                    } else {
+                        $_SESSION['success_message'] = 'Shipment status updated successfully. (Warning: Email notification failed)';
+                    }
+                } else {
+                    $_SESSION['success_message'] = 'Shipment status updated successfully.';
+                }
+                
                 header('Location: /admin/shipments?view=' . $tracking_number);
                 exit;
             } catch (PDOException $e) {

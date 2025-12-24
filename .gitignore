@@ -1,0 +1,44 @@
+# Dependencies
+/vendor/
+node_modules/
+
+# Environment & Configuration
+.env
+.env.local
+.env.production
+/public_html/config/mail.php
+
+# Composer
+composer.lock
+
+# Logs
+/public_html/storage/logs/*.log
+*.log
+
+# System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Uploads (keep directory, ignore files)
+/public_html/uploads/resumes/*
+!/public_html/uploads/resumes/README.md
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Test files (remove after testing)
+/public_html/test-email.php
+
+# Cache
+*.cache
+/public_html/cache/

@@ -35,11 +35,10 @@ try {
     
     $pdo = new PDO($dsn, DB_USER, DB_PASS, $options);
 } catch (PDOException $e) {
-    if (DB_DEBUG) {
-        die("Database Connection Failed: " . $e->getMessage());
-    } else {
-        die("Database connection error. Please contact support.");
-    }
+    $errorMessage = DB_DEBUG 
+        ? "Database Connection Failed: " . $e->getMessage()
+        : "Database connection error. Please contact support.";
+    die($errorMessage);
 }
 
 /**
@@ -59,7 +58,7 @@ function getDatabaseConnection() {
     // Check connection
     if ($conn->connect_error) {
         if (DB_DEBUG) {
-            die("Connection failed: " . $conn->connect_error);
+            error_log("Connection failed: " . $conn->connect_error);
         }
         return false;
     }
@@ -67,7 +66,7 @@ function getDatabaseConnection() {
     // Set charset
     if (!$conn->set_charset(DB_CHARSET)) {
         if (DB_DEBUG) {
-            die("Error setting charset: " . $conn->error);
+            error_log("Error setting charset: " . $conn->error);
         }
         return false;
     }

@@ -528,6 +528,11 @@
                     <i class="bi bi-people"></i>Admin Users
                 </a>
             </li>
+            <li>
+                <a href="/admin/email-config" class="<?php echo basename($_SERVER['PHP_SELF']) == 'email-config.php' ? 'active' : ''; ?>">
+                    <i class="bi bi-envelope-at"></i>Email Configuration
+                </a>
+            </li>
         </ul>
         
         <div style="flex-grow: 1;"></div>
