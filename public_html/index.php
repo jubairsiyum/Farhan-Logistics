@@ -205,37 +205,20 @@ include 'includes/navbar.php';
         </div>
         
         <div class="row g-4 mb-5">
+            <!-- RMG & Textile - HIGHLIGHTED FIRST -->
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <div class="h-100 p-4 rounded-3" 
-                     style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.15); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 32px rgba(0,0,0,0.2); cursor: pointer;"
-                     onmouseover="this.style.transform='translateY(-12px) scale(1.02)'; this.style.background='rgba(255,255,255,0.18)'; this.style.borderColor='rgba(236,32,37,0.5)'; this.style.boxShadow='0 15px 45px rgba(236,32,37,0.25)';"
-                     onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.12)'; this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.2)';">
+                     style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.20) 0%, rgba(236, 32, 37, 0.15) 100%); backdrop-filter: blur(15px); border: 3px solid rgba(236,32,37,0.6); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 12px 40px rgba(236,32,37,0.35); cursor: pointer; position: relative;"
+                     onmouseover="this.style.transform='translateY(-15px) scale(1.03)'; this.style.background='linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(236,32,37,0.2) 100%)'; this.style.borderColor='rgba(236,32,37,0.8)'; this.style.boxShadow='0 20px 50px rgba(236,32,37,0.45)';"
+                     onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='linear-gradient(135deg, rgba(255,255,255,0.20) 0%, rgba(236,32,37,0.15) 100%)'; this.style.borderColor='rgba(236,32,37,0.6)'; this.style.boxShadow='0 12px 40px rgba(236,32,37,0.35)';">
+                    <span class="badge" style="position: absolute; top: 15px; right: 15px; background: linear-gradient(135deg, #ec2025, #c91d22); color: white; font-size: 0.7rem; padding: 6px 12px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(236,32,37,0.4);">FEATURED</span>
                     <div class="text-center">
-                        <div class="mb-4" style="width: 100px; height: 100px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 12px 35px rgba(236, 32, 37, 0.4); position: relative; overflow: hidden;">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);"></div>
-                            <i class="bi bi-handbag text-white" style="font-size: 3rem; position: relative; z-index: 1;"></i>
+                        <div class="mb-4" style="width: 110px; height: 110px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 15px 40px rgba(236, 32, 37, 0.5); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.15) 100%);"></div>
+                            <i class="bi bi-scissors text-white" style="font-size: 3.2rem; position: relative; z-index: 1;"></i>
                         </div>
-                        <h4 class="mb-3 text-white" style="font-weight: 700; font-size: 1.35rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Leather & Footwear</h4>
-                        <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.8; opacity: 0.92; text-shadow: 0 1px 5px rgba(0,0,0,0.2);">
-                            Temperature-controlled shipping and expert handling for premium leather goods, footwear collections, 
-                            and fashion accessories with quality preservation throughout transit
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
-                <div class="h-100 p-4 rounded-3" 
-                     style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.15); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 32px rgba(0,0,0,0.2); cursor: pointer;"
-                     onmouseover="this.style.transform='translateY(-12px) scale(1.02)'; this.style.background='rgba(255,255,255,0.18)'; this.style.borderColor='rgba(236,32,37,0.5)'; this.style.boxShadow='0 15px 45px rgba(236,32,37,0.25)';"
-                     onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.12)'; this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.2)';">
-                    <div class="text-center">
-                        <div class="mb-4" style="width: 100px; height: 100px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 12px 35px rgba(236, 32, 37, 0.4); position: relative; overflow: hidden;">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);"></div>
-                            <i class="bi bi-scissors text-white" style="font-size: 3rem; position: relative; z-index: 1;"></i>
-                        </div>
-                        <h4 class="mb-3 text-white" style="font-weight: 700; font-size: 1.35rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">RMG & Textile</h4>
-                        <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.8; opacity: 0.92; text-shadow: 0 1px 5px rgba(0,0,0,0.2);">
+                        <h4 class="mb-3 text-white" style="font-weight: 800; font-size: 1.45rem; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">RMG & Textile</h4>
+                        <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.8; opacity: 0.95; text-shadow: 0 1px 5px rgba(0,0,0,0.2); font-weight: 500;">
                             Specialized solutions for ready-made garments and textile shipments with efficient bulk handling, 
                             on-hanger services, and compliance with international textile trade regulations
                         </p>
@@ -271,8 +254,28 @@ include 'includes/navbar.php';
                         <div class="mb-4" style="width: 100px; height: 100px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 12px 35px rgba(236, 32, 37, 0.4); position: relative; overflow: hidden;">
                             <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);"></div>
                             <i class="bi bi-cpu text-white" style="font-size: 3rem; position: relative; z-index: 1;"></i>
-                        </div>
-                        <h4 class="mb-3 text-white" style="font-weight: 700; font-size: 1.35rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Electronics & Parts</h4>
+                        </div>                        <h4 class="mb-3 text-white" style="font-weight: 700; font-size: 1.35rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Leather & Footwear</h4>
+                        <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.8; opacity: 0.92; text-shadow: 0 1px 5px rgba(0,0,0,0.2);">
+                            Temperature-controlled shipping and expert handling for premium leather goods, footwear collections, 
+                            and fashion accessories with quality preservation throughout transit
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Additional Industries Row -->
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+                <div class="h-100 p-4 rounded-3" 
+                     style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(15px); border: 2px solid rgba(255,255,255,0.15); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 32px rgba(0,0,0,0.2); cursor: pointer;"
+                     onmouseover="this.style.transform='translateY(-12px) scale(1.02)'; this.style.background='rgba(255,255,255,0.18)'; this.style.borderColor='rgba(236,32,37,0.5)'; this.style.boxShadow='0 15px 45px rgba(236,32,37,0.25)';"
+                     onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.12)'; this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.2)';">
+                    <div class="text-center">
+                        <div class="mb-4" style="width: 100px; height: 100px; background: linear-gradient(135deg, #ec2025 0%, #c91d22 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 12px 35px rgba(236, 32, 37, 0.4); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);"></div>
+                            <i class="bi bi-cpu text-white" style="font-size: 3rem; position: relative; z-index: 1;"></i>
+                        </div>                        <h4 class="mb-3 text-white" style="font-weight: 700; font-size: 1.35rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Electronics & Parts</h4>
                         <p class="mb-0 text-white" style="font-size: 0.95rem; line-height: 1.8; opacity: 0.92; text-shadow: 0 1px 5px rgba(0,0,0,0.2);">
                             Secure transportation for high-value electronics, sensitive components, and tech products with 
                             anti-static packaging, climate control, and comprehensive insurance coverage
@@ -341,30 +344,12 @@ include 'includes/navbar.php';
 <section class="py-100 section-light">
     <div class="container">
         <div class="section-title" data-aos="fade-up">
-            <h2>Our Core Services</h2>
+            <h2 style="color: var(--primary-navy);">Our Core Services</h2>
             <p>Comprehensive logistics solutions tailored to your business needs</p>
         </div>
         
         <div class="row g-4">
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=600&h=400&fit=crop&q=85" alt="Air Freight - Cargo Plane">
-                        <div class="service-overlay">
-                            <i class="bi bi-airplane"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h4>Air Freight</h4>
-                        <p>Fast and reliable air cargo services for time-sensitive shipments worldwide with real-time tracking.</p>
-                        <a href="/services#air-freight" class="learn-more">
-                            Learn More <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="service-card">
                     <div class="service-img">
                         <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?w=600&h=400&fit=crop&q=85" alt="Sea Freight - Container Ship">
@@ -376,6 +361,24 @@ include 'includes/navbar.php';
                         <h4>Sea Freight</h4>
                         <p>Cost-effective ocean freight solutions with FCL and LCL options for global shipping requirements.</p>
                         <a href="/services#sea-freight" class="learn-more">
+                            Learn More <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=600&h=400&fit=crop&q=85" alt="Air Freight - Cargo Plane">
+                        <div class="service-overlay">
+                            <i class="bi bi-airplane"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h4>Air Freight</h4>
+                        <p>Fast and reliable air cargo services for time-sensitive shipments worldwide with real-time tracking.</p>
+                        <a href="/services#air-freight" class="learn-more">
                             Learn More <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -478,21 +481,21 @@ include 'includes/navbar.php';
             
             <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
                 <div class="stat-item">
-                    <div class="stat-number" data-target="5000">5000+</div>
+                    <div class="stat-number" data-target="1700">1700+</div>
                     <div class="stat-label">Active Clients</div>
                 </div>
             </div>
             
             <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
                 <div class="stat-item">
-                    <div class="stat-number" data-target="150">150+</div>
+                    <div class="stat-number" data-target="100">100+</div>
                     <div class="stat-label">Countries Served</div>
                 </div>
             </div>
             
             <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
                 <div class="stat-item">
-                    <div class="stat-number" data-target="50000">50K+</div>
+                    <div class="stat-number" data-target="1000">1000+</div>
                     <div class="stat-label">Shipments Annually</div>
                 </div>
             </div>
@@ -553,7 +556,7 @@ include 'includes/navbar.php';
                          class="img-fluid rounded mb-3" style="height: 250px; width: 100%; object-fit: cover;">
                     <div class="card-body text-center">
                         <h5>Middle East Hub</h5>
-                        <p>Dubai, UAE - Central logistics hub serving GCC, Middle East, and North Africa markets.</p>
+                        <p>UAE Ports (Jebel Ali, Khalifa Port, Abu Dhabi Port) and major Air Hubs (Dubai International, Abu Dhabi International) - Central logistics gateway serving GCC, Middle East, and North Africa markets with comprehensive sea and air freight solutions.</p>
                     </div>
                 </div>
             </div>
@@ -564,7 +567,7 @@ include 'includes/navbar.php';
                          class="img-fluid rounded mb-3" style="height: 250px; width: 100%; object-fit: cover;">
                     <div class="card-body text-center">
                         <h5>Asia Pacific</h5>
-                        <p>Strategic partnerships in China, India, Singapore, and major Asian ports.</p>
+                        <p>Singapore Port (leading global hub), China (Shanghai, Shenzhen, Ningbo), India (Mumbai, Chennai), Hong Kong, and major Asian port hubs with extensive shipping networks and logistics capabilities.</p>
                     </div>
                 </div>
             </div>
@@ -575,7 +578,7 @@ include 'includes/navbar.php';
                          class="img-fluid rounded mb-3" style="height: 250px; width: 100%; object-fit: cover;">
                     <div class="card-body text-center">
                         <h5>European Network</h5>
-                        <p>Comprehensive coverage across EU with partners in major European cities.</p>
+                        <p>European Sea Ports (Rotterdam, Hamburg, Antwerp, Felixstowe) and Major Airports (Frankfurt, Heathrow, Charles de Gaulle, Schiphol) - Comprehensive EU coverage with multimodal transport solutions across major European logistics corridors.</p>
                     </div>
                 </div>
             </div>

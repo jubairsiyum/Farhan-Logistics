@@ -36,23 +36,25 @@
                 <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
                     <h5 class="footer-title">Our Services</h5>
                     <ul class="footer-links">
-                        <li><a href="/services#freight">Freight Forwarding</a></li>
-                        <li><a href="/services#customs">Customs & Trade</a></li>
-                        <li><a href="/services#finance">Finance & Docs</a></li>
-                        <li><a href="/services#technology">Tech Support</a></li>
-                        <li><a href="/services#network">Global Network</a></li>
+                        <li><a href="/services#sea-freight">Sea Freight</a></li>
+                        <li><a href="/services#air-freight">Air Freight</a></li>
+                        <li><a href="/services#road-transport">Road Transport</a></li>
+                        <li><a href="/services#warehousing">Warehousing</a></li>
+                        <li><a href="/services#customs-clearance">Customs Clearance</a></li>
+                        <li><a href="/services#overseas-agent">Overseas Agent</a></li>
+                        <li><a href="/services#client-services">Client Services</a></li>
                     </ul>
                 </div>
                 
                 <!-- Industries & Partners -->
-                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
                     <h5 class="footer-title">Industries Served</h5>
                     <ul class="footer-links">
+                        <li><a href="/solutions">RMG & Textile</a></li>
+                        <li><a href="/solutions">FMCG & Retail</a></li>
+                        <li><a href="/solutions">Electronics & Parts</a></li>
+                        <li><a href="/solutions">Agriculture</a></li>
                         <li><a href="/solutions">Leather & Footwear</a></li>
-                        <li><a href="/solutions">RMG & Textile Exporters</a></li>
-                        <li><a href="/solutions">FMCG & Retail Imports</a></li>
-                        <li><a href="/solutions">Electronics & Spare Parts</a></li>
-                        <li><a href="/solutions">Agriculture & Commodities</a></li>
                     </ul>
                 </div>
                 
