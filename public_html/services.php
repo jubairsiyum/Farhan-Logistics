@@ -187,6 +187,46 @@ include 'includes/navbar.php';
                 </div>
             </div>
             
+            <!-- Overseas -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="350" id="overseas">
+                <div class="service-detail-card">
+                    <div class="service-detail-icon">
+                        <i class="bi bi-globe-americas"></i>
+                    </div>
+                    <h4>Overseas</h4>
+                    <p>
+                        Global logistics network providing seamless international shipping solutions across 
+                        continents. Our overseas services ensure your cargo reaches any destination worldwide 
+                        with complete visibility, compliance, and expert handling throughout the journey.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Worldwide Shipping Network</li>
+                        <li><i class="bi bi-check-circle-fill"></i> International Compliance</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Multi-Modal Solutions</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Agent & Client -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400" id="agent-client">
+                <div class="service-detail-card">
+                    <div class="service-detail-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h4>Agent & Client Services</h4>
+                    <p>
+                        Dedicated agent network and client relationship management providing personalized 
+                        support, transparent communication, and tailored logistics solutions. We act as your 
+                        trusted partner, coordinating every detail from booking to final delivery.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Dedicated Account Management</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 24/7 Client Support</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Agent Coordination</li>
+                    </ul>
+                </div>
+            </div>
+            
             <!-- Canada Agent Support -->
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="450">
                 <div class="service-detail-card">

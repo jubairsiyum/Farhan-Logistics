@@ -41,8 +41,8 @@
                         <li><a href="/services#road-transport">Road Transport</a></li>
                         <li><a href="/services#warehousing">Warehousing</a></li>
                         <li><a href="/services#customs-clearance">Customs Clearance</a></li>
-                        <li><a href="/services#overseas-agent">Overseas Agent</a></li>
-                        <li><a href="/services#client-services">Client Services</a></li>
+                        <li><a href="/services#overseas">Overseas</a></li>
+                        <li><a href="/services#agent-client">Agent & Client</a></li>
                     </ul>
                 </div>
                 
@@ -76,7 +76,7 @@
                         </li>
                         <li>
                             <i class="bi bi-clock-fill"></i>
-                            <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
+                            <span>Saturday - Thursday: 9:00 AM - 6:00 PM</span>
                         </li>
                     </ul>
                 </div>

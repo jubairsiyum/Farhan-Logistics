@@ -211,6 +211,145 @@ include 'includes/navbar.php';
     </div>
 </section>
 
+<!-- Operations Manager Section -->
+<section class="py-100 bg-light-custom">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-5 order-md-2" data-aos="fade-left">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=85" 
+                         alt="Operations Manager" 
+                         class="img-fluid rounded shadow-lg" 
+                         style="height: 450px; width: 100%; object-fit: cover; border-radius: 15px !important;">
+                    <!-- Floating badge -->
+                    <div class="position-absolute bottom-0 start-0 m-3 p-3" 
+                         style="background: linear-gradient(135deg, rgba(236, 32, 37, 0.95), rgba(236, 32, 37, 0.9)); 
+                                backdrop-filter: blur(10px); border-radius: 12px; box-shadow: 0 8px 32px rgba(236,32,37,0.4);"
+                         data-aos="zoom-in" data-aos-delay="300">
+                        <div>
+                            <h5 class="mb-0 text-white" style="font-weight: 700; font-size: 1.1rem;">Global Excellence</h5>
+                            <small class="text-white" style="font-weight: 600; opacity: 0.95;">Freight Forwarding</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 order-md-1 ps-md-4" data-aos="fade-right">
+                <div class="mb-4">
+                    <span class="badge text-white px-3 py-2" 
+                          style="background: linear-gradient(135deg, var(--primary-red), #c91d22); 
+                                 font-size: 0.75rem; letter-spacing: 1px; font-weight: 600;">
+                        OPERATIONS MANAGEMENT
+                    </span>
+                </div>
+                <h2 class="mb-4" style="font-size: 2.3rem; font-weight: 700; color: var(--primary-navy);">
+                    Operations Manager<br><span style="color: var(--primary-red);">(Export, Import & Sales)</span>
+                </h2>
+                <p class="lead mb-4" style="color: #495057; font-size: 1.15rem; line-height: 1.9;">
+                    Orchestrating seamless supply chain excellence across international borders with strategic vision and operational precision
+                </p>
+                <p class="mb-4" style="line-height: 1.9; color: #495057; font-size: 1.05rem;">
+                    Our Operations Manager drives <strong style="color: var(--primary-navy);">global freight forwarding excellence</strong> through meticulous management 
+                    of export and import operations. With comprehensive oversight of sales initiatives and logistics coordination, they ensure 
+                    every shipment meets our stringent quality standards while maximizing customer satisfaction and operational efficiency.
+                </p>
+                <p class="mb-4" style="line-height: 1.9; color: #495057; font-size: 1.05rem;">
+                    Specializing in <strong style="color: var(--primary-red);">FCL and LCL consolidation</strong>, documentation excellence, and customs compliance, 
+                    this pivotal role ensures that Farhan Logistics delivers reliable, cost-effective solutions across major international markets 
+                    including Asia, Europe, Middle East, Americas, and Africa.
+                </p>
+                <div class="mt-4">
+                    <a href="/services" class="btn btn-primary-custom btn-lg">
+                        <i class="bi bi-arrow-right-circle me-2"></i>Explore Operations
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Employees Section -->
+<section class="py-100">
+    <div class="container">
+        <div class="section-title mb-60 text-center" data-aos="fade-up">
+            <div class="mb-3">
+                <span class="badge text-white px-4 py-2" style="background: linear-gradient(135deg, var(--primary-red), #c91d22); font-size: 0.8rem; letter-spacing: 1.5px; font-weight: 600; box-shadow: 0 4px 15px rgba(236, 32, 37, 0.3); display: inline-block;">
+                    OUR TEAM
+                </span>
+            </div>
+            <h2 class="mb-3" style="font-size: 2.75rem; font-weight: 700; color: var(--primary-navy);">
+                Talented Professionals Driving Excellence
+            </h2>
+            <p class="mx-auto" style="font-size: 1.15rem; max-width: 850px; line-height: 1.8; color: #495057;">
+                Dedicated team members working collaboratively to deliver exceptional logistics solutions worldwide
+            </p>
+        </div>
+
+        <div class="row g-4 align-items-center">
+            <!-- Individual Profile -->
+            <div class="col-lg-5 col-md-6" data-aos="fade-right">
+                <div class="position-relative overflow-hidden rounded-3" style="box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12); border-radius: 20px !important;">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=85" 
+                         alt="Team Member" 
+                         class="img-fluid" 
+                         style="height: 450px; width: 100%; object-fit: cover; transition: transform 0.4s ease;"
+                         onmouseover="this.style.transform='scale(1.05)'"
+                         onmouseout="this.style.transform='scale(1)'">
+                    <!-- Overlay -->
+                    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 0%, rgba(47, 51, 141, 0.8) 100%); display: flex; align-items: flex-end; padding: 30px;">
+                        <div>
+                            <h4 class="text-white mb-1" style="font-weight: 700; font-size: 1.4rem;">Professional Excellence</h4>
+                            <p class="text-white mb-0" style="opacity: 0.95; font-size: 0.95rem;">Dedicated to Freight Forwarding Excellence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Photo -->
+            <div class="col-lg-5 col-md-6 offset-lg-1" data-aos="fade-left">
+                <div class="position-relative overflow-hidden rounded-3" style="box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12); border-radius: 20px !important;">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&q=85" 
+                         alt="Team Group" 
+                         class="img-fluid" 
+                         style="height: 450px; width: 100%; object-fit: cover; transition: transform 0.4s ease;"
+                         onmouseover="this.style.transform='scale(1.05)'"
+                         onmouseout="this.style.transform='scale(1)'">
+                    <!-- Overlay -->
+                    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 0%, rgba(236, 32, 37, 0.8) 100%); display: flex; align-items: flex-end; padding: 30px;">
+                        <div>
+                            <h4 class="text-white mb-1" style="font-weight: 700; font-size: 1.4rem;">Collaborative Team</h4>
+                            <p class="text-white mb-0" style="opacity: 0.95; font-size: 0.95rem;">Working Together for Global Success</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Highlights -->
+        <div class="row g-4 mt-4">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-4 rounded-3" style="background: linear-gradient(135deg, rgba(236, 32, 37, 0.05), rgba(47, 51, 141, 0.08)); border-left: 4px solid var(--primary-red);">
+                    <h5 class="mb-3" style="color: var(--primary-navy); font-weight: 700;">
+                        <i class="bi bi-people-fill me-2" style="color: var(--primary-red);"></i>Expert Team
+                    </h5>
+                    <p class="mb-0" style="color: #495057; line-height: 1.8;">
+                        Professionals with deep expertise in freight forwarding, customs compliance, supply chain management, and international logistics
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-4 rounded-3" style="background: linear-gradient(135deg, rgba(47, 51, 141, 0.08), rgba(236, 32, 37, 0.05)); border-left: 4px solid var(--primary-navy);">
+                    <h5 class="mb-3" style="color: var(--primary-navy); font-weight: 700;">
+                        <i class="bi bi-globe-americas me-2" style="color: var(--primary-red);"></i>Global Network
+                    </h5>
+                    <p class="mb-0" style="color: #495057; line-height: 1.8;">
+                        Connected with international partners, carriers, and customs agents across all major markets ensuring seamless logistics operations
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Key Highlights -->
 <section class="py-100" style="background: linear-gradient(135deg, rgba(20, 24, 82, 0.97), rgba(47, 51, 141, 0.95)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=90') center/cover fixed; position: relative; overflow: hidden;">
     <!-- Decorative Elements -->

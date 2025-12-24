@@ -83,7 +83,6 @@ $current_page = basename($_SERVER['PHP_SELF'] ?? 'index.php');
         <ul class="mobile-nav-links">
             <li><a href="/" class="<?php echo ($current_page == 'index.php') ? 'active' : ''; ?>"><i class="bi bi-house-door me-3"></i>Home</a></li>
             <li><a href="/about" class="<?php echo ($current_page == 'about.php') ? 'active' : ''; ?>"><i class="bi bi-info-circle me-3"></i>About Us</a></li>
-            <li><a href="/leadership" class="<?php echo ($current_page == 'leadership.php') ? 'active' : ''; ?>"><i class="bi bi-people me-3"></i>Leadership</a></li>
             <li><a href="/services" class="<?php echo ($current_page == 'services.php') ? 'active' : ''; ?>"><i class="bi bi-grid me-3"></i>Services</a></li>
             <li><a href="/solutions" class="<?php echo ($current_page == 'solutions.php') ? 'active' : ''; ?>"><i class="bi bi-gear me-3"></i>Solutions</a></li>
             <li><a href="/tracking" class="<?php echo ($current_page == 'tracking.php') ? 'active' : ''; ?>"><i class="bi bi-geo-alt me-3"></i>Track Shipment</a></li>
@@ -119,7 +118,7 @@ $current_page = basename($_SERVER['PHP_SELF'] ?? 'index.php');
                 <i class="bi bi-clock-fill"></i>
                 <div>
                     <span class="label">Working Hours</span>
-                    <span>Mon - Sat: 8:00 AM - 6:00 PM</span>
+                    <span>Saturday - Thursday: 9:00 AM - 6:00 PM</span>
                 </div>
             </div>
         </div>

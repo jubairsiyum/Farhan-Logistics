@@ -89,9 +89,8 @@ include 'includes/navbar.php';
                         <div>
                             <h6 style="color: var(--primary-navy); font-weight: 700;">Business Hours</h6>
                             <p class="text-muted mb-0">
-                                Monday - Friday: 9:00 AM - 6:00 PM<br>
-                                Saturday: 9:00 AM - 2:00 PM<br>
-                                Sunday: Closed<br>
+                                Saturday - Thursday: 9:00 AM - 6:00 PM<br>
+                                Friday: Closed<br>
                                 <small class="text-orange">24/7 Emergency Support Available</small>
                             </p>
                         </div>

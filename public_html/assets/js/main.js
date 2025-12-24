@@ -6,6 +6,17 @@
 (function() {
     'use strict';
 
+    // Keep body padding in sync with the live header height
+    function setHeaderOffset(headerWrapper, forcedHeight) {
+        if (!headerWrapper) return;
+
+        const height = typeof forcedHeight === 'number'
+            ? forcedHeight
+            : Math.round(headerWrapper.getBoundingClientRect().height);
+
+        document.documentElement.style.setProperty('--header-offset', `${height}px`);
+    }
+
     // ========================================================================
     // 1. INITIALIZE AOS (Animate On Scroll)
     // ========================================================================
@@ -57,12 +68,20 @@
         if (!headerWrapper) return;
 
         let lastScroll = 0;
+        let lastHeight = 0;
         const scrollThreshold = 80;
 
-        window.addEventListener('scroll', function() {
+        const syncHeaderOffset = () => {
+            const headerHeight = Math.round(headerWrapper.getBoundingClientRect().height);
+            if (headerHeight !== lastHeight) {
+                setHeaderOffset(headerWrapper, headerHeight);
+                lastHeight = headerHeight;
+            }
+        };
+
+        const applyScrollState = () => {
             const currentScroll = window.pageYOffset;
             
-            // Add/remove scrolled class for styling
             if (currentScroll > scrollThreshold) {
                 headerWrapper.classList.add('scrolled');
                 body.classList.add('header-scrolled');
@@ -70,9 +89,17 @@
                 headerWrapper.classList.remove('scrolled');
                 body.classList.remove('header-scrolled');
             }
-            
+
+            syncHeaderOffset();
             lastScroll = currentScroll;
-        });
+        };
+
+        // Initial sync
+        applyScrollState();
+
+        window.addEventListener('scroll', applyScrollState);
+        window.addEventListener('resize', syncHeaderOffset);
+        window.addEventListener('load', syncHeaderOffset);
     }
 
     // ========================================================================

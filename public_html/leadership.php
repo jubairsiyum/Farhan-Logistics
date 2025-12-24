@@ -295,7 +295,7 @@ include 'includes/navbar.php';
                                     <p><i class="bi bi-geo-alt-fill me-2"></i>House # 19, Road # 6/A<br>Sector-12, Uttara, Dhaka-1230</p>
                                     <p><i class="bi bi-telephone-fill me-2"></i>+880 1844-167431</p>
                                     <p><i class="bi bi-envelope-fill me-2"></i>hannan@farhancargobd.com</p>
-                                    <p><i class="bi bi-clock-fill me-2"></i>Mon - Sat: 9:00 AM - 6:00 PM</p>
+                                    <p><i class="bi bi-clock-fill me-2"></i>Saturday - Thursday: 9:00 AM - 6:00 PM</p>
                                 </div>
                                 <a href="/contact" class="btn btn-primary-custom mt-3">
                                     <i class="bi bi-arrow-right me-2"></i>Get Directions
