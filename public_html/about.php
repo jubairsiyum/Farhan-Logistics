@@ -223,14 +223,14 @@ include 'includes/navbar.php';
                         <div class="col-md-5">
                             <div class="leader-img" style="position: relative; overflow: hidden; height: 100%; min-height: 450px;">
                                 <img src="/assets/images/amin.png" 
-                                     alt="Md. Abdul Hannan - Managing Director" 
+                                     alt="Sirajul Amin - Operations Manager" 
                                      style="width: 100%; height: 100%; object-fit: cover; display: block;">
                                 <div class="leader-overlay" 
                                      style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
                                             background: linear-gradient(135deg, rgba(47, 51, 141, 0.9), rgba(236, 32, 37, 0.85)); 
                                             opacity: 0; transition: all 0.4s ease; display: flex; align-items: center; justify-content: center;">
                                     <div class="social-links text-center">
-                                        <a href="mailto:hannan@farhancargobd.com" class="text-white d-inline-block mx-2" 
+                                        <a href="mailto:amin@farhancargobd.com" class="text-white d-inline-block mx-2" 
                                            style="font-size: 1.8rem; transition: transform 0.3s;" 
                                            onmouseover="this.style.transform='scale(1.2)'" 
                                            onmouseout="this.style.transform='scale(1)'">
@@ -242,7 +242,7 @@ include 'includes/navbar.php';
                                            onmouseout="this.style.transform='scale(1)'">
                                             <i class="bi bi-linkedin"></i>
                                         </a>
-                                        <a href="tel:+880XXXXXXXXX" class="text-white d-inline-block mx-2" 
+                                        <a href="tel:+8801901102523" class="text-white d-inline-block mx-2" 
                                            style="font-size: 1.8rem; transition: transform 0.3s;" 
                                            onmouseover="this.style.transform='scale(1.2)'" 
                                            onmouseout="this.style.transform='scale(1)'">
@@ -258,26 +258,42 @@ include 'includes/navbar.php';
                                     <span class="badge px-3 py-2" 
                                           style="background: linear-gradient(135deg, var(--primary-red), #c91d22); 
                                                  font-size: 0.75rem; letter-spacing: 1px; font-weight: 600;">
-                                        MANAGING DIRECTOR
+                                        Operations Manager
                                     </span>
                                 </div>
                                 <h3 class="mb-2" style="color: var(--primary-navy); font-size: 2rem; font-weight: 700;">
-                                    Md. Abdul Hannan
+                                    Sirajul Amin
                                 </h3>
                                 <p class="position mb-4" style="color: var(--primary-red); font-size: 1.1rem; font-weight: 600;">
-                                    Managing Director
+                                    Operations Manager (Export, Import & Sales)
                                 </p>
                                 <p class="bio mb-4" style="line-height: 1.9; color: #495057; font-size: 1.05rem;">
-                                    With over <strong style="color: var(--primary-navy);">15 years of expertise</strong> in logistics and international trade, 
-                                    Md. Abdul Hannan leads our strategic vision and oversees all operations with a commitment to excellence and innovation. 
-                                    His deep understanding of freight forwarding, supply chain management, and international commerce has been 
-                                    instrumental in positioning <strong style="color: var(--primary-red);">Farhan Logistics International Ltd.</strong> 
-                                    as a trusted and reliable partner for businesses throughout Bangladesh and beyond.
-                                </p>
-                                <p class="bio mb-4" style="line-height: 1.9; color: #495057; font-size: 1.05rem;">
-                                    Under his leadership, the company has grown to serve major international markets including USA, UK, Australia, 
-                                    Canada, Europe, Africa, Middle-East, and Asia, specializing in RMG exports, handicrafts, and agro products.
-                                </p>
+  As <strong style="color: var(--primary-navy);">Operations Manager</strong> for 
+  <strong style="color: var(--primary-red);">Export, Import & Sales</strong> at 
+  <strong style="color: var(--primary-navy);">Farhan Logistics International Ltd.</strong>, 
+  a leading <strong style="color: var(--primary-red);">3PL specialist</strong> based in Bangladesh, 
+  I oversee our comprehensive freight forwarding operations with a strong emphasis on reliability, 
+  efficiency, and client satisfaction.
+</p>
+
+<p class="bio mb-4" style="line-height: 1.9; color: #495057; font-size: 1.05rem;">
+  I manage <strong style="color: var(--primary-red);">end-to-end air and sea freight services</strong>, 
+  including <strong style="color: var(--primary-navy);">FCL</strong> and 
+  <strong style="color: var(--primary-navy);">LCL</strong> shipments, while specializing in key sectors such as 
+  <strong style="color: var(--primary-red);">RMG (Ready-Made Garments)</strong>, handicrafts, agro products, 
+  and general cargo. My responsibilities encompass shipment coordination, 
+  <strong style="color: var(--primary-navy);">customs clearance</strong>, compliance with international regulations 
+  and Incoterms, carrier negotiations, documentation, and 
+  <strong style="color: var(--primary-red);">multi-modal transport optimization</strong> 
+  to deliver seamless import and export solutions.
+</p>
+
+<p class="bio mb-4" style="line-height: 1.9; color: #495057; font-size: 1.05rem;">
+  Combining operational leadership with a proactive sales approach, I drive business growth by fostering strong client partnerships 
+  and providing tailored, cost-effective logistics that ensure 
+  <strong style="color: var(--primary-navy);">timely delivery</strong> and transparency 
+  in a competitive global market.
+</p>
                                 
                                 <div class="leader-details mt-4 pt-4" style="border-top: 2px solid #f0f0f0;">
                                     <div class="row g-3">
@@ -292,7 +308,7 @@ include 'includes/navbar.php';
                                                     <small style="color: #6c757d; font-size: 0.85rem; display: block; margin-bottom: 2px;">Email</small>
                                                     <a href="mailto:hannan@farhancargobd.com" 
                                                        style="color: var(--primary-navy); font-weight: 600; text-decoration: none; font-size: 1rem;">
-                                                        hannan@farhancargobd.com
+                                                        amin@farhancargobd.com
                                                     </a>
                                                 </div>
                                             </div>
@@ -306,9 +322,9 @@ include 'includes/navbar.php';
                                                 </div>
                                                 <div>
                                                     <small style="color: #6c757d; font-size: 0.85rem; display: block; margin-bottom: 2px;">Phone</small>
-                                                    <a href="tel:+880XXXXXXXXX" 
+                                                    <a href="tel:+8801901102523" 
                                                        style="color: var(--primary-navy); font-weight: 600; text-decoration: none; font-size: 1rem;">
-                                                        +880 1844-167431
+                                                        +880 1901-102523
                                                     </a>
                                                 </div>
                                             </div>
@@ -345,7 +361,7 @@ include 'includes/navbar.php';
             <!-- Individual Profile -->
             <div class="col-lg-5 col-md-6" data-aos="fade-right">
                 <div class="position-relative overflow-hidden rounded-3" style="box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12); border-radius: 20px !important;">
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=85" 
+                    <img src="assets/images/1.png" 
                          alt="Team Member" 
                          class="img-fluid" 
                          style="height: 450px; width: 100%; object-fit: cover; transition: transform 0.4s ease;"
@@ -364,7 +380,7 @@ include 'includes/navbar.php';
             <!-- Team Photo -->
             <div class="col-lg-5 col-md-6 offset-lg-1" data-aos="fade-left">
                 <div class="position-relative overflow-hidden rounded-3" style="box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12); border-radius: 20px !important;">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&q=85" 
+                    <img src="assets/images/2.png" 
                          alt="Team Group" 
                          class="img-fluid" 
                          style="height: 450px; width: 100%; object-fit: cover; transition: transform 0.4s ease;"
