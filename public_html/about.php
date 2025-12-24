@@ -213,54 +213,111 @@ include 'includes/navbar.php';
 
 <!-- Operations Manager Section -->
 <section class="py-100 bg-light-custom">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-5 order-md-2" data-aos="fade-left">
-                <div class="position-relative">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=85" 
-                         alt="Operations Manager" 
-                         class="img-fluid rounded shadow-lg" 
-                         style="height: 450px; width: 100%; object-fit: cover; border-radius: 15px !important;">
-                    <!-- Floating badge -->
-                    <div class="position-absolute bottom-0 start-0 m-3 p-3" 
-                         style="background: linear-gradient(135deg, rgba(236, 32, 37, 0.95), rgba(236, 32, 37, 0.9)); 
-                                backdrop-filter: blur(10px); border-radius: 12px; box-shadow: 0 8px 32px rgba(236,32,37,0.4);"
-                         data-aos="zoom-in" data-aos-delay="300">
-                        <div>
-                            <h5 class="mb-0 text-white" style="font-weight: 700; font-size: 1.1rem;">Global Excellence</h5>
-                            <small class="text-white" style="font-weight: 600; opacity: 0.95;">Freight Forwarding</small>
+    <div class="container">       
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="leadership-card shadow-lg" data-aos="fade-up" data-aos-delay="100" 
+                     style="background: white; border-radius: 20px; overflow: hidden; border: none;">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-5">
+                            <div class="leader-img" style="position: relative; overflow: hidden; height: 100%; min-height: 450px;">
+                                <img src="/assets/images/amin.png" 
+                                     alt="Md. Abdul Hannan - Managing Director" 
+                                     style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                                <div class="leader-overlay" 
+                                     style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+                                            background: linear-gradient(135deg, rgba(47, 51, 141, 0.9), rgba(236, 32, 37, 0.85)); 
+                                            opacity: 0; transition: all 0.4s ease; display: flex; align-items: center; justify-content: center;">
+                                    <div class="social-links text-center">
+                                        <a href="mailto:hannan@farhancargobd.com" class="text-white d-inline-block mx-2" 
+                                           style="font-size: 1.8rem; transition: transform 0.3s;" 
+                                           onmouseover="this.style.transform='scale(1.2)'" 
+                                           onmouseout="this.style.transform='scale(1)'">
+                                            <i class="bi bi-envelope-fill"></i>
+                                        </a>
+                                        <a href="#" class="text-white d-inline-block mx-2" 
+                                           style="font-size: 1.8rem; transition: transform 0.3s;" 
+                                           onmouseover="this.style.transform='scale(1.2)'" 
+                                           onmouseout="this.style.transform='scale(1)'">
+                                            <i class="bi bi-linkedin"></i>
+                                        </a>
+                                        <a href="tel:+880XXXXXXXXX" class="text-white d-inline-block mx-2" 
+                                           style="font-size: 1.8rem; transition: transform 0.3s;" 
+                                           onmouseover="this.style.transform='scale(1.2)'" 
+                                           onmouseout="this.style.transform='scale(1)'">
+                                            <i class="bi bi-telephone-fill"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="leader-content" style="padding: 3rem 2.5rem;">
+                                <div class="mb-4">
+                                    <span class="badge px-3 py-2" 
+                                          style="background: linear-gradient(135deg, var(--primary-red), #c91d22); 
+                                                 font-size: 0.75rem; letter-spacing: 1px; font-weight: 600;">
+                                        MANAGING DIRECTOR
+                                    </span>
+                                </div>
+                                <h3 class="mb-2" style="color: var(--primary-navy); font-size: 2rem; font-weight: 700;">
+                                    Md. Abdul Hannan
+                                </h3>
+                                <p class="position mb-4" style="color: var(--primary-red); font-size: 1.1rem; font-weight: 600;">
+                                    Managing Director
+                                </p>
+                                <p class="bio mb-4" style="line-height: 1.9; color: #495057; font-size: 1.05rem;">
+                                    With over <strong style="color: var(--primary-navy);">15 years of expertise</strong> in logistics and international trade, 
+                                    Md. Abdul Hannan leads our strategic vision and oversees all operations with a commitment to excellence and innovation. 
+                                    His deep understanding of freight forwarding, supply chain management, and international commerce has been 
+                                    instrumental in positioning <strong style="color: var(--primary-red);">Farhan Logistics International Ltd.</strong> 
+                                    as a trusted and reliable partner for businesses throughout Bangladesh and beyond.
+                                </p>
+                                <p class="bio mb-4" style="line-height: 1.9; color: #495057; font-size: 1.05rem;">
+                                    Under his leadership, the company has grown to serve major international markets including USA, UK, Australia, 
+                                    Canada, Europe, Africa, Middle-East, and Asia, specializing in RMG exports, handicrafts, and agro products.
+                                </p>
+                                
+                                <div class="leader-details mt-4 pt-4" style="border-top: 2px solid #f0f0f0;">
+                                    <div class="row g-3">
+                                        <div class="col-12">
+                                            <div class="contact-item d-flex align-items-center">
+                                                <div class="icon-box me-3" 
+                                                     style="width: 45px; height: 45px; background: rgba(236, 32, 37, 0.1); 
+                                                            border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                                    <i class="bi bi-envelope-fill" style="color: var(--primary-red); font-size: 1.2rem;"></i>
+                                                </div>
+                                                <div>
+                                                    <small style="color: #6c757d; font-size: 0.85rem; display: block; margin-bottom: 2px;">Email</small>
+                                                    <a href="mailto:hannan@farhancargobd.com" 
+                                                       style="color: var(--primary-navy); font-weight: 600; text-decoration: none; font-size: 1rem;">
+                                                        hannan@farhancargobd.com
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="contact-item d-flex align-items-center">
+                                                <div class="icon-box me-3" 
+                                                     style="width: 45px; height: 45px; background: rgba(47, 51, 141, 0.1); 
+                                                            border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                                    <i class="bi bi-telephone-fill" style="color: var(--primary-navy); font-size: 1.2rem;"></i>
+                                                </div>
+                                                <div>
+                                                    <small style="color: #6c757d; font-size: 0.85rem; display: block; margin-bottom: 2px;">Phone</small>
+                                                    <a href="tel:+880XXXXXXXXX" 
+                                                       style="color: var(--primary-navy); font-weight: 600; text-decoration: none; font-size: 1rem;">
+                                                        +880 1844-167431
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-7 order-md-1 ps-md-4" data-aos="fade-right">
-                <div class="mb-4">
-                    <span class="badge text-white px-3 py-2" 
-                          style="background: linear-gradient(135deg, var(--primary-red), #c91d22); 
-                                 font-size: 0.75rem; letter-spacing: 1px; font-weight: 600;">
-                        OPERATIONS MANAGEMENT
-                    </span>
-                </div>
-                <h2 class="mb-4" style="font-size: 2.3rem; font-weight: 700; color: var(--primary-navy);">
-                    Operations Manager<br><span style="color: var(--primary-red);">(Export, Import & Sales)</span>
-                </h2>
-                <p class="lead mb-4" style="color: #495057; font-size: 1.15rem; line-height: 1.9;">
-                    Orchestrating seamless supply chain excellence across international borders with strategic vision and operational precision
-                </p>
-                <p class="mb-4" style="line-height: 1.9; color: #495057; font-size: 1.05rem;">
-                    Our Operations Manager drives <strong style="color: var(--primary-navy);">global freight forwarding excellence</strong> through meticulous management 
-                    of export and import operations. With comprehensive oversight of sales initiatives and logistics coordination, they ensure 
-                    every shipment meets our stringent quality standards while maximizing customer satisfaction and operational efficiency.
-                </p>
-                <p class="mb-4" style="line-height: 1.9; color: #495057; font-size: 1.05rem;">
-                    Specializing in <strong style="color: var(--primary-red);">FCL and LCL consolidation</strong>, documentation excellence, and customs compliance, 
-                    this pivotal role ensures that Farhan Logistics delivers reliable, cost-effective solutions across major international markets 
-                    including Asia, Europe, Middle East, Americas, and Africa.
-                </p>
-                <div class="mt-4">
-                    <a href="/services" class="btn btn-primary-custom btn-lg">
-                        <i class="bi bi-arrow-right-circle me-2"></i>Explore Operations
-                    </a>
                 </div>
             </div>
         </div>
