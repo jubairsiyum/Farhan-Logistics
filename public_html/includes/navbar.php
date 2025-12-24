@@ -3,29 +3,31 @@
 $current_page = basename($_SERVER['PHP_SELF'] ?? 'index.php');
 ?>
 
-<!-- Top Contact Bar (Desktop Only) -->
-<div class="top-contact-bar d-none d-lg-block">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <div class="top-contact-info">
-                    <span class="me-4"><i class="bi bi-telephone-fill"></i> +880 1844-167431</span>
-                    <span><i class="bi bi-envelope-fill"></i> hannan@farhancargobd.com</span>
+<!-- Header Wrapper for Sticky Behavior -->
+<header class="header-wrapper">
+    <!-- Top Contact Bar (Desktop Only) -->
+    <div class="top-contact-bar d-none d-lg-block">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="top-contact-info">
+                        <span class="me-4"><i class="bi bi-telephone-fill"></i> +880 1844-167431</span>
+                        <span><i class="bi bi-envelope-fill"></i> hannan@farhancargobd.com</span>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6 text-end">
-                <div class="top-social-links">
-                    <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
-                    <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
+                <div class="col-md-6 text-end">
+                    <div class="top-social-links">
+                        <a href="#" class="me-3" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="me-3" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Main Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark main-navbar sticky-top">
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-navbar">
     <div class="container">
         <a class="navbar-brand" href="/">
             <img src="/assets/images/logo.svg" alt="Farhan Logistics International Ltd." class="navbar-logo">
@@ -69,6 +71,7 @@ $current_page = basename($_SERVER['PHP_SELF'] ?? 'index.php');
         </div>
     </div>
 </nav>
+</header>
 
 <!-- Mobile Offcanvas Menu -->
 <div class="offcanvas offcanvas-end mobile-menu" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">

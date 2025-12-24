@@ -48,21 +48,30 @@
     }
 
     // ========================================================================
-    // 3. NAVBAR SCROLL EFFECT
+    // 3. NAVBAR SCROLL EFFECT - MODERN STICKY BEHAVIOR
     // ========================================================================
     function initNavbarScroll() {
-        const navbar = document.querySelector('.main-navbar');
+        const headerWrapper = document.querySelector('.header-wrapper');
+        const body = document.body;
         
-        if (!navbar) return;
+        if (!headerWrapper) return;
+
+        let lastScroll = 0;
+        const scrollThreshold = 80;
 
         window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 50) {
-                navbar.style.padding = '8px 0';
-                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
+            const currentScroll = window.pageYOffset;
+            
+            // Add/remove scrolled class for styling
+            if (currentScroll > scrollThreshold) {
+                headerWrapper.classList.add('scrolled');
+                body.classList.add('header-scrolled');
             } else {
-                navbar.style.padding = '15px 0';
-                navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+                headerWrapper.classList.remove('scrolled');
+                body.classList.remove('header-scrolled');
             }
+            
+            lastScroll = currentScroll;
         });
     }
 
