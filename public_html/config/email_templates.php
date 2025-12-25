@@ -5,6 +5,19 @@
  */
 
 /**
+ * Get the logo URL for emails
+ * Uses the configured domain to ensure proper loading in email clients
+ * 
+ * @return string Logo URL
+ */
+function getLogoUrl() {
+    $domain = defined('MAIL_DOMAIN') ? MAIL_DOMAIN : ($_SERVER['HTTP_HOST'] ?? 'farhancargobd.com');
+    // Remove any port number if present
+    $domain = explode(':', $domain)[0];
+    return 'https://' . $domain . '/assets/images/logo.svg';
+}
+
+/**
  * Base email template wrapper
  * 
  * @param string $content Main content HTML
@@ -103,7 +116,7 @@ function trackingEmailTemplate($data) {
     <!-- Header with logo -->
     <tr>
         <td align="center" style="background: linear-gradient(135deg, #2f338d 0%, #1e2259 100%); padding: 40px 20px;">
-            <img src="https://' . $_SERVER['HTTP_HOST'] . '/assets/images/logo.svg" alt="Farhan Logistics" style="height: 60px; width: auto; display: block;" />
+            <img src="https://res.cloudinary.com/jubairamin/image/upload/v1766672495/Untitled_design_1_datzwn.png" alt="Farhan Logistics" style="height: 60px; width: auto; display: block; margin: 0 auto;" />
             <h1 style="margin: 20px 0 0; color: #ffffff; font-size: 28px; font-weight: 700;">Shipment Created Successfully</h1>
         </td>
     </tr>
@@ -253,7 +266,7 @@ function statusUpdateEmailTemplate($data) {
     <!-- Header -->
     <tr>
         <td align="center" style="background: linear-gradient(135deg, #2f338d 0%, #1e2259 100%); padding: 40px 20px;">
-            <img src="https://' . $_SERVER['HTTP_HOST'] . '/assets/images/logo.svg" alt="Farhan Logistics" style="height: 60px; width: auto; display: block;" />
+            <img src="' . getLogoUrl() . '" alt="Farhan Logistics" style="height: 60px; width: auto; display: block; margin: 0 auto;" />
             <h1 style="margin: 20px 0 0; color: #ffffff; font-size: 28px; font-weight: 700;">Shipment Status Update</h1>
         </td>
     </tr>

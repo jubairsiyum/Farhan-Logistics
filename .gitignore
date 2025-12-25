@@ -8,9 +8,6 @@ node_modules/
 .env.production
 /public_html/config/mail.php
 
-# Composer
-composer.lock
-
 # Logs
 /public_html/storage/logs/*.log
 *.log
