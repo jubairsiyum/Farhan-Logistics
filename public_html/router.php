@@ -1,7 +1,13 @@
 <?php
-// Capture any errors and output them
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
+// Error handling - only show errors in development, log in production
+if (getenv('APP_ENV') === 'production' || getenv('APP_DEBUG') === 'false') {
+    error_reporting(E_ALL);
+    ini_set('display_errors', '0');
+    ini_set('log_errors', '1');
+} else {
+    error_reporting(E_ALL);
+    ini_set('display_errors', '1');
+}
 
 // Get the request path
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);

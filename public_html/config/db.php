@@ -19,7 +19,11 @@ define('DB_PASS', '');                    // Your database password
 define('DB_CHARSET', 'utf8mb4');          // Character set
 
 // Error Reporting (Set to false in production)
-define('DB_DEBUG', true);
+define('DB_DEBUG', getenv('APP_DEBUG') !== 'false' && getenv('APP_ENV') !== 'production');
+
+// Global database connection variable
+$pdo = null;
+$db_connected = false;
 
 /**
  * PDO Database Connection
@@ -34,11 +38,16 @@ try {
     ];
     
     $pdo = new PDO($dsn, DB_USER, DB_PASS, $options);
+    $db_connected = true;
 } catch (PDOException $e) {
     $errorMessage = DB_DEBUG 
         ? "Database Connection Failed: " . $e->getMessage()
         : "Database connection error. Please contact support.";
-    die($errorMessage);
+    
+    // Log the error but don't die - allow page to render without database
+    error_log("PDO Connection Error: " . $e->getMessage());
+    $pdo = null;
+    $db_connected = false;
 }
 
 /**
