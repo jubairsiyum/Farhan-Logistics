@@ -101,28 +101,28 @@ $current_page = basename($_SERVER['PHP_SELF'] ?? 'index.php');
             <div class="contact-item">
                 <i class="bi bi-telephone-fill"></i>
                 <div>
-                    <span class="label">Sales</span>
+                    <!-- <span class="label">Sales</span> -->
                     <a href="tel:+8801844167431">+880 1844-167431</a>
                 </div>
             </div>
             <div class="contact-item">
                 <i class="bi bi-telephone-fill"></i>
                 <div>
-                    <span class="label">Operations Manager</span>
+                    <!-- <span class="label">Operations Manager</span> -->
                     <a href="tel:+8801901102523">+880 1901-102523</a>
                 </div>
             </div>
             <div class="contact-item">
                 <i class="bi bi-envelope-fill"></i>
                 <div>
-                    <span class="label">Email (General)</span>
+                    <!-- <span class="label">Email (General)</span> -->
                     <a href="mailto:hannan@farhancargobd.com">hannan@farhancargobd.com</a>
                 </div>
             </div>
             <div class="contact-item">
                 <i class="bi bi-envelope-fill"></i>
                 <div>
-                    <span class="label">Email (Operations)</span>
+                    <!-- <span class="label">Email (Operations)</span> -->
                     <a href="mailto:amin@farhancargobd.com">amin@farhancargobd.com</a>
                 </div>
             </div>
@@ -139,7 +139,7 @@ $current_page = basename($_SERVER['PHP_SELF'] ?? 'index.php');
         <div class="mobile-social">
             <h6>Follow Us</h6>
             <div class="social-links">
-                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/sirajul-amin-93459780?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i></a>
                 <a href="#"><i class="bi bi-facebook"></i></a>
                 <a href="#"><i class="bi bi-instagram"></i></a>
                 <a href="#"><i class="bi bi-twitter"></i></a>

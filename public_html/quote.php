@@ -370,7 +370,7 @@ include 'includes/navbar.php';
                 </p>
             </div>
             <div class="col-lg-4 text-lg-end" data-aos="fade-left">
-                <a href="tel:+97144XXXXXX" class="btn btn-primary-custom btn-lg">
+                <a href="tel:+8801901102523" class="btn btn-primary-custom btn-lg">
                     <i class="bi bi-telephone-fill"></i> Call Now
                 </a>
             </div>

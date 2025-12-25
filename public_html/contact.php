@@ -101,7 +101,7 @@ include 'includes/navbar.php';
                 <div class="mt-4">
                     <h6 class="mb-3">Follow Us</h6>
                     <div class="d-flex gap-2">
-                        <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/sirajul-amin-93459780?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon"><i class="bi bi-linkedin"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
