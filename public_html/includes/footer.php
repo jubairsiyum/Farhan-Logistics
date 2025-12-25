@@ -68,11 +68,11 @@
                         </li>
                         <li>
                             <i class="bi bi-telephone-fill"></i>
-                            <span>+880 1844-167431</span>
+                            <span> +880 1844-167431<br> +880 1901-102523</span>
                         </li>
                         <li>
                             <i class="bi bi-envelope-fill"></i>
-                            <span>hannan@farhancargobd.com</span>
+                            <span><a href="mailto:hannan@farhancargobd.com" style="color: inherit; text-decoration: none;">hannan@farhancargobd.com</a><br><a href="mailto:amin@farhancargobd.com" style="color: inherit; text-decoration: none;">amin@farhancargobd.com</a></span>
                         </li>
                         <li>
                             <i class="bi bi-clock-fill"></i>
@@ -137,9 +137,9 @@
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <ul class="footer-bottom-links">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms & Conditions</a></li>
+                        <li><a href="/sitemap">Sitemap</a></li>
                     </ul>
                 </div>
             </div>

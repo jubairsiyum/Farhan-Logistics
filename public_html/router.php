@@ -13,6 +13,13 @@ if (preg_match('/\.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot|webp)$/i'
     return false;
 }
 
+// Handle sitemap.xml request
+if ($uri === '/sitemap.xml') {
+    $_SERVER['PHP_SELF'] = '/sitemap.xml.php';
+    include 'sitemap.xml.php';
+    return true;
+}
+
 // Root - serve index.php
 if ($uri === '/' || $uri === '') {
     $_SERVER['PHP_SELF'] = '/index.php';

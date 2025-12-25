@@ -64,7 +64,8 @@ include 'includes/navbar.php';
                         <div>
                             <h6 style="color: var(--primary-navy); font-weight: 700;">Phone</h6>
                             <p class="text-muted mb-0">
-                                Mobile: +880 1844-167431
+                                <a href="tel:+8801844167431" style="color: var(--primary-red); text-decoration: none;">+880 1844-167431</a><br>
+                                <a href="tel:+8801901102523" style="color: var(--primary-red); text-decoration: none;">+880 1901-102523</a>
                             </p>
                         </div>
                     </div>
@@ -76,8 +77,8 @@ include 'includes/navbar.php';
                         <div>
                             <h6 style="color: var(--primary-navy); font-weight: 700;">Email</h6>
                             <p class="text-muted mb-0">
-                                General: hannan@farhancargobd.com<br>
-                                Support: farhanlogisticsltd2025@gmail.com
+                                <a href="mailto:hannan@farhancargobd.com" style="color: var(--primary-red); text-decoration: none;">hannan@farhancargobd.com</a><br>
+                                <a href="mailto:amin@farhancargobd.com" style="color: var(--primary-red); text-decoration: none;">amin@farhancargobd.com</a>
                             </p>
                         </div>
                     </div>

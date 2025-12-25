@@ -9,17 +9,15 @@ $current_page = basename($_SERVER['PHP_SELF'] ?? 'index.php');
     <div class="top-contact-bar d-none d-lg-block">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="top-contact-info">
-                        <span class="me-4"><i class="bi bi-telephone-fill"></i> +880 1844-167431</span>
-                        <span><i class="bi bi-envelope-fill"></i> hannan@farhancargobd.com</span>
-                    </div>
-                </div>
-                <div class="col-md-6 text-end">
-                    <div class="top-social-links">
-                        <a href="#" class="me-3" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="me-3" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <div class="col-md-12">
+                    <div class="top-contact-info" style="display: flex; align-items: center; justify-content: flex-start; gap: 15px; flex-wrap: wrap;">
+                        <span style="display: inline-flex; align-items: center; gap: 5px; font-size: 14px;"><i class="bi bi-telephone-fill"></i> +880 1844-167431</span>
+                        <span style="color: rgba(255,255,255,0.3);">•</span>
+                        <span style="display: inline-flex; align-items: center; gap: 5px; font-size: 14px;"><i class="bi bi-telephone-fill"></i> +880 1901-102523</span>
+                        <span style="color: rgba(255,255,255,0.3);">•</span>
+                        <span style="display: inline-flex; align-items: center; gap: 5px; font-size: 14px;"><i class="bi bi-envelope-fill"></i> <a href="mailto:hannan@farhancargobd.com" style="color: inherit; text-decoration: none;">hannan@farhancargobd.com</a></span>
+                        <span style="color: rgba(255,255,255,0.3);">•</span>
+                        <span style="display: inline-flex; align-items: center; gap: 5px; font-size: 14px;"><i class="bi bi-envelope-fill"></i> <a href="mailto:amin@farhancargobd.com" style="color: inherit; text-decoration: none;">amin@farhancargobd.com</a></span>
                     </div>
                 </div>
             </div>
@@ -103,15 +101,29 @@ $current_page = basename($_SERVER['PHP_SELF'] ?? 'index.php');
             <div class="contact-item">
                 <i class="bi bi-telephone-fill"></i>
                 <div>
-                    <span class="label">Call Us</span>
+                    <span class="label">Sales</span>
                     <a href="tel:+8801844167431">+880 1844-167431</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="bi bi-telephone-fill"></i>
+                <div>
+                    <span class="label">Operations Manager</span>
+                    <a href="tel:+8801901102523">+880 1901-102523</a>
                 </div>
             </div>
             <div class="contact-item">
                 <i class="bi bi-envelope-fill"></i>
                 <div>
-                    <span class="label">Email Us</span>
+                    <span class="label">Email (General)</span>
                     <a href="mailto:hannan@farhancargobd.com">hannan@farhancargobd.com</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="bi bi-envelope-fill"></i>
+                <div>
+                    <span class="label">Email (Operations)</span>
+                    <a href="mailto:amin@farhancargobd.com">amin@farhancargobd.com</a>
                 </div>
             </div>
             <div class="contact-item">
