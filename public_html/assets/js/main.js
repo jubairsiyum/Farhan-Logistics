@@ -330,15 +330,27 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    showAlert('success', data.message || 'Application submitted successfully!');
+                    showSuccessModal(
+                        'Application Submitted!',
+                        data.message || 'Thank you for your interest! We will review your application and contact you soon.',
+                        'bi-check-circle-fill'
+                    );
                     careerForm.reset();
                     careerForm.classList.remove('was-validated');
                 } else {
-                    showAlert('danger', data.message || 'Error submitting application. Please try again.');
+                    showErrorModal(
+                        'Submission Failed',
+                        data.message || 'Error submitting application. Please try again.',
+                        'bi-exclamation-triangle-fill'
+                    );
                 }
             })
             .catch(error => {
-                showAlert('danger', 'Network error. Please check your connection and try again.');
+                showErrorModal(
+                    'Network Error',
+                    'Please check your connection and try again.',
+                    'bi-wifi-off'
+                );
             })
             .finally(() => {
                 submitBtn.disabled = false;
