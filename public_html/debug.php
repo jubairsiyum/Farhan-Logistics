@@ -53,7 +53,7 @@ ini_set('display_errors', '1');
                     if (file_exists($vendor_path)) {
                         echo '<span class="ok">✓ Found: ' . $vendor_path . '</span>';
                     } else {
-                        echo '<span class="error">✗ Not Found: ' . $vendor_path . '</span>';
+                        echo '<span class="warning">⚠ Not Found (Optional - will use PHP mail() fallback)</span>';
                     }
                     ?>
                 </td>
@@ -157,8 +157,8 @@ ini_set('display_errors', '1');
     
     <!-- Vendor Paths Test -->
     <div class="section">
-        <h2>Vendor Path Detection</h2>
-        <p>The system checks multiple paths to locate composer vendor directory:</p>
+        <h2>Vendor Path Detection (Optional)</h2>
+        <p>The system checks multiple paths to locate composer vendor directory. <strong>This is optional</strong> - the site will work without it using PHP mail() fallback.</p>
         <table>
             <?php
             $paths = [
@@ -174,11 +174,12 @@ ini_set('display_errors', '1');
             
             foreach ($paths as $path => $description) {
                 $exists = file_exists($path);
-                $status = $exists ? '<span class="ok">✓ FOUND</span>' : '✗ Not found';
+                $status = $exists ? '<span class="ok">✓ FOUND</span>' : '<span class="warning">⚠ Not found</span>';
                 echo "<tr><td><strong>$description</strong><br><code>$path</code></td><td>$status</td></tr>";
             }
             ?>
         </table>
+        <p class="mt-3"><em>Note: If not found, emails will be sent using PHP's built-in mail() function instead of PHPMailer/SMTP.</em></p>
     </div>
 
     <!-- Server Environment -->
