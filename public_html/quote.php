@@ -1,5 +1,6 @@
 <?php 
 $pageTitle = 'Get a Quote';
+require_once __DIR__ . '/config/security.php';
 include 'includes/header.php'; 
 include 'includes/navbar.php'; 
 ?>
@@ -290,6 +291,9 @@ include 'includes/navbar.php';
                                 </div>
                             </div>
                         </div>
+                        
+                        <!-- CSRF Token -->
+                        <?php echo csrfField(); ?>
                         
                         <!-- Submit Button -->
                         <div class="text-center">

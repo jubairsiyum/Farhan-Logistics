@@ -1,5 +1,6 @@
 <?php 
 $pageTitle = 'Contact Us';
+require_once __DIR__ . '/config/security.php';
 include 'includes/header.php'; 
 include 'includes/navbar.php'; 
 ?>
@@ -206,6 +207,9 @@ include 'includes/navbar.php';
                                     <div class="invalid-feedback">Please provide a message.</div>
                                 </div>
                             </div>
+                            
+                            <!-- CSRF Token -->
+                            <?php echo csrfField(); ?>
                             
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary-custom btn-lg">

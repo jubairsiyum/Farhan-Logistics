@@ -212,15 +212,27 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    showAlert('success', data.message || 'Thank you! Your message has been sent successfully.');
+                    showSuccessModal(
+                        'Message Sent Successfully!',
+                        data.message || 'Thank you for contacting us! We will get back to you within 24 hours.',
+                        'bi-check-circle-fill'
+                    );
                     contactForm.reset();
                     contactForm.classList.remove('was-validated');
                 } else {
-                    showAlert('danger', data.message || 'Sorry, there was an error. Please try again.');
+                    showErrorModal(
+                        'Submission Failed',
+                        data.message || 'Sorry, there was an error. Please try again.',
+                        'bi-exclamation-triangle-fill'
+                    );
                 }
             })
             .catch(error => {
-                showAlert('danger', 'Network error. Please check your connection and try again.');
+                showErrorModal(
+                    'Network Error',
+                    'Please check your connection and try again.',
+                    'bi-wifi-off'
+                );
             })
             .finally(() => {
                 submitBtn.disabled = false;
@@ -259,15 +271,27 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    showAlert('success', data.message || 'Quote request received! We will contact you shortly.');
+                    showSuccessModal(
+                        'Quote Request Received!',
+                        data.message || 'Thank you for your quote request! Our team will contact you shortly with a detailed quotation.',
+                        'bi-check-circle-fill'
+                    );
                     quoteForm.reset();
                     quoteForm.classList.remove('was-validated');
                 } else {
-                    showAlert('danger', data.message || 'Error processing your request. Please try again.');
+                    showErrorModal(
+                        'Submission Failed',
+                        data.message || 'Error processing your request. Please try again.',
+                        'bi-exclamation-triangle-fill'
+                    );
                 }
             })
             .catch(error => {
-                showAlert('danger', 'Network error. Please check your connection and try again.');
+                showErrorModal(
+                    'Network Error',
+                    'Please check your connection and try again.',
+                    'bi-wifi-off'
+                );
             })
             .finally(() => {
                 submitBtn.disabled = false;
@@ -585,6 +609,54 @@
     // ========================================================================
     // 11. ALERT HELPER FUNCTION
     // ========================================================================
+    // ========================================================================
+    // SUCCESS/ERROR MODAL FUNCTIONS
+    // ========================================================================
+    function showSuccessModal(title, message, icon = 'bi-check-circle-fill') {
+        showModal(title, message, icon, 'success');
+    }
+
+    function showErrorModal(title, message, icon = 'bi-exclamation-triangle-fill') {
+        showModal(title, message, icon, 'danger');
+    }
+
+    function showModal(title, message, icon, type) {
+        // Remove existing modal if any
+        const existingModal = document.getElementById('responseModal');
+        if (existingModal) {
+            existingModal.remove();
+        }
+
+        const iconColor = type === 'success' ? '#28a745' : '#dc3545';
+        const btnClass = type === 'success' ? 'btn-success' : 'btn-danger';
+
+        const modalHTML = `
+            <div class="modal fade" id="responseModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content" style="border: none; border-radius: 15px; overflow: hidden;">
+                        <div class="modal-body text-center p-5">
+                            <i class="bi ${icon}" style="font-size: 4rem; color: ${iconColor}; margin-bottom: 1.5rem; display: block;"></i>
+                            <h3 class="mb-3" style="color: var(--primary-navy); font-weight: 700;">${title}</h3>
+                            <p class="text-muted mb-4" style="font-size: 1.1rem; line-height: 1.6;">${message}</p>
+                            <button type="button" class="btn ${btnClass} btn-lg px-5" data-bs-dismiss="modal" style="border-radius: 50px;">
+                                <i class="bi bi-check2"></i> Okay
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        document.body.insertAdjacentHTML('beforeend', modalHTML);
+        const modal = new bootstrap.Modal(document.getElementById('responseModal'));
+        modal.show();
+
+        // Remove modal from DOM after it's hidden
+        document.getElementById('responseModal').addEventListener('hidden.bs.modal', function() {
+            this.remove();
+        });
+    }
+
     function showAlert(type, message) {
         const alertContainer = document.getElementById('alertContainer') || createAlertContainer();
         
