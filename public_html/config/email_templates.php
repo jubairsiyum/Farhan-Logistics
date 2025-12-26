@@ -278,7 +278,7 @@ function statusUpdateEmailTemplate($data) {
     <!-- Header -->
     <tr>
         <td align="center" style="background: linear-gradient(135deg, #2f338d 0%, #1e2259 100%); padding: 40px 20px;">
-            <img src="' . getLogoUrl() . '" alt="Farhan Logistics" style="height: 60px; width: auto; display: block; margin: 0 auto;" />
+            <img src="" alt="Farhan Logistics" style="height: 60px; width: auto; display: block; margin: 0 auto;" />
             <h1 style="margin: 20px 0 0; color: #ffffff; font-size: 28px; font-weight: 700;">Shipment Status Update</h1>
         </td>
     </tr>
