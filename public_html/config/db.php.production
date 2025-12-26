@@ -1,0 +1,87 @@
+<?php
+/**
+ * Database Configuration File - PRODUCTION TEMPLATE
+ * PDO MySQL Connection for Admin Panel & Frontend
+ * 
+ * DEPLOYMENT INSTRUCTIONS:
+ * ========================
+ * 1. Login to cPanel
+ * 2. Go to MySQL Databases
+ * 3. Create a new database (e.g., cpanelusername_farhanlogistics)
+ * 4. Create a new database user with a strong password
+ * 5. Add the user to the database with ALL PRIVILEGES
+ * 6. Update the constants below with your actual credentials
+ * 7. Import farhanlogistics.sql via phpMyAdmin
+ * 8. Test the connection by visiting yourdomain.com/admin
+ */
+
+// ==================================================
+// IMPORTANT: UPDATE THESE VALUES FOR PRODUCTION
+// ==================================================
+
+define('DB_HOST', 'localhost');                        // Usually 'localhost' on most cPanel hosts
+define('DB_NAME', 'your_cpanel_username_farhanlogistics');  // CHANGE THIS - Your cPanel database name
+define('DB_USER', 'your_cpanel_username_dbuser');          // CHANGE THIS - Your cPanel database username  
+define('DB_PASS', 'your_strong_password_here');            // CHANGE THIS - Your database password
+define('DB_CHARSET', 'utf8mb4');
+
+// ==================================================
+// DEBUG MODE (Set to false in production)
+// ==================================================
+define('DB_DEBUG', false); // Set to false to hide database errors from visitors
+
+// ==================================================
+// DO NOT EDIT BELOW THIS LINE
+// ==================================================
+
+// Global database connection variable
+$pdo = null;
+$db_connected = false;
+
+/**
+ * PDO Database Connection
+ * Establishes connection to MySQL database
+ */
+try {
+    $dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET;
+    $options = [
+        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::ATTR_EMULATE_PREPARES   => false,
+    ];
+    
+    $pdo = new PDO($dsn, DB_USER, DB_PASS, $options);
+    $db_connected = true;
+    
+} catch (PDOException $e) {
+    $errorMessage = DB_DEBUG 
+        ? "Database Connection Failed: " . $e->getMessage()
+        : "Database connection error. Please contact support.";
+    
+    // Log the error (check error_log file in cPanel)
+    error_log("PDO Connection Error: " . $e->getMessage());
+    
+    $pdo = null;
+    $db_connected = false;
+    
+    // Don't die - allow pages to render without database
+    // Only admin panel and forms will be affected
+}
+
+/**
+ * Check if database is connected
+ * Use this in your pages: if ($db_connected) { ... }
+ */
+function isDatabaseConnected() {
+    global $db_connected;
+    return $db_connected;
+}
+
+/**
+ * Get database connection
+ * Returns PDO object or null
+ */
+function getDatabase() {
+    global $pdo;
+    return $pdo;
+}

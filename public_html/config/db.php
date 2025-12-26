@@ -13,13 +13,13 @@
 
 // Database Configuration Constants
 define('DB_HOST', 'localhost');           // Usually 'localhost' on cPanel
-define('DB_NAME', 'farhanlogistics');     // Your database name (e.g., cpanel_user_farhanlogistics)
-define('DB_USER', 'root');                // Your database username
-define('DB_PASS', '');                    // Your database password
+define('DB_NAME', 'farhancargobd_farhanlogistics');     // Your database name (e.g., cpanel_user_farhanlogistics)
+define('DB_USER', 'farhancargobd_webmaster');                // Your database username
+define('DB_PASS', '&@lmd-?R~R#f${T.');                    // Your database password
 define('DB_CHARSET', 'utf8mb4');          // Character set
 
 // Error Reporting (Set to false in production)
-define('DB_DEBUG', getenv('APP_DEBUG') !== 'false' && getenv('APP_ENV') !== 'production');
+define('DB_DEBUG', false);
 
 // Global database connection variable
 $pdo = null;

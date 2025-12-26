@@ -170,6 +170,7 @@ ini_set('display_errors', '1');
                 $paths[$_SERVER['HOME'] . '/vendor/autoload.php'] = 'Home directory';
             }
             $paths['/home/farhan/public_html/vendor/autoload.php'] = 'Farhan home directory';
+            $paths['/home/farhancargobd/vendor/autoload.php'] = 'Farhancargobd home directory';
             
             foreach ($paths as $path => $description) {
                 $exists = file_exists($path);

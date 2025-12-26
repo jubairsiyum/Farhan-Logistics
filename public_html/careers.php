@@ -5,13 +5,19 @@ $pageTitle = 'Careers';
 require_once 'config/db.php';
 
 // Fetch active job postings
-try {
-    $stmt = $pdo->prepare("SELECT * FROM job_postings WHERE status = 'active' ORDER BY created_at DESC");
-    $stmt->execute();
-    $jobs = $stmt->fetchAll(PDO::FETCH_ASSOC);
-} catch (PDOException $e) {
-    $jobs = [];
-    error_log('Careers page error: ' . $e->getMessage());
+$jobs = [];
+if ($pdo !== null) {
+    try {
+        $stmt = $pdo->prepare("SELECT * FROM job_postings WHERE status = 'active' ORDER BY created_at DESC");
+        $stmt->execute();
+        $jobs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        $jobs = [];
+        error_log('Careers page error: ' . $e->getMessage());
+    }
+} else {
+    // Database not configured yet - show placeholder message
+    error_log('Database connection not available on careers page');
 }
 
 include 'includes/header.php'; 

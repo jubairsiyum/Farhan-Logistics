@@ -1,0 +1,30 @@
+# Minimal .htaccess for testing - use this if main .htaccess causes errors
+
+# Enable Rewrite Engine
+RewriteEngine On
+RewriteBase /
+
+# Disable Directory Browsing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "^(\.htaccess|\.env|composer\.json|db\.php)$">
+    Require all denied
+</FilesMatch>
+
+# Route through router.php
+RewriteCond %{REQUEST_URI} \.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot|webp|pdf)$ [NC]
+RewriteRule ^ - [L]
+
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ router.php [QSA,L]
+
+# Default Document
+DirectoryIndex index.php index.html
+
+# UTF-8 Encoding
+AddDefaultCharset UTF-8
