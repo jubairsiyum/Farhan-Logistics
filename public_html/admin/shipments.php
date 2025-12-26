@@ -497,6 +497,7 @@ require_once __DIR__ . '/includes/header.php';
                                     <form method="POST" class="d-inline" onsubmit="return confirm('Delete this shipment?');">
                                         <input type="hidden" name="action" value="delete_shipment">
                                         <input type="hidden" name="tracking_number" value="<?= htmlspecialchars($shipment['tracking_number']) ?>">
+                                        <?php echo csrfField(); ?>
                                         <button type="submit" class="btn btn-sm btn-outline-danger" title="Delete">
                                             <i class="bi bi-trash"></i>
                                         </button>
@@ -526,7 +527,7 @@ require_once __DIR__ . '/includes/header.php';
                 <input type="hidden" name="action" value="create_shipment">
                 <div class="modal-body">
                     <div class="alert alert-info mb-3">
-                        <i class="fas fa-info-circle"></i> Tracking number will be generated automatically (10-digit format)
+                        <i class="bi bi-info-circle"></i> Tracking number will be generated automatically (10-digit format)
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
