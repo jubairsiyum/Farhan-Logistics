@@ -4,6 +4,18 @@
  * Professional, responsive HTML email templates
  */
 
+// Define tracking URL constant
+if (!defined('TRACKING_URL')) {
+    $domain = $_SERVER['HTTP_HOST'] ?? 'farhancargobd.com';
+    $domain = explode(':', $domain)[0]; // Remove port if present
+    define('TRACKING_URL', 'https://' . $domain . '/tracking');
+}
+
+// Define support email constant
+if (!defined('MAIL_SUPPORT_EMAIL')) {
+    define('MAIL_SUPPORT_EMAIL', 'hannan@farhancargobd.com');
+}
+
 /**
  * Get the logo URL for emails
  * Uses the configured domain to ensure proper loading in email clients
@@ -84,7 +96,7 @@ function emailTemplate($content, $options = []) {
                             <p style="margin: 0 0 10px;">&copy; ' . date('Y') . ' Farhan Logistics International Ltd. All rights reserved.</p>
                             <p style="margin: 0 0 10px;">
                                 <a href="mailto:' . MAIL_SUPPORT_EMAIL . '" style="color: #2f338d; text-decoration: none;">' . MAIL_SUPPORT_EMAIL . '</a> | 
-                                <a href="https://' . $_SERVER['HTTP_HOST'] . '" style="color: #2f338d; text-decoration: none;">Visit Website</a>
+                                <a href="https://' . (isset($_SERVER['HTTP_HOST']) ? htmlspecialchars($_SERVER['HTTP_HOST']) : 'farhancargobd.com') . '" style="color: #2f338d; text-decoration: none;">Visit Website</a>
                             </p>
                             <p style="margin: 0; font-size: 12px; color: #999999;">This is an automated message. Please do not reply to this email.</p>
                         </td>
