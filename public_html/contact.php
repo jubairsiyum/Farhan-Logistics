@@ -230,13 +230,12 @@ include 'includes/navbar.php';
         <div class="map-container" style="height: 450px; background: #e9ecef;" data-aos="fade-up">
             <!-- Google Maps Embed - Uttara, Dhaka -->
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.5436766406766!2d90.38562287587938!3d23.865743484570843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c5d08c696f6f%3A0x89ea4627b0e9c3b!2sUttara%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1735214000000!5m2!1sen!2sbd" 
+                src="https://maps.google.com/maps?q=House%2019%2C%20Road%206%2FA%2C%20Sector%2012%2C%20Uttara%2C%20Dhaka%2C%20Bangladesh&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
                 height="450" 
                 style="border:0;" 
                 allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"
+                loading="lazy"
             ></iframe>
         </div>
     </div>
