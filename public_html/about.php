@@ -108,10 +108,9 @@ include 'includes/navbar.php';
                      style="background: white; border-radius: 20px; overflow: hidden; border: none;">
                     <div class="row g-0 align-items-center">
                         <div class="col-md-5">
-                            <div class="leader-img" style="position: relative; overflow: hidden; height: 100%; min-height: 450px;">
+                            <div class="leader-img">
                                 <img src="/assets/images/hanna.png" 
-                                     alt="Md. Abdul Hannan - Managing Director" 
-                                     style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                                     alt="Md. Abdul Hannan - Managing Director">
                                 <div class="leader-overlay" 
                                      style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
                                             background: linear-gradient(135deg, rgba(47, 51, 141, 0.9), rgba(236, 32, 37, 0.85)); 
@@ -221,10 +220,9 @@ include 'includes/navbar.php';
                      style="background: white; border-radius: 20px; overflow: hidden; border: none;">
                     <div class="row g-0 align-items-center">
                         <div class="col-md-5">
-                            <div class="leader-img" style="position: relative; overflow: hidden; height: 100%; min-height: 450px;">
+                            <div class="leader-img">
                                 <img src="/assets/images/amin.png" 
-                                     alt="Sirajul Amin - Operations Manager" 
-                                     style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                                     alt="Sirajul Amin - Operations Manager">
                                 <div class="leader-overlay" 
                                      style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
                                             background: linear-gradient(135deg, rgba(47, 51, 141, 0.9), rgba(236, 32, 37, 0.85)); 
