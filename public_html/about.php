@@ -266,32 +266,28 @@ include 'includes/navbar.php';
                                     Operations Manager (Export, Import & Sales)
                                 </p>
                                 <p class="bio mb-4" style="line-height: 1.9; color: #495057; font-size: 1.05rem;">
-  As <strong style="color: var(--primary-navy);">Operations Manager</strong> for 
-  <strong style="color: var(--primary-red);">Export, Import & Sales</strong> at 
-  <strong style="color: var(--primary-navy);">Farhan Logistics International Ltd.</strong>, 
-  a leading <strong style="color: var(--primary-red);">3PL specialist</strong> based in Bangladesh, 
-  I oversee our comprehensive freight forwarding operations with a strong emphasis on reliability, 
-  efficiency, and client satisfaction.
+  As the <strong style="color: var(--primary-navy);">Head of Total Operations</strong> at
+  <strong style="color: var(--primary-navy);">Farhan Logistics International Ltd.</strong>,
+  I oversee and execute end-to-end logistics functions across global markets,
+  ensuring operational efficiency and strategic growth.
 </p>
 
 <p class="bio mb-4" style="line-height: 1.9; color: #495057; font-size: 1.05rem;">
-  I manage <strong style="color: var(--primary-red);">end-to-end air and sea freight services</strong>, 
-  including <strong style="color: var(--primary-navy);">FCL</strong> and 
-  <strong style="color: var(--primary-navy);">LCL</strong> shipments, while specializing in key sectors such as 
-  <strong style="color: var(--primary-red);">RMG (Ready-Made Garments)</strong>, handicrafts, agro products, 
-  and general cargo. My responsibilities encompass shipment coordination, 
-  <strong style="color: var(--primary-navy);">customs clearance</strong>, compliance with international regulations 
-  and Incoterms, carrier negotiations, documentation, and 
-  <strong style="color: var(--primary-red);">multi-modal transport optimization</strong> 
-  to deliver seamless import and export solutions.
+  I develop strategic partnerships with freight agents in the UK, USA, Canada,
+  South Africa, Europe, UAE, and Asia, while managing nominated buyers and securing
+  long-term logistics contracts. My responsibilities include full control of sea
+  and air shipment operations, freight negotiation, cargo handling,
+  export-import documentation, and customs coordination.
 </p>
 
 <p class="bio mb-4" style="line-height: 1.9; color: #495057; font-size: 1.05rem;">
-  Combining operational leadership with a proactive sales approach, I drive business growth by fostering strong client partnerships 
-  and providing tailored, cost-effective logistics that ensure 
-  <strong style="color: var(--primary-navy);">timely delivery</strong> and transparency 
-  in a competitive global market.
+  I supervise daily office operations, align cross-functional teams, and ensure
+  compliance with international trade standards. With a strong focus on
+  <strong style="color: var(--primary-red);">buyer satisfaction</strong> and delivery efficiency,
+  I continuously optimize logistics performance and strengthen the company’s
+  global reputation.
 </p>
+
                                 
                                 <div class="leader-details mt-4 pt-4" style="border-top: 2px solid #f0f0f0;">
                                     <div class="row g-3">
