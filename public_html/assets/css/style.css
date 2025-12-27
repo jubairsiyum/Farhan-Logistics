@@ -2476,11 +2476,7 @@ textarea.form-control {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.leadership-card:hover .leader-img img {
-    transform: scale(1.1);
+    object-position: center;
 }
 
 .leader-overlay {
