@@ -23,6 +23,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         $status = $_POST['status'];
         $password = $_POST['password'] ?? '';
         
+        // RBAC: Validate if current user can create/edit users with this role
+        if ($user_id > 0) {
+            // Editing - check if can edit this role
+            if (!canEditRole($role)) {
+                $_SESSION['error_message'] = 'Access denied. You do not have permission to edit users with this role.';
+                logSecurityEvent('unauthorized_user_edit_attempt', [
+                    'current_user' => $_SESSION['admin_username'],
+                    'current_role' => $_SESSION['admin_role'],
+                    'target_role' => $role
+                ]);
+                header('Location: /admin/users');
+                exit;
+            }
+        } else {
+            // Creating - check if can create this role
+            if (!canCreateRole($role)) {
+                $_SESSION['error_message'] = 'Access denied. You do not have permission to create users with this role.';
+                logSecurityEvent('unauthorized_user_create_attempt', [
+                    'current_user' => $_SESSION['admin_username'],
+                    'current_role' => $_SESSION['admin_role'],
+                    'target_role' => $role
+                ]);
+                header('Location: /admin/users');
+                exit;
+            }
+        }
+        
         try {
             if ($user_id > 0) {
                 // Update existing user
@@ -96,7 +123,7 @@ require_once __DIR__ . '/includes/header.php';
                     <h2><i class="bi bi-people-fill me-2"></i>Admin Users</h2>
                     <p class="text-muted mb-0">Manage administrator accounts and permissions</p>
                 </div>
-                <?php if (!$editing_user): ?>
+                <?php if (!$editing_user && (isSuperAdmin() || isAdmin())): ?>
                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userModal">
                     <i class="bi bi-person-plus me-2"></i>Add New Admin
                 </button>
@@ -118,6 +145,12 @@ require_once __DIR__ . '/includes/header.php';
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     </div>
     <?php unset($_SESSION['error_message']); endif; ?>
+    
+    <?php if (hasRole('manager')): ?>
+    <div class="alert alert-info" role="alert">
+        <i class="bi bi-info-circle me-2"></i>As a Manager, you can view user information but cannot create or edit users.
+    </div>
+    <?php endif; ?>
 
     <?php if ($editing_user): ?>
     <!-- Edit Form -->
@@ -193,10 +226,17 @@ require_once __DIR__ . '/includes/header.php';
                             <td><?= date('M d, Y', strtotime($user['created_at'])) ?></td>
                             <td>
                                 <div class="btn-group" role="group">
+                                    <?php if (canEditRole($user['role']) && !hasRole('manager')): ?>
                                     <a href="/admin/users?edit=<?= $user['id'] ?>" class="btn btn-sm btn-outline-primary" title="Edit">
                                         <i class="bi bi-pencil"></i>
                                     </a>
-                                    <?php if ($user['id'] !== $_SESSION['admin_id']): ?>
+                                    <?php else: ?>
+                                    <button class="btn btn-sm btn-outline-secondary" disabled title="<?= hasRole('manager') ? 'View only' : 'No permission to edit this role' ?>">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                    <?php endif; ?>
+                                    
+                                    <?php if ($user['id'] !== $_SESSION['admin_id'] && canEditRole($user['role']) && !hasRole('manager')): ?>
                                     <form method="POST" class="d-inline" onsubmit="return confirm('Delete this admin user?');">
                                         <input type="hidden" name="action" value="delete">
                                         <input type="hidden" name="user_id" value="<?= $user['id'] ?>">

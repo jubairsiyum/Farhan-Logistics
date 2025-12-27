@@ -2,8 +2,8 @@
 // Include security configuration
 require_once dirname(__DIR__) . '/config/security.php';
 
-// Check authentication
-requireAdmin();
+// Require Super Admin access only
+requireSuperAdmin();
 
 require_once dirname(__DIR__) . '/config/db.php';
 require_once dirname(__DIR__) . '/config/mail.php';

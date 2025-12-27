@@ -22,12 +22,44 @@
     
     <div class="col-md-6 mb-3">
         <label class="form-label">Role *</label>
-        <select class="form-select" name="role" required>
-            <option value="admin" <?= (!$editing_user || $editing_user['role'] === 'admin') ? 'selected' : '' ?>>Admin</option>
-            <option value="manager" <?= ($editing_user && $editing_user['role'] === 'manager') ? 'selected' : '' ?>>Manager</option>
-            <option value="super_admin" <?= ($editing_user && $editing_user['role'] === 'super_admin') ? 'selected' : '' ?>>Super Admin</option>
+        <select class="form-select" name="role" required <?= hasRole('manager') ? 'disabled' : '' ?>>
+            <?php
+            $allowedRoles = getAllowedRoles();
+            $currentUserRole = $editing_user ? $editing_user['role'] : '';
+            
+            // If editing and current user can't edit this role, show it as disabled
+            if ($editing_user && !canEditRole($currentUserRole)) {
+                echo '<option value="' . htmlspecialchars($currentUserRole) . '" selected disabled>' . ucfirst(str_replace('_', ' ', $currentUserRole)) . ' (View Only)</option>';
+            } else {
+                // Show allowed roles based on permissions
+                if (in_array('admin', $allowedRoles)) {
+                    $selected = (!$editing_user || $currentUserRole === 'admin') ? 'selected' : '';
+                    echo '<option value="admin" ' . $selected . '>Admin</option>';
+                }
+                if (in_array('manager', $allowedRoles)) {
+                    $selected = ($editing_user && $currentUserRole === 'manager') ? 'selected' : '';
+                    echo '<option value="manager" ' . $selected . '>Manager</option>';
+                }
+                
+                // If editing a super_admin and current user is super_admin, show it (but super admin can't be created, only viewed)
+                if ($editing_user && $currentUserRole === 'super_admin' && isSuperAdmin()) {
+                    echo '<option value="super_admin" selected disabled>Super Admin (Cannot be modified)</option>';
+                }
+            }
+            ?>
         </select>
-        <small class="text-muted">Super Admin has full system access</small>
+        <?php if (hasRole('manager')): ?>
+            <input type="hidden" name="role" value="<?= $editing_user ? htmlspecialchars($editing_user['role']) : 'manager' ?>">
+        <?php endif; ?>
+        <small class="text-muted">
+            <?php if (isSuperAdmin()): ?>
+                Super Admin can create Admin and Manager roles
+            <?php elseif (isAdmin()): ?>
+                Admin can create Manager roles only
+            <?php else: ?>
+                You cannot modify user roles
+            <?php endif; ?>
+        </small>
     </div>
     
     <div class="col-md-6 mb-3">

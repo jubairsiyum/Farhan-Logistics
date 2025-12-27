@@ -415,7 +415,135 @@ function resetFailedLogins($identifier) {
 // NEVER concatenate user input directly into SQL queries
 
 // ========================================================================
-// 12. INITIALIZE SECURITY
+// 12. ROLE-BASED ACCESS CONTROL (RBAC)
+// ========================================================================
+
+/**
+ * Check if current user has specific role
+ */
+function hasRole($role) {
+    return isset($_SESSION['admin_role']) && $_SESSION['admin_role'] === $role;
+}
+
+/**
+ * Check if current user is Super Admin
+ */
+function isSuperAdmin() {
+    return hasRole('super_admin');
+}
+
+/**
+ * Check if current user is Admin or higher
+ */
+function isAdmin() {
+    return hasRole('admin') || hasRole('super_admin');
+}
+
+/**
+ * Check if current user is Manager or higher
+ */
+function isManager() {
+    return hasRole('manager') || hasRole('admin') || hasRole('super_admin');
+}
+
+/**
+ * Check if user can create users of a specific role
+ * Super Admin: Can create Admin, Manager
+ * Admin: Can create Manager only
+ * Manager: Cannot create anyone
+ */
+function canCreateRole($targetRole) {
+    $currentRole = $_SESSION['admin_role'] ?? 'manager';
+    
+    if ($currentRole === 'super_admin') {
+        // Super Admin can create Admin and Manager
+        return in_array($targetRole, ['admin', 'manager']);
+    } elseif ($currentRole === 'admin') {
+        // Admin can create Manager only
+        return $targetRole === 'manager';
+    }
+    
+    // Manager cannot create anyone
+    return false;
+}
+
+/**
+ * Check if user can edit users of a specific role
+ */
+function canEditRole($targetRole) {
+    $currentRole = $_SESSION['admin_role'] ?? 'manager';
+    
+    if ($currentRole === 'super_admin') {
+        // Super Admin can edit everyone
+        return true;
+    } elseif ($currentRole === 'admin') {
+        // Admin can edit managers and other admins
+        return in_array($targetRole, ['admin', 'manager']);
+    }
+    
+    // Manager cannot edit anyone
+    return false;
+}
+
+/**
+ * Require Super Admin access for a page
+ */
+function requireSuperAdmin() {
+    if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+        header('Location: /admin/');
+        exit;
+    }
+    
+    if (!isSuperAdmin()) {
+        $_SESSION['error_message'] = 'Access denied. This page is only accessible to Super Administrators.';
+        logSecurityEvent('unauthorized_access_attempt', [
+            'user' => $_SESSION['admin_username'],
+            'role' => $_SESSION['admin_role'],
+            'page' => $_SERVER['PHP_SELF']
+        ]);
+        header('Location: /admin/dashboard');
+        exit;
+    }
+}
+
+/**
+ * Require Admin or Super Admin access
+ */
+function requireAdminOrHigher() {
+    if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+        header('Location: /admin/');
+        exit;
+    }
+    
+    if (!isAdmin()) {
+        $_SESSION['error_message'] = 'Access denied. Insufficient permissions.';
+        logSecurityEvent('unauthorized_access_attempt', [
+            'user' => $_SESSION['admin_username'],
+            'role' => $_SESSION['admin_role'],
+            'page' => $_SERVER['PHP_SELF']
+        ]);
+        header('Location: /admin/dashboard');
+        exit;
+    }
+}
+
+/**
+ * Get allowed roles for current user to assign
+ */
+function getAllowedRoles() {
+    $currentRole = $_SESSION['admin_role'] ?? 'manager';
+    
+    if ($currentRole === 'super_admin') {
+        return ['admin', 'manager'];
+    } elseif ($currentRole === 'admin') {
+        return ['manager'];
+    }
+    
+    return [];
+}
+
+// ========================================================================
+// 13. INITIALIZE SECURITY
 // ========================================================================
 
 // Set security headers on every page load
