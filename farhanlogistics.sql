@@ -45,7 +45,7 @@ CREATE TABLE `admin_users` (
 --
 
 INSERT INTO `admin_users` (`id`, `username`, `password`, `email`, `full_name`, `role`, `status`, `last_login`, `created_at`, `updated_at`) VALUES
-(1, 'admin', '$2y$12$EBjjg2yiterYkBEkfK6TqOcgtZ1hdj5urTy25.cSfdkcolyc.5ZH2', 'admin@farhanlogistics.com', 'System Administrator', 'super_admin', 'active', '2025-12-24 19:21:39', '2025-12-23 18:31:59', '2025-12-24 19:21:39'),
+(1, 'siyum', '$2y$12$EBjjg2yiterYkBEkfK6TqOcgtZ1hdj5urTy25.cSfdkcolyc.5ZH2', 'admin@farhanlogistics.com', 'System Administrator', 'super_admin', 'active', '2025-12-24 19:21:39', '2025-12-23 18:31:59', '2025-12-24 19:21:39'),
 (2, 'jsiyum', '$2y$12$rllYPUBcOOUAPKMGo7wsZuzoLjLgIz7CB91KA7YKapuDg5aLunfI2', 'jubairsiyum@gmail.com', 'Jubair Amin Siyum', 'admin', 'active', '2025-12-23 20:05:31', '2025-12-23 20:05:09', '2025-12-23 20:05:31');
 
 -- --------------------------------------------------------
